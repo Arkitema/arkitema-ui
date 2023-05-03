@@ -15,7 +15,7 @@ export const Primary: Story = {
   args: {
     label: "label",
     value: "value",
-    type: 'string',
+    type: "string",
     options: [],
     sx: {},
   },
