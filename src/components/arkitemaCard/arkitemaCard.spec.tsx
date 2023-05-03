@@ -3,20 +3,21 @@ import { render, screen, cleanup } from "@testing-library/react";
 import React from "react";
 import { ArkitemaCard } from "./arkitemaCard";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
-import getProjectsResponse from "../../__mocks__/getProjects";
 import { CardInfo } from "./arkitemaCard";
+
+const cardInfo: CardInfo = {
+  id: 'id',
+  title: 'title',
+  subtitle: 'subtitle',
+  unit: "kgCO2",
+  imageUrl: "",
+};
 
 describe("CarbonCard", () => {
   afterEach(cleanup);
   it("should render carbon card successfully", async () => {
-    const projectData = getProjectsResponse;
-    const cardInfo: CardInfo = {
-      id: projectData.data.projects[0].projectId,
-      title: projectData.data.projects[0].name,
-      subtitle: projectData.data.projects[0].metaFields.CO2 + "",
-      unit: "kgCO2",
-      imageUrl: "",
-    };
+
+    
 
     const { baseElement } = render(
       <MemoryRouter initialEntries={["/projects"]}>
@@ -31,14 +32,6 @@ describe("CarbonCard", () => {
     expect(baseElement).toBeDefined();
   });
   it("should render carbon card successfully", async () => {
-    const projectData = getProjectsResponse;
-    const cardInfo: CardInfo = {
-      id: projectData.data.projects[0].projectId,
-      title: projectData.data.projects[0].name,
-      subtitle: projectData.data.projects[0].metaFields.CO2 + "",
-      unit: "kgCO2",
-      imageUrl: "",
-    };
 
     const { baseElement } = render(
       <MemoryRouter initialEntries={["/projects"]}>

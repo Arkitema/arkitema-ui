@@ -1,5 +1,5 @@
 import React, { CSSProperties } from "react";
-import { CarbonBaseLogo } from "../../assets";
+import { ArkitemaLogo } from "../../assets";
 import { Link } from "react-router-dom";
 import { Typography } from "@mui/material";
 
@@ -23,7 +23,7 @@ export function Logo(props: LogoProps) {
       <img
         alt="carbon-base-logo"
         style={{ marginTop: margin + "px", ...(sxImage as CSSProperties) }}
-        src={CarbonBaseLogo}
+        src={ArkitemaLogo}
       />
       <Typography
         variant="h1"
