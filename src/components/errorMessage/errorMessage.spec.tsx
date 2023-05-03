@@ -20,7 +20,7 @@ describe("Error", () => {
     });
     const { baseElement } = render(<ErrorMessage error={error} />);
     expect(baseElement).toBeTruthy();
-    expect(await screen.findByText(error.name)).toBeInTheDocument();
+    expect(await screen.findByText(error.name)).toBeTruthy();
     expect(await screen.findByText(error.message)).toBeInTheDocument();
   });
 });

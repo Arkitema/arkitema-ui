@@ -22,9 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# IDEs
-.fleet
-.vscode
-.vs
-.idea
