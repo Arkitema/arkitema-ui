@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "Matter";
+  src: url("../fonts/Matter-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("../fonts/Matter-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: "Matter";
+  src: url("../fonts/Matter-Bold.woff2") format("woff2"),
+    url("../fonts/Matter-Bold.woff") format("woff"),
+    url("../fonts/Matter-Bold.ttf") format("truetype"),
+    url("../fonts/Matter-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+} */
+
+/* @font-face {
+  font-family: "Matter";
+  src: url("../fonts/Matter-SemiBold.woff2") format("woff2"),
+    url("../fonts/Matter-SemiBold.woff") format("woff"),
+    url("../fonts/Matter-SemiBold.ttf") format("truetype"),
+    url("../fonts/Matter-SemiBold.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("../fonts/Matter-Light.woff2") format("woff2"),
+    url("../fonts/Matter-Light.woff") format("woff"),
+    url("../fonts/Matter-Light.ttf") format("truetype"),
+    url("../fonts/Matter-Light.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("../fonts/Matter-Light.woff2") format("woff2"),
+    url("../fonts/Matter-Light.woff") format("woff"),
+    url("../fonts/Matter-Light.ttf") format("truetype"),
+    url("../fonts/Matter-Light.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+} */
+
+/* @font-face {
+  font-family: "Matter";
+  src: url("../fonts/Matter-Light.woff2") format("woff2"),
+    url("../fonts/Matter-Light.woff") format("woff"),
+    url("../fonts/Matter-Light.ttf") format("truetype"),
+    url("../fonts/Matter-Light.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+} */
