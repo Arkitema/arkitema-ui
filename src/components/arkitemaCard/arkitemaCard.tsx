@@ -9,13 +9,13 @@ export interface CardInfo {
   title: string;
   subtitle: string;
   unit: string;
-  imageUrl: string;
+  imageUrl: any;
 }
 
 export interface CardProps {
   key: number;
   cardInfo: CardInfo;
-  size?: "small" | "large";
+  size?: "small" | "large" | 'xl';
 }
 
 export const ArkitemaCard: React.FC<CardProps> = (props) => {
@@ -31,6 +31,10 @@ export const ArkitemaCard: React.FC<CardProps> = (props) => {
       setHeight("200px");
       setWidth("200px");
       setMd(2);
+    } else if (size === 'xl') {
+      setHeight("550px");
+      setWidth("550px");
+      setMd(5.5);
     }
   }, [size]);
 
@@ -72,13 +76,20 @@ export const ArkitemaCard: React.FC<CardProps> = (props) => {
                     color: theme.palette.common.white,
                     zIndex: 2,
                   }
-                : {
+                : size === 'xl' ? {
+                  position: "absolute",
+                  top: "12%",
+                  left: "14%",
+                  fontSize: theme.typography.h1,
+                  color: theme.palette.common.white,
+                  zIndex: 2,
+                  } : {
                     position: "absolute",
                     left: "calc(50% - 4vw)",
                     top: "12%",
                     color: theme.palette.common.white,
                     zIndex: 2,
-                  }
+                  } 
             }
           >
             {cardInfo.title}
@@ -95,7 +106,7 @@ export const ArkitemaCard: React.FC<CardProps> = (props) => {
             }}
           >
             {cardInfo.subtitle}
-            {size === "small" && " co2"}
+            {size === "small" && cardInfo.unit}
           </Typography>
           {size === "large" && (
             <Typography

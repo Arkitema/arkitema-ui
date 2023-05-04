@@ -19,6 +19,7 @@ export const CardGrid: React.FC<CardGridProps> = (props) => {
         width: "100%",
         display: "flex",
         marginRight: 0,
+        marginLeft: 0,
         paddingTop: "52px",
         paddingRight: 0,
         ...sx,
