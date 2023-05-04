@@ -14,6 +14,6 @@ type Story = StoryObj<typeof ArkitemaTable>;
 
 export const Primary: Story = {
   args: {
-    data: {'Row 1 ': 'row 1', 'Row 2': 'row 2'}
+    data: { "Row 1 ": "row 1", "Row 2": "row 2" },
   },
 };

@@ -19,7 +19,7 @@ interface InformationInputProps {
 export const InformationInput = (props: InformationInputProps) => {
   const { id, label, setValue, value, options, type, sx } = props;
 
-  return (options && options.length > 0) ? (
+  return options && options.length > 0 ? (
     <FormControl
       variant="standard"
       sx={{ width: "250px", marginTop: "30px" }}
