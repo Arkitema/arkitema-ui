@@ -1,0 +1,28 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "esnext",
+    "module": "ESNext",
+    "lib": ["es5", "es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./dist/esm",
+    "jsx": "react-jsx",
+    "types": ["node"],
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "src",
+    "isolatedModules": true,
+    "esModuleInterop": true
+  },
+  "exclude": ["node_modules", "**/*.spec.tsx", "**/__mocks__/*.*", "**/*.stories.tsx"],
+  "include": ["src/**/*"]
+}
