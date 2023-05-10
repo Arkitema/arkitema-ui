@@ -1,1 +1,1 @@
-export * from "./primaryAppBar";
+export * from "./arkitemaAppBar";
