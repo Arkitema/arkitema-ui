@@ -25,7 +25,7 @@ packages/
 - layout/
   - appContainer
   - cardGrid
-  - paperPages
+  - paperPage
   - arkitemaCard
   - arkitemaTable
 - navigation/

@@ -1,0 +1,54 @@
+import React from 'react'
+import PieChart, { Values, centerText } from './pieChart'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+
+// mock data
+const browsers: Values[] = [
+  { label: 'Google Chrome', value: 48.09 },
+  { label: 'Internet Explorer', value: 24.14 },
+  { label: 'Firefox', value: 18.82 },
+  { label: 'Safari', value: 56.45 },
+  { label: 'Microsoft Edge', value: 57.65 },
+  { label: 'Opera', value: 1.32 },
+  { label: 'Mozilla', value: 0.12 },
+  { label: 'Other/Unknown', value: 0.01 },
+]
+
+export default {
+  title: 'Example/PieChart',
+  component: PieChart,
+  // argTypes: {
+  //   colorA: {
+  //     control: {
+  //       type: 'color', presetColors: [{ color: '#ff4785', title: 'Coral' }, 'rgba(0, 159, 183, 1)', '#fe4a49'],
+  //     }
+  //   }
+  // },
+} as ComponentMeta<typeof PieChart>
+
+export const Template: ComponentStory<typeof PieChart> = ({ ...rest }) => {
+  return <PieChart {...rest} />
+}
+
+Template.args = {
+  width: 1000,
+  height: 1000,
+  colors: [
+    'rgba(100, 160, 136, 1)',
+    'rgba(74, 82, 64, 1)',
+    'rgba(111, 94, 92, 1)',
+    'rgba(162, 132, 151, 1)',
+    'rgba(198, 202, 237, 1)',
+    'rgba(173, 168, 190, 1)',
+  ],
+  data: browsers,
+  donutThickness: 280,
+  fontFamily: 'Arial, Helvetica, sans-serif',
+  centerText: {
+    enabled: true,
+    text: 'kg CO2-eq/m2/year',
+    textSize: 36,
+    aggregation: 'sum',
+    unitTextSize: 24,
+  } as centerText,
+}

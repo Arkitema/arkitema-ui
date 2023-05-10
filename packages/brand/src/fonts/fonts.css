@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Matter";
+  src: url("./Matter-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Matter";
+  src: url("./Matter-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
