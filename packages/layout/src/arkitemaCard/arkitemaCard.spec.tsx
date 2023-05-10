@@ -6,9 +6,9 @@ import { MemoryRouter, Route, Routes } from "react-router-dom";
 import { CardInfo } from "./arkitemaCard";
 
 const cardInfo: CardInfo = {
-  id: 'id',
-  title: 'title',
-  subtitle: 'subtitle',
+  id: "id",
+  title: "title",
+  subtitle: "subtitle",
   unit: "kgCO2",
   imageUrl: "",
 };
@@ -16,9 +16,6 @@ const cardInfo: CardInfo = {
 describe("CarbonCard", () => {
   afterEach(cleanup);
   it("should render carbon card successfully", async () => {
-
-    
-
     const { baseElement } = render(
       <MemoryRouter initialEntries={["/projects"]}>
         <Routes>
@@ -32,7 +29,6 @@ describe("CarbonCard", () => {
     expect(baseElement).toBeDefined();
   });
   it("should render carbon card successfully", async () => {
-
     const { baseElement } = render(
       <MemoryRouter initialEntries={["/projects"]}>
         <Routes>

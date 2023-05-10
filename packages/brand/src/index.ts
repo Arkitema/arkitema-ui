@@ -1,3 +1,3 @@
-export * from './fonts'
-export * from './logo'
-export * from './theme'
+export * from "./fonts";
+export * from "./logo";
+export * from "./theme";

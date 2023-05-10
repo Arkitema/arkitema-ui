@@ -1,11 +1,13 @@
 # Arkitema UI
 
 ## Inspiration
+
 [VisX](https://github.com/airbnb/visx)
 
-
 ## Package Structure
+
 packages/
+
 - visualizations/
 - pages/
   - 404Page

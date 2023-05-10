@@ -44,5 +44,5 @@ Template.args = {
   horizontalStrokeColor: '#000000',
   horizontalStrokeOpacity: 0.1,
   horizontalStrokeDasharray: '3.3',
-  borderRadius:0,
+  borderRadius: 0,
 }

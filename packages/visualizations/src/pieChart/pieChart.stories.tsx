@@ -1,6 +1,6 @@
 import React from 'react'
 import PieChart, { Values, centerText } from './pieChart'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from "@storybook/react";
 
 // mock data
 const browsers: Values[] = [
@@ -14,20 +14,38 @@ const browsers: Values[] = [
   { label: 'Other/Unknown', value: 0.01 },
 ]
 
-export default {
-  title: 'Example/PieChart',
-  component: PieChart,
-  // argTypes: {
-  //   colorA: {
-  //     control: {
-  //       type: 'color', presetColors: [{ color: '#ff4785', title: 'Coral' }, 'rgba(0, 159, 183, 1)', '#fe4a49'],
-  //     }
-  //   }
-  // },
-} as ComponentMeta<typeof PieChart>
+const meta: Meta<typeof PieChart> = {title: 'Example/PieChart',
+component: PieChart}
+export default meta;
 
-export const Template: ComponentStory<typeof PieChart> = ({ ...rest }) => {
-  return <PieChart {...rest} />
+
+type Story = StoryObj<typeof PieChart>;
+
+const data = {
+  width: 1000,
+  height: 1000,
+  colors: [
+    'rgba(100, 160, 136, 1)',
+    'rgba(74, 82, 64, 1)',
+    'rgba(111, 94, 92, 1)',
+    'rgba(162, 132, 151, 1)',
+    'rgba(198, 202, 237, 1)',
+    'rgba(173, 168, 190, 1)',
+  ],
+  data: browsers,
+  donutThickness: 280,
+  fontFamily: 'Arial, Helvetica, sans-serif',
+  centerText: {
+    enabled: true,
+    text: 'kg CO2-eq/m2/year',
+    textSize: 36,
+    aggregation: 'sum',
+    unitTextSize: 24,
+  } as centerText,
+}
+
+export const Template: Story = ({ ...rest }) => {
+  return <PieChart data={data} {...rest} />
 }
 
 Template.args = {

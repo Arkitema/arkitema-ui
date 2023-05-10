@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 import { AppBar, Box, Toolbar, Button } from "@mui/material";
 import { Logo } from "../logo";
 import { theme } from "../theme";
 import { useNavigate } from "react-router-dom";
-import { LogoProps } from '../logo'
+import { LogoProps } from "../logo";
 
 export interface LinkItem {
   link: string;
@@ -39,7 +39,7 @@ export const ArkitemaAppBar: React.FC<ArkitemaAppBarProps> = (props) => {
       >
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <Logo
-            link={logoProps.link} 
+            link={logoProps.link}
             sxText={logoProps.sxText}
             sxImage={logoProps.sxImage}
             title={logoProps.title}
@@ -48,33 +48,34 @@ export const ArkitemaAppBar: React.FC<ArkitemaAppBarProps> = (props) => {
             <Box
               sx={{ display: { xs: "none", sm: "block", alignItems: "top" } }}
             >
-              {navItems && navItems.map((item) => {
-                return (
-                  <Button
-                    key={item.title}
-                    sx={{ color: "#333333", font: "Matter" }}
-                    style={{
-                      textTransform: "none",
-                      font: "Matter",
-                      fontSize: "19px",
-                      marginLeft: "23px",
-                      marginTop: "33px",
-                      marginBottom: "24px",
-                      opacity:
-                        location.toLocaleLowerCase() ===
-                        item.title.toLocaleLowerCase()
-                          ? 1
-                          : 0.5,
-                      padding: 0,
-                    }}
-                    onClick={() => {
-                      navigate(item.link);
-                    }}
-                  >
-                    {item.title}
-                  </Button>
-                );
-              })}
+              {navItems &&
+                navItems.map((item) => {
+                  return (
+                    <Button
+                      key={item.title}
+                      sx={{ color: "#333333", font: "Matter" }}
+                      style={{
+                        textTransform: "none",
+                        font: "Matter",
+                        fontSize: "19px",
+                        marginLeft: "23px",
+                        marginTop: "33px",
+                        marginBottom: "24px",
+                        opacity:
+                          location.toLocaleLowerCase() ===
+                          item.title.toLocaleLowerCase()
+                            ? 1
+                            : 0.5,
+                        padding: 0,
+                      }}
+                      onClick={() => {
+                        navigate(item.link);
+                      }}
+                    >
+                      {item.title}
+                    </Button>
+                  );
+                })}
             </Box>
           )}
         </Toolbar>

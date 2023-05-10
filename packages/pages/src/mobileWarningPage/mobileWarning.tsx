@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { Box } from "@mui/system";
 import { DoDisturb } from "@mui/icons-material";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
@@ -15,7 +15,7 @@ export const MobileWarningPage = () => {
             display: "block",
             left: "50%",
             transform: "translateX(-50%)",
-            color: '#707070',
+            color: "#707070",
             width: "260px",
             height: "260px",
           }}
@@ -27,7 +27,7 @@ export const MobileWarningPage = () => {
             display: "block",
             left: "50%",
             transform: "translateX(-50%)",
-            color: '#707070',
+            color: "#707070",
             width: "810px",
             height: "130px",
             top: "190px",

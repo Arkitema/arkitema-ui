@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react'
+import React, { useRef, useEffect } from 'react'
 import { BarStack } from '@visx/shape'
 import { SeriesPoint } from '@visx/shape/lib/types'
 import { Group } from '@visx/group'
@@ -152,24 +152,24 @@ export default function StackedBarChart({
     <div style={{ position: 'relative', marginTop: margin.top, marginLeft: margin.left, width: width }}>
       <svg ref={containerRef} width={width + margin.left} height={height + 150} style={{ margin: 50 }}>
         <rect x={margin.left} y={0} width={width} height={height} fill={backgroundColor} rx={14} />
-                    <GridColumns
-                    left={margin.left}
-              scale={labelScale}
-              height={yMax}
-              stroke={verticalStrokeColor}
-              strokeOpacity={verticalStrokeOpacity}
-              strokeDasharray={verticalStrokeDasharray}
-            />
-            <GridRows
-              top={margin.top-55}
-              left={margin.left}
-              scale={valueScale}
-              width={xMax}
-              stroke={horizontalStrokeColor}
-              strokeOpacity={horizontalStrokeOpacity}
-              strokeDasharray={horizontalStrokeDasharray}
-              offset={labelScale.bandwidth() / 2}
-            />
+        <GridColumns
+          left={margin.left}
+          scale={labelScale}
+          height={yMax}
+          stroke={verticalStrokeColor}
+          strokeOpacity={verticalStrokeOpacity}
+          strokeDasharray={verticalStrokeDasharray}
+        />
+        <GridRows
+          top={margin.top - 55}
+          left={margin.left}
+          scale={valueScale}
+          width={xMax}
+          stroke={horizontalStrokeColor}
+          strokeOpacity={horizontalStrokeOpacity}
+          strokeDasharray={horizontalStrokeDasharray}
+          offset={labelScale.bandwidth() / 2}
+        />
         <Group top={margin.top} left={margin.left}>
           <BarStack<any, string>
             data={newDataFormat}
@@ -266,7 +266,13 @@ export default function StackedBarChart({
       >
         <LegendOrdinal scale={colorScale} direction='column' labelMargin='0 30px 0 0' />
       </div> */}
-      <LegendElement data={data} colorScale={colorScale} fontFamily={fontFamily} chartHeight={height} chartWidth={width}/>
+      <LegendElement
+        data={data}
+        colorScale={colorScale}
+        fontFamily={fontFamily}
+        chartHeight={height}
+        chartWidth={width}
+      />
       {tooltipOpen && tooltipData && (
         <TooltipInPortal top={tooltipTop} left={tooltipLeft} style={tooltipStyles}>
           <div style={{ color: colorScale(tooltipData.key) }}>
@@ -283,7 +289,6 @@ export default function StackedBarChart({
 }
 
 export type LegendElement = {
-
   colorScale: any
   fontFamily: string
   data: Item[]
@@ -312,24 +317,24 @@ function LegendElement({ colorScale, fontFamily, data, chartWidth, chartHeight }
   //   // @ts-ignore: Object is possibly 'null'.
   //   legendElement.current.style.top = `${y}px`;
   // }, [data])
-  
+
   return (
     <div
-    ref={legendElement}
-        style={{
-          position: 'absolute',
-          left: '30%',
-          top: '40%',
-          transform: 'translateY(-50%)',
-          width: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'flex-end',
-          fontSize: '16px',
-          fontFamily: fontFamily,
-        }}
-      >
-        <LegendOrdinal scale={colorScale} direction='column' labelMargin='0 30px 0 0' />
-      </div>
+      ref={legendElement}
+      style={{
+        position: 'absolute',
+        left: '30%',
+        top: '40%',
+        transform: 'translateY(-50%)',
+        width: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+        fontSize: '16px',
+        fontFamily: fontFamily,
+      }}
+    >
+      <LegendOrdinal scale={colorScale} direction='column' labelMargin='0 30px 0 0' />
+    </div>
   )
 }

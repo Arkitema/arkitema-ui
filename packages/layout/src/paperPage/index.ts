@@ -1,2 +1,2 @@
-export * from './PaperPage'
-export * from './PaperPageStack'
+export * from "./PaperPage";
+export * from "./PaperPageStack";

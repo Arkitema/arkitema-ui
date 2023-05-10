@@ -2,7 +2,7 @@ import React, { CSSProperties } from "react";
 import { ArkitemaLogo } from "../../assets";
 import { Link } from "react-router-dom";
 import { Typography } from "@mui/material";
-import { theme } from '../../components'
+import { theme } from "../../components";
 
 export interface LogoProps {
   sxImage?: Record<string, unknown>;
