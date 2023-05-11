@@ -1,9 +1,8 @@
 import React from 'react'
-import PieChart, { Values, centerText } from './pieChart'
-import type { Meta, StoryObj } from "@storybook/react";
+import PieChart, { Value, centerText } from './pieChart'
+import type { Meta, StoryObj } from '@storybook/react'
 
-// mock data
-const browsers: Values[] = [
+const browsers: Value[] = [
   { label: 'Google Chrome', value: 48.09 },
   { label: 'Internet Explorer', value: 24.14 },
   { label: 'Firefox', value: 18.82 },
@@ -14,12 +13,10 @@ const browsers: Values[] = [
   { label: 'Other/Unknown', value: 0.01 },
 ]
 
-const meta: Meta<typeof PieChart> = {title: 'Example/PieChart',
-component: PieChart}
-export default meta;
+const meta: Meta<typeof PieChart> = { title: 'Example/PieChart', component: PieChart }
+export default meta
 
-
-type Story = StoryObj<typeof PieChart>;
+type Story = StoryObj<typeof PieChart>
 
 const data = {
   width: 1000,

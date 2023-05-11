@@ -3,6 +3,11 @@
 ## Inspiration
 [VisX](https://github.com/airbnb/visx)
 
+## Usage
+```bash
+npm install --save @arkitema/brand @arkitema/dataFetching @arkitema/errorHandling @arkitema/inputs @arkitema/layout @arkitema/navigation @arkitema/pages @arkitema/visualizations
+```
+
 
 ## Package Structure
 packages/

@@ -4,7 +4,7 @@ import { scaleOrdinal } from '@visx/scale'
 import { Group } from '@visx/group'
 import { animated, useTransition, to } from '@react-spring/web'
 
-export interface Values {
+export interface Value {
   label: string
   value: number
 }
@@ -41,7 +41,7 @@ export type PieProps = {
   margin?: typeof defaultMargin
   animate?: boolean
   colors?: string[]
-  data: Values[]
+  data: Value[]
   donutThickness?: number
   fontFamily?: string
   labelFontSize?: number
@@ -63,7 +63,7 @@ export default function PieChart({
   const [selectedDataPoint, setSelectedDataPoint] = useState<string | null>(null)
 
   if (width < 10) return null
-  const values = (d: Values) => d.value
+  const values = (d: Value) => d.value
   const totalValue =
     (Math.round(
       data
@@ -135,7 +135,7 @@ export default function PieChart({
           cornerRadius={3}
           padAngle={0.005}
         >
-          {(pie) => (
+          {(pie: ProvidedProps<Value>) => (
             <AnimatedPie
               {...pie}
               animate={animate}

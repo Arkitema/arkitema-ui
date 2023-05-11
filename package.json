@@ -11,7 +11,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "format:fix": "prettier --write src/",
-    "format": "prettier --check src/"
+    "format": "prettier --check src/",
+    "test": "vitest run"
   },
   "dependencies": {
     "@apollo/client": "^3.7.12",
@@ -46,10 +47,12 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "eslint-plugin-storybook": "^0.6.11",
+    "jsdom": "^22.0.0",
     "prettier": "^2.8.4",
     "prop-types": "^15.8.1",
     "storybook": "^7.0.7",
     "typescript": "^5.0.2",
-    "vite": "^4.3.2"
+    "vite": "^4.3.2",
+    "vitest": "^0.31.0"
   }
 }
