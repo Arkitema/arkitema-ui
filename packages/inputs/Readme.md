@@ -1,4 +1,4 @@
-# @arkitema/brand
+# @arkitema/inputs
 
 ## Installation
 

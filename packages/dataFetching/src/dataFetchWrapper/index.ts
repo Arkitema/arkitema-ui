@@ -1,1 +1,1 @@
-export * from "./dataFetchWrapper";
+export * from './dataFetchWrapper'

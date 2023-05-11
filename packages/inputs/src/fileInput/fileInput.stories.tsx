@@ -1,18 +1,18 @@
-import React from "react";
-import type { Meta, StoryObj } from "@storybook/react";
-import { FileInput } from ".";
+import React from 'react'
+import type { Meta, StoryObj } from '@storybook/react'
+import { FileInput } from '.'
 
 const meta: Meta<typeof FileInput> = {
-  title: "FileInput",
+  title: 'FileInput',
   component: FileInput,
-};
+}
 
-export default meta;
+export default meta
 
-type Story = StoryObj<typeof FileInput>;
+type Story = StoryObj<typeof FileInput>
 
 export const Primary: Story = {
   args: {
-    text: "Upload Image",
+    text: 'Upload Image',
   },
-};
+}

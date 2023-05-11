@@ -1,17 +1,22 @@
 {
-  "name": "@arkitema/dataFetching",
+  "name": "@arkitema/datafetching",
   "private": true,
   "version": "0.1.0",
-  "type": "module",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "test": "vitest run",
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json",
+    "build:watch": "tsc --watch",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "format:fix": "prettier --write src/",
     "format": "prettier --check src/"
+  },
+  "peerDependencies": {
+    "@arkitema/errorhandling": "^0.1.0"
   },
   "dependencies": {
     "@apollo/client": "^3.7.12",

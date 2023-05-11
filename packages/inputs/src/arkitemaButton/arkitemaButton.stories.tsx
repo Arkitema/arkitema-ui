@@ -1,21 +1,21 @@
-import React from "react";
-import type { Meta, StoryObj } from "@storybook/react";
-import { ArkitemaButton } from ".";
+import React from 'react'
+import type { Meta, StoryObj } from '@storybook/react'
+import { ArkitemaButton } from '.'
 
 const meta: Meta<typeof ArkitemaButton> = {
-  title: "ArkitemaButton",
+  title: 'ArkitemaButton',
   component: ArkitemaButton,
-};
+}
 
-export default meta;
+export default meta
 
-type Story = StoryObj<typeof ArkitemaButton>;
+type Story = StoryObj<typeof ArkitemaButton>
 
 export const Primary: Story = {
   args: {
-    text: "Button text",
+    text: 'Button text',
     onclick: () => {
-      console.log("clicked");
+      console.log('clicked')
     },
   },
-};
+}

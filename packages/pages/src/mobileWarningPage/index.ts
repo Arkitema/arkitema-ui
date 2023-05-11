@@ -1,1 +1,1 @@
-export * from "./mobileWarning";
+export * from './mobileWarningPage'

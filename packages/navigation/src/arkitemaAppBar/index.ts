@@ -1,1 +1,1 @@
-export * from "./arkitemaAppBar";
+export * from './arkitemaAppBar'

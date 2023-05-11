@@ -1,18 +1,8 @@
 {
-    "compilerOptions": {
-      "declarationDir": "lib",
-      "outDir": "lib",
-      "rootDir": "src"
-    },
-    "exclude": [
-      "lib",
-      "test"
-    ],
-    "extends": "../../tsconfig.options.json",
-    "include": [
-      "src/**/*",
-      "types/**/*",
-      "../../types/**/*"
-    ],
-    "references": []
-  }
+  "compilerOptions": {
+    "outDir": "./dist/esm"
+  },
+  "extends": "../../tsconfig.json",
+  "exclude": ["node_modules", "**/*.spec.tsx", "**/__mocks__/*.*"],
+  "include": ["src/**/*"]
+}

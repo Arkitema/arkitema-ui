@@ -1,4 +1,4 @@
-# @arkitema/brand
+# @arkitema/navigation
 
 ## Installation
 

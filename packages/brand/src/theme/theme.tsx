@@ -1,33 +1,33 @@
-import { createTheme } from "@mui/material/styles";
-import "../../fonts.css";
+import { createTheme } from '@mui/material/styles'
+import '../fonts/fonts.css'
 
-declare module "@mui/material/styles" {
+declare module '@mui/material/styles' {
   interface Theme {
     status: {
-      danger: React.CSSProperties["color"];
-    };
+      danger: React.CSSProperties['color']
+    }
   }
 
   interface Palette {
-    neutral: Palette["primary"];
+    neutral: Palette['primary']
   }
   interface PaletteOptions {
-    neutral: PaletteOptions["primary"];
+    neutral: PaletteOptions['primary']
   }
 
   interface PaletteColor {
-    darker?: string;
+    darker?: string
   }
   interface SimplePaletteColorOptions {
-    darker?: string;
+    darker?: string
   }
   interface BreakpointOverrides {
-    xs: true;
-    sm: true;
-    md: true;
-    lg: true;
-    xl: true;
-    xxl: true;
+    xs: true
+    sm: true
+    md: true
+    lg: true
+    xl: true
+    xxl: true
   }
 }
 export const theme = createTheme({
@@ -43,64 +43,64 @@ export const theme = createTheme({
   },
   palette: {
     common: {
-      black: "#333333",
-      white: "#F7F7F6",
+      black: '#333333',
+      white: '#F7F7F6',
     },
     primary: {
-      main: "#97A6B4",
-      dark: "#627688",
+      main: '#97A6B4',
+      dark: '#627688',
     },
     grey: {
-      50: "#F7F7F6",
-      100: "#BDBDBD",
-      200: "#707070",
+      50: '#F7F7F6',
+      100: '#BDBDBD',
+      200: '#707070',
     },
     error: {
-      main: "#E06763",
+      main: '#E06763',
     },
     warning: {
-      main: "#FEA763",
+      main: '#FEA763',
     },
     success: {
-      main: "#6C8E85",
+      main: '#6C8E85',
     },
     background: {
-      default: "#F7F7F6",
-      paper: "#FFFFFF",
+      default: '#F7F7F6',
+      paper: '#FFFFFF',
     },
     neutral: {
-      main: "#64748B",
-      contrastText: "#fff",
+      main: '#64748B',
+      contrastText: '#fff',
     },
   },
   typography: {
-    fontFamily: ["Matter", "sans-serif"].join(","),
+    fontFamily: ['Matter', 'sans-serif'].join(','),
     button: {
-      textTransform: "none",
+      textTransform: 'none',
     },
     h1: {
       fontWeight: 500,
-      fontSize: "38px",
+      fontSize: '38px',
     },
     h2: {
-      fontWeight: "medium",
-      fontSize: "31px",
+      fontWeight: 'medium',
+      fontSize: '31px',
     },
     h3: {
-      fontWeight: "medium",
-      fontSize: "19px",
+      fontWeight: 'medium',
+      fontSize: '19px',
     },
     h4: {
       fontWeight: 300,
-      fontSize: "16px",
+      fontSize: '16px',
     },
     h5: {
       fontWeight: 300,
-      fontSize: "14px",
+      fontSize: '14px',
     },
     h6: {
       fontWeight: 300,
-      fontSize: "12px",
+      fontSize: '12px',
     },
   },
   components: {
@@ -112,4 +112,4 @@ export const theme = createTheme({
       },
     },
   },
-});
+})

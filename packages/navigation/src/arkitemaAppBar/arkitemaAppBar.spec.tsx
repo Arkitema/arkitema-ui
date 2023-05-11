@@ -1,4 +1,4 @@
-import "@testing-library/jest-dom";
+import '@testing-library/jest-dom'
 // import { render, screen } from '@testing-library/react'
 // import { MemoryRouter, Route, Routes } from 'react-router-dom'
 // import { LcaAppBar } from './primaryAppBar'
@@ -6,11 +6,11 @@ import "@testing-library/jest-dom";
 // import { appBarMock } from '../../__mocks__/appBar.mock'
 // import React from 'react'
 
-describe("Carbon App Bar", () => {
-  it("should render settings successfully", async () => {
-    expect(true).toBeTruthy();
-  });
-});
+describe('Carbon App Bar', () => {
+  it('should render settings successfully', async () => {
+    expect(true).toBeTruthy()
+  })
+})
 
 // describe('Carbon App Bar', () => {
 //   it('should render settings successfully', async () => {

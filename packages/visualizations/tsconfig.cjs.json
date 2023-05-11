@@ -1,7 +1,16 @@
+// {
+//   "extends": "./tsconfig.json",
+//   "compilerOptions": {
+//     "module": "CommonJS",
+//     "outDir": "./dist/cjs"
+//   }
+// }
+
 {
-  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "module": "CommonJS",
     "outDir": "./dist/cjs"
-  }
+  },
+  "extends": "../../tsconfig.cjs.json",
+  "exclude": ["node_modules", "**/*.spec.tsx", "**/__mocks__/*.*"],
+  "include": ["src/**/*"]
 }

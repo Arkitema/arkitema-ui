@@ -1,2 +1,2 @@
-export * from "./breadcrumb";
-export * from "./arkitemaAppBar";
+export * from './breadcrumb'
+export * from './arkitemaAppBar'

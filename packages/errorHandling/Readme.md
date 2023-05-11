@@ -1,9 +1,9 @@
-# @arkitema/brand
+# @arkitema/errorhandling
 
 ## Installation
 
 ```
-npm install --save @arkitema/errorHandling
+npm install --save @arkitema/errorhandling
 ```
 
 ## Contents

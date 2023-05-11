@@ -21,7 +21,7 @@ packages/
   - apolloTokenProvider
   - dataFetchWrapper
   - loading
-- errorHandling/
+- errorhandling/
   - errorBoundary
   - errorMessage
 - layout/

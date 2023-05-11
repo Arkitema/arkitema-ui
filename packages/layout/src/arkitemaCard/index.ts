@@ -1,1 +1,1 @@
-export * from "./arkitemaCard";
+export * from './arkitemaCard'

@@ -1,3 +1,3 @@
-export * from "./apolloTokenProvider";
-export * from "./dataFetchWrapper";
-export * from "./loading";
+export * from './apolloTokenProvider'
+export * from './dataFetchWrapper'
+export * from './loading'

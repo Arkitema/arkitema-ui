@@ -1,1 +1,1 @@
-export * from "./apolloTokenProvider";
+export * from './apolloTokenProvider'

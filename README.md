@@ -1,16 +1,19 @@
 # Arkitema UI
 
 ## Inspiration
+
 [VisX](https://github.com/airbnb/visx)
 
 ## Usage
+
 ```bash
-npm install --save @arkitema/brand @arkitema/dataFetching @arkitema/errorHandling @arkitema/inputs @arkitema/layout @arkitema/navigation @arkitema/pages @arkitema/visualizations
+npm install --save @arkitema/brand @arkitema/dataFetching @arkitema/errorhandling @arkitema/inputs @arkitema/layout @arkitema/navigation @arkitema/pages @arkitema/visualizations
 ```
 
-
 ## Package Structure
+
 packages/
+
 - visualizations/
 - pages/
   - 404Page
@@ -24,7 +27,7 @@ packages/
   - apolloTokenProvider
   - dataFetchWrapper
   - loading
-- errorHandling/
+- errorhandling/
   - errorBoundary
   - errorMessage
 - layout/
