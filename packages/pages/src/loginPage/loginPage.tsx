@@ -1,6 +1,6 @@
 import { InteractionStatus } from '@azure/msal-browser'
 import { useMsal } from '@azure/msal-react'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import react, { useCallback, useState } from 'react'
 import { Button, Container, Paper, Stack, Typography } from '@mui/material'
 import { ErrorMessage } from '@arkitema/errorhandling'
@@ -13,9 +13,9 @@ export interface LoginProps {
 export const LoginPage: React.FC<LoginProps> = (props) => {
   const { link } = props
   LoginPage.propTypes = {
-    link: PropTypes.string.isRequired
-  };
-  
+    link: PropTypes.string.isRequired,
+  }
+
   const { instance, inProgress } = useMsal()
   const [error, setError] = useState()
   const navigate = useNavigate()

@@ -44,10 +44,10 @@ export const ArkitemaAppBar: React.FC<ArkitemaAppBarProps> = (props) => {
                   return (
                     <Button
                       key={item.title}
-                      sx={{ color: '#333333', font: 'Matter' }}
+                      sx={{ color: '#333333', font: theme.typography.fontFamily }}
                       style={{
                         textTransform: 'none',
-                        font: 'Matter',
+                        font:  theme.typography.fontFamily,
                         fontSize: '19px',
                         marginLeft: '23px',
                         marginTop: '33px',

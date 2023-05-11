@@ -2,6 +2,7 @@ import { Stack, Typography, Container } from '@mui/material'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ArkitemaButton } from '@arkitema/inputs'
+import { theme } from '@arkitema/brand'
 
 export const NotFoundPage: React.FC<unknown> = () => {
   const navigate = useNavigate()
@@ -12,7 +13,7 @@ export const NotFoundPage: React.FC<unknown> = () => {
         component='div'
         sx={{
           color: '#333333',
-          font: 'Matter',
+          fontFamily: theme.typography.fontFamily,
         }}
       >
         {'Page Not Found'}

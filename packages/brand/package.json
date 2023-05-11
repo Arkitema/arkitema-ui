@@ -7,6 +7,7 @@
   "scripts": {
     "test": "vitest run",
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json",
+    "postbuild": "copyfiles --flat ./src/assets/*.{png,svg,ico} ./dist/esm/assets/ && copyfiles --flat ./src/assets/*.{png,svg,ico} ./dist/cjs/assets/",
     "build:watch": "tsc --watch",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
@@ -30,6 +31,7 @@
     "react-router-dom": "^6.10.0"
   },
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "@storybook/addon-essentials": "^7.0.7",
     "@storybook/addon-interactions": "^7.0.7",
     "@storybook/addon-links": "^7.0.7",

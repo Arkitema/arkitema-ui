@@ -1,6 +1,7 @@
 import { Typography } from '@mui/material'
 import React from 'react'
 import imageCompression from 'browser-image-compression'
+import { theme } from '@arkitema/brand'
 
 interface FileInputProps {
   imageData: string
@@ -44,7 +45,7 @@ export const FileInput = (props: FileInputProps) => {
         component='div'
         sx={{
           color: '#333333',
-          font: 'Matter',
+          font: theme.typography.fontFamily,
           fontSize: '12px',
           paddingBottom: '20px',
         }}
