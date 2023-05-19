@@ -1,0 +1,113 @@
+name: Push Action
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  node_version: '18.x'
+  app_name: 'ui'
+
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Test
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.node_version }}
+          cache: "npm"
+
+    # TODO - Make this into workspace commands
+      - name: Install
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Format
+        run: npm run format
+
+      - name: Unit Tests
+        run: npm run test
+
+      - name: Build
+        run: npm build
+    # TODO - Figure out how this work upload stuff works when dealing with multiple packages
+#      - name: Upload artifact for deployment job
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: storybook-app
+#          path: ./dist
+    # TODO - Test and build Storybook
+#      - name: Storybook Tests
+#        run: npm run storybook:test
+
+#      - name: Storybook Build
+#        run: npm run storybook:build
+
+#      - name: Upload artifact for deployment job
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: storybook-app
+#          path: ./dist
+
+  publish-packages:
+    name: Publish NPM Package
+    runs-on: ubuntu-latest
+    needs:
+      - test
+    steps:
+      - uses: actions/checkout@v3
+    # TODO - Should run for each updated package
+      - name: Download Artifacts from Build Job
+        uses: actions/download-artifact@v3
+        with:
+          name: ${{ env.artifact_name }}
+          path: ./dist
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.node_version }}
+          registry-url: https://registry.npmjs.org/
+
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+
+  publish-storybook:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Download Artifact from Build Job
+        uses: actions/download-artifact@v3
+        with:
+          name: storybook-app
+
+      - name: Upload to Blob Storage
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+            az storage blob delete-batch --sas-token ${{ secrets.AZURE_CREDENTIALS }} --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} --source ${{ vars.BUNDLES_CONTAINER_NAME}} --pattern "bundles/${{ env.app_name }}/main/*"
+            az storage blob upload-batch --sas-token ${{ secrets.AZURE_CREDENTIALS }} --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} --auth-mode key -d ${{ vars.BUNDLES_CONTAINER_NAME}} --destination-path "bundles/${{ env.app_name }}/main" -s .
+
+  release:
+    runs-on: ubuntu-latest
+    needs:
+      - publish-storybook
+      - publish-packages
+    name: Release
+    env:
+      # TODO - how do we handle versioning?
+      tag_version: "test"
+    steps:
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ env.tag_version }}
+          body: |
+            Release of ${{ env.tag_version }}
