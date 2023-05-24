@@ -4,5 +4,13 @@
   },
   "extends": "../../tsconfig.json",
   "exclude": ["node_modules", "**/*.spec.tsx", "**/__mocks__/*.*"],
-  "include": ["src/**/*"]
+  "include": ["src/**/*"],
+  "references": [
+    {
+      "path": "../errorHandling"
+    },
+    {
+      "path": "../brand"
+    }
+  ]
 }

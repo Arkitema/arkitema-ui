@@ -2,6 +2,7 @@
   "compilerOptions": {
     "outDir": "./dist/esm"
   },
+  "composite": true,
   "extends": "../../tsconfig.json",
   "exclude": ["node_modules", "**/*.spec.tsx", "**/__mocks__/*.*"],
   "include": ["src/**/*"]
