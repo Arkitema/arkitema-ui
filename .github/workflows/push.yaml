@@ -31,11 +31,13 @@ jobs:
       - name: Format
         run: npm run format
 
+      - name: Build
+        run: npm build
+
       - name: Unit Tests
         run: npm run test
 
-      - name: Build
-        run: npm build
+
     # TODO - Figure out how this work upload stuff works when dealing with multiple packages
   #      - name: Upload artifact for deployment job
   #        uses: actions/upload-artifact@v3
