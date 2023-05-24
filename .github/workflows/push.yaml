@@ -23,7 +23,7 @@ jobs:
 
       # TODO - Make this into workspace commands
       - name: Install
-        run: npm ci
+        run: npm install
 
       - name: Lint
         run: npm run lint
