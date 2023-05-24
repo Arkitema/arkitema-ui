@@ -15,6 +15,9 @@
     "format:fix": "prettier --write src/",
     "format": "prettier --check src/"
   },
+  "peerDependencies": {
+    "@arkitema/brand": "0.1.0"
+  },
   "dependencies": {
     "@apollo/client": "^3.7.12",
     "@azure/msal-browser": "^2.36.0",
