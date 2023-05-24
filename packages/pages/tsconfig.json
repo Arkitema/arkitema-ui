@@ -1,12 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./dist/esm",
-    "paths": {
-      "@arkitema/brand": [
-        "../brand/dist/cjs/index.js",
-        "../brand/dist/esm/index.js"
-      ]
-    }
+    "rootDir": "./src"
   },
   "extends": "../../tsconfig.json",
   "exclude": [
@@ -19,7 +14,7 @@
   ],
   "references": [
     {
-      "path": "../errorHandling"
+      "path": "../errorhandling"
     },
     {
       "path": "../brand"

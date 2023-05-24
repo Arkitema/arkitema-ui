@@ -8,7 +8,7 @@
   "include": ["src/**/*"],
   "references": [
     {
-      "path": "../errorHandling"
+      "path": "../errorhandling"
     },
     {
       "path": "../brand"

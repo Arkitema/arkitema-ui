@@ -10,20 +10,26 @@
     "importHelpers": true,
     "target": "esnext",
     "module": "ESNext",
-    "lib": ["es5", "es2017", "dom"],
+    "lib": [
+      "es5",
+      "es2017",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "react-jsx",
-    "types": ["node"],
+    "types": [
+      "node"
+    ],
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": "src",
-    "isolatedModules": true,
     "esModuleInterop": true,
     "paths": {
-      "@arkitema/brand": ["./packages/brand/dist/cjs/index.js", "./packages/brand/dist/esm/index.js"]
+      "@arkitema/*": [
+        "./packages/*/"
+      ]
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./dist/cjs",
-    "rootDir": "./src",
+    "rootDir": "./src"
   },
   "extends": "../../tsconfig.cjs.json",
   "exclude": [
@@ -15,12 +15,6 @@
   "references": [
     {
       "path": "../errorhandling"
-    },
-    {
-      "path": "../brand"
-    },
-    {
-      "path": "../inputs"
     }
   ]
 }
