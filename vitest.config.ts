@@ -10,7 +10,7 @@ export default defineConfig({
     environment: 'jsdom',
     include: ['packages/**/src/**/*.spec.{ts,tsx}'],
     deps: {
-      inline: ['**/@lca/**'],
+      inline: ['**/@arkitema/**'],
     },
     setupFiles: './vitest.setup.ts',
     css: false,
