@@ -8,7 +8,7 @@
     "test": "vitest run",
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json",
     "build:watch": "tsc --watch",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 100",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "format:fix": "prettier --write src/",
