@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/esm"
+    "outDir": "./dist/esm",
+    "rootDir": "./src"
   },
   "extends": "../../tsconfig.json",
   "exclude": ["node_modules", "**/*.spec.tsx", "**/__mocks__/*.*"],

@@ -1,8 +1,15 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/esm"
+    "outDir": "./dist/esm",
+    "rootDir": "./src"
   },
   "extends": "../../tsconfig.json",
-  "exclude": ["node_modules", "**/*.spec.tsx", "**/__mocks__/*.*"],
-  "include": ["src/**/*", "./src/declaration.d.ts"]
+  "exclude": [
+    "node_modules",
+    "**/*.spec.tsx",
+    "**/__mocks__/*.*"
+  ],
+  "include": [
+    "./src/**/*"
+  ]
 }

@@ -21,6 +21,9 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": "src",
     "isolatedModules": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "paths": {
+      "@arkitema/brand": ["./packages/brand/dist/cjs/index.js", "./packages/brand/dist/esm/index.js"]
+    }
   }
 }

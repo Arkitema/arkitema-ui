@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/esm"
+    "outDir": "./dist/esm",
+    "rootDir": "./src"
   },
   "composite": true,
   "extends": "../../tsconfig.json",
