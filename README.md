@@ -38,7 +38,7 @@ packages/
     - theme
     - fonts
 
-License
+# License
 
 Unless otherwise described, the code in this repository is licensed under the [Apache-2.0 License](LICENSE). Please note
 that some modules, extensions or code herein might be otherwise licensed. This is indicated either in the root of the
