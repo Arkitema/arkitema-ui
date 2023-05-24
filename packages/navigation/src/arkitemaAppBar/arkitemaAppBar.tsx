@@ -47,7 +47,7 @@ export const ArkitemaAppBar: React.FC<ArkitemaAppBarProps> = (props) => {
                       sx={{ color: '#333333', font: theme.typography.fontFamily }}
                       style={{
                         textTransform: 'none',
-                        font:  theme.typography.fontFamily,
+                        font: theme.typography.fontFamily,
                         fontSize: '19px',
                         marginLeft: '23px',
                         marginTop: '33px',

@@ -46,7 +46,7 @@ export function Logo(props: LogoProps) {
           sx={{
             flexGrow: 1,
             marginLeft: '11.27px',
-            font:  theme.typography.fontFamily,
+            font: theme.typography.fontFamily,
             fontSize: textSize + 'px',
             fontWeight: 'medium',
             color: theme.palette.common.black,

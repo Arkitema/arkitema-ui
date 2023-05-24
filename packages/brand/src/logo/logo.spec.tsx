@@ -16,6 +16,6 @@ describe('logo', () => {
     expect(container).toBeTruthy()
     expect(await screen.findByTestId('logo')).toBeTruthy()
     expect(await screen.findByText('Arkitema')).toBeTruthy()
-    expect(await screen.findByTestId('logo')).toHaveAttribute('href', '/');
+    expect(await screen.findByTestId('logo')).toHaveAttribute('href', '/')
   })
 })

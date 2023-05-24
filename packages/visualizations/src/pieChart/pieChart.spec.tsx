@@ -19,13 +19,11 @@ describe.skip('PieChart', () => {
   //   render(<PieChart {...testProps} />)
   //   expect(screen.getByRole('svg')).toBeInTheDocument()
   // })
-
   // it('displays the correct values', () => {
   //   render(<PieChart {...testProps} />)
   //   expect(screen.getByText('60')).toBeInTheDocument()
   //   expect(screen.getByText('kg CO2-eq /m2/year')).toBeInTheDocument()
   // })
-
   // it('selects a data point when clicked', () => {
   //   render(<PieChart {...testProps} />)
   //   const dataPoint2 = screen.getByText('Data point 2')

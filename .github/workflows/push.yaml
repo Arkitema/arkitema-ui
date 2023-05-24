@@ -9,7 +9,6 @@ env:
   node_version: '18.x'
   app_name: 'ui'
 
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -20,9 +19,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.node_version }}
-          cache: "npm"
+          cache: 'npm'
 
-    # TODO - Make this into workspace commands
+      # TODO - Make this into workspace commands
       - name: Install
         run: npm ci
 
@@ -38,23 +37,23 @@ jobs:
       - name: Build
         run: npm build
     # TODO - Figure out how this work upload stuff works when dealing with multiple packages
-#      - name: Upload artifact for deployment job
-#        uses: actions/upload-artifact@v3
-#        with:
-#          name: storybook-app
-#          path: ./dist
-    # TODO - Test and build Storybook
-#      - name: Storybook Tests
-#        run: npm run storybook:test
+  #      - name: Upload artifact for deployment job
+  #        uses: actions/upload-artifact@v3
+  #        with:
+  #          name: storybook-app
+  #          path: ./dist
+  # TODO - Test and build Storybook
+  #      - name: Storybook Tests
+  #        run: npm run storybook:test
 
-#      - name: Storybook Build
-#        run: npm run storybook:build
+  #      - name: Storybook Build
+  #        run: npm run storybook:build
 
-#      - name: Upload artifact for deployment job
-#        uses: actions/upload-artifact@v3
-#        with:
-#          name: storybook-app
-#          path: ./dist
+  #      - name: Upload artifact for deployment job
+  #        uses: actions/upload-artifact@v3
+  #        with:
+  #          name: storybook-app
+  #          path: ./dist
 
   publish-packages:
     name: Publish NPM Package
@@ -63,7 +62,7 @@ jobs:
       - test
     steps:
       - uses: actions/checkout@v3
-    # TODO - Should run for each updated package
+      # TODO - Should run for each updated package
       - name: Download Artifacts from Build Job
         uses: actions/download-artifact@v3
         with:
@@ -103,7 +102,7 @@ jobs:
     name: Release
     env:
       # TODO - how do we handle versioning?
-      tag_version: "test"
+      tag_version: 'test'
     steps:
       - name: Release
         uses: softprops/action-gh-release@v1

@@ -265,18 +265,17 @@ export default withTooltip<BarStackHorizontalProps, TooltipData>(
 )
 
 export type Margins = {
-  right?: number;
-  left?: number;
-  top?: number;
-  bottom?: number;
+  right?: number
+  left?: number
+  top?: number
+  bottom?: number
 }
 
-
 export type LegendElement = {
-  margins: Margins;
-  width: number;
-  colorScale:any;
-  fontFamily: string;
+  margins: Margins
+  width: number
+  colorScale: any
+  fontFamily: string
 }
 
 function LegendElement({ margins, width, colorScale, fontFamily }: LegendElement) {
