@@ -92,8 +92,8 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            az storage blob delete-batch --sas-token ${{ secrets.AZURE_CREDENTIALS }} --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} --source ${{ vars.BUNDLES_CONTAINER_NAME}} --pattern "bundles/${{ env.app_name }}/main/*"
-            az storage blob upload-batch --sas-token ${{ secrets.AZURE_CREDENTIALS }} --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} --auth-mode key -d ${{ vars.BUNDLES_CONTAINER_NAME}} --destination-path "bundles/${{ env.app_name }}/main" -s .
+            az storage blob delete-batch --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} --source ${{ vars.BUNDLES_CONTAINER_NAME}} --pattern "bundles/${{ env.app_name }}/main/*"
+            az storage blob upload-batch --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} --auth-mode key -d ${{ vars.BUNDLES_CONTAINER_NAME}} --destination-path "bundles/${{ env.app_name }}/main" -s .
 
   release:
     runs-on: ubuntu-latest
@@ -102,7 +102,7 @@ jobs:
       - publish-packages
     name: Release
     env:
-      # TODO - how do we handle versioning?
+      # TODO - how do we handle versioning? - Lerna?
       tag_version: 'test'
     steps:
       - name: Release
