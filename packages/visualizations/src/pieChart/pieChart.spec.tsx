@@ -1,20 +1,20 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import PieChart, { PieProps } from './pieChart'
+//import PieChart, { PieProps } from './pieChart'
 import React from 'react'
 
-const testProps: PieProps = {
-  width: 400,
-  height: 400,
-  colors: ['#000', '#111', '#222'],
-  data: [
-    { label: 'Data point 1', value: 10 },
-    { label: 'Data point 2', value: 20 },
-    { label: 'Data point 3', value: 30 },
-  ],
-}
+// const testProps: PieProps = {
+//   width: 400,
+//   height: 400,
+//   colors: ['#000', '#111', '#222'],
+//   data: [
+//     { label: 'Data point 1', value: 10 },
+//     { label: 'Data point 2', value: 20 },
+//     { label: 'Data point 3', value: 30 },
+//   ],
+// }
 
-xdescribe('PieChart', () => {
+describe.skip('PieChart', () => {
   it('renders correctly', () => {
     render(<PieChart {...testProps} />)
     expect(screen.getByRole('svg')).toBeInTheDocument()

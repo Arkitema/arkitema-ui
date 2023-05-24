@@ -7,7 +7,7 @@
   "scripts": {
     "test": "vitest run",
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json",
-    "postbuild": "copyfiles --flat ./src/assets/*.{png,svg,ico} ./dist/esm/assets/ && copyfiles --flat ./src/assets/*.{png,svg,ico} ./dist/cjs/assets/",
+    "postbuild": "copyfiles --flat ./src/assets/*.{png,svg,ico} ./dist/esm/assets/ && copyfiles --flat ./src/fonts/*.{css,otf} ./dist/esm/fonts/ && copyfiles --flat ./src/{assets,fonts}/*.{png,svg,ico,css} ./dist/cjs/assets/ && copyfiles --flat ./src/fonts/*.{css,otf} ./dist/cjs/fonts/",
     "build:watch": "tsc --watch",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",

@@ -4,6 +4,7 @@
   "description": "Shared visualisations library for LCAcollect",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
+  "type": "module",
   "files": [
     "dist"
   ],
