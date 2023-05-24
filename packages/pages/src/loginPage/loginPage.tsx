@@ -1,7 +1,7 @@
 import { InteractionStatus } from '@azure/msal-browser'
 import { useMsal } from '@azure/msal-react'
 import PropTypes from 'prop-types'
-import react, { useCallback, useState } from 'react'
+import { useCallback, useState } from 'react'
 import { Button, Container, Paper, Stack, Typography } from '@mui/material'
 import { ErrorMessage } from '@arkitema/errorhandling'
 import { useNavigate } from 'react-router-dom'

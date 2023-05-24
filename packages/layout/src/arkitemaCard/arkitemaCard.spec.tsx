@@ -1,9 +1,8 @@
 import '@testing-library/jest-dom'
 import { render, screen, cleanup } from '@testing-library/react'
 import React from 'react'
-import { ArkitemaCard } from './arkitemaCard'
+import { ArkitemaCard, CardInfo } from './arkitemaCard'
 import { MemoryRouter, Route, Routes } from 'react-router-dom'
-import { CardInfo } from './arkitemaCard'
 
 const cardInfo: CardInfo = {
   id: 'id',
