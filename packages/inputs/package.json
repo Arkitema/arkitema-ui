@@ -15,9 +15,6 @@
     "format:fix": "prettier --write src/",
     "format": "prettier --check src/"
   },
-  "peerDependencies": {
-    "@arkitema/brand": "^0.1.0"
-  },
   "dependencies": {
     "@apollo/client": "^3.7.12",
     "@azure/msal-browser": "^2.36.0",
@@ -30,7 +27,8 @@
     "browser-image-compression": "^2.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.10.0"
+    "react-router-dom": "^6.10.0",
+    "@arkitema/brand": "^0.1.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.7",

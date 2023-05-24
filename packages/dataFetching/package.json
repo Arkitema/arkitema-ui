@@ -27,9 +27,7 @@
     "browser-image-compression": "^2.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.10.0"
-  },
-  "peerDependencies": {
+    "react-router-dom": "^6.10.0",
     "@arkitema/errorhandling": "^0.1.0"
   },
   "devDependencies": {
