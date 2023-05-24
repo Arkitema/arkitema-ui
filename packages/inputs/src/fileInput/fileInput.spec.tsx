@@ -1,9 +1,10 @@
 import React from 'react'
-import { render, screen, fireEvent } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import { FileInput } from './fileInput'
 
 describe('FileInput', () => {
   it('renders the upload project image text', () => {
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
     render(<FileInput text='Upload Project Image' imageData='' setImageData={() => {}} />)
     const textElement = screen.getByText('Upload Project Image')
     expect(textElement).toBeTruthy()

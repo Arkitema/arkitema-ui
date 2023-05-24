@@ -264,11 +264,19 @@ export default withTooltip<BarStackHorizontalProps, TooltipData>(
   },
 )
 
+export type Margins = {
+  right?: number;
+  left?: number;
+  top?: number;
+  bottom?: number;
+}
+
+
 export type LegendElement = {
-  margins: any
-  width: number
-  colorScale: any
-  fontFamily: string
+  margins: Margins;
+  width: number;
+  colorScale:any;
+  fontFamily: string;
 }
 
 function LegendElement({ margins, width, colorScale, fontFamily }: LegendElement) {
@@ -276,9 +284,9 @@ function LegendElement({ margins, width, colorScale, fontFamily }: LegendElement
     <div
       style={{
         position: 'absolute',
-        bottom: margins.bottom / 2 - 15,
-        left: margins.left,
-        width: width - margins.right - margins.left,
+        bottom: margins.bottom ? margins.bottom / 2 - 15 : 0,
+        left: margins?.left,
+        width: margins.right && margins.left ? width - margins.right - margins.left : 0,
         display: 'flex',
         justifyContent: 'center',
         fontSize: '14px',

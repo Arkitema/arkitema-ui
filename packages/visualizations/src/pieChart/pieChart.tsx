@@ -166,22 +166,24 @@ export type TextProps = {
 }
 
 function TextElement({ textContent, chartWidth, height, fontSize, fontFamily = defaultFontFamily }: TextProps) {
-  const textRef = useRef(null)
+  const textRef = useRef<SVGTextElement>(null);
 
   useEffect(() => {
-    // @ts-ignore: Object is possibly 'null'.
-    const { width } = textRef.current.getBBox()
+    const textElement = textRef.current;
 
-    // Calculate the x and y position based on the width of the text element
-    const x = chartWidth - chartWidth / 2 + width / 2
-    const y = height
+    if (textElement) {
+      const { width } = textElement.getBBox();
 
-    // Set the x and y position of the text element
-    // @ts-ignore: Object is possibly 'null'.
-    textRef.current.setAttribute('x', x)
-    // @ts-ignore: Object is possibly 'null'.
-    textRef.current.setAttribute('y', y)
-  }, [textContent])
+      // Calculate the x and y position based on the width of the text element
+      const x = chartWidth - chartWidth / 2 + width / 2;
+      const y = height;
+
+      // Set the x and y position of the text element
+      textElement.setAttribute('x', String(x));
+      textElement.setAttribute('y', String(y));
+    }
+  }, [textContent, chartWidth, height]);
+  
 
   return (
     <text

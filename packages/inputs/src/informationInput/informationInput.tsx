@@ -25,7 +25,7 @@ export const InformationInput = (props: InformationInputProps) => {
         label={label}
       >
         {options.map((option) => {
-          return <MenuItem value={option}>{option}</MenuItem>
+          return <MenuItem key={1} value={option}>{option}</MenuItem>
         })}
       </Select>
     </FormControl>
