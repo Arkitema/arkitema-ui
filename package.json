@@ -8,13 +8,14 @@
   ],
   "scripts": {
     "build": "npm run build --workspaces --if-present",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "format:fix": "prettier --write src/",
-    "format": "prettier --check src/",
-    "test": "vitest run"
+    "lint": "npm run lint --workspaces --if-present",
+    "lint:fix": "npm run lint:fix --workspaces --if-present",
+    "fix": "npm run fix --workspaces --if-present",
+    "format:fix": "npm run format:fix --workspaces --if-present",
+    "format": "npm run format --workspaces --if-present",
+    "storybook": "npm run storybook --workspaces --if-present",
+    "storybook:build": "npm run storybook:build --workspaces --if-present",
+    "chromatic": "npm run chromatic --workspaces --if-present"
   },
   "dependencies": {
     "@apollo/client": "^3.7.12",
