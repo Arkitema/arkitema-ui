@@ -1,7 +1,7 @@
 {
   "name": "@arkitema/visualizations",
   "version": "1.0.4",
-  "description": "Shared visualisations library for LCAcollect",
+  "description": "Arkitema Visualisations Library",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "type": "module",
@@ -23,11 +23,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lcacollect/shared-components-frontend.git"
+    "url": "git+https://github.com/Arkitema/arkitema-ui.git"
   },
   "keywords": [],
   "author": "",
-  "license": "Proprietary",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-essentials": "^6.4.22",

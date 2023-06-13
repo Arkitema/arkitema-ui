@@ -21,9 +21,16 @@ jobs:
           node-version: ${{ env.node_version }}
           cache: 'npm'
 
-      # TODO - Make this into workspace commands
+      - name: Cache node_modules
+        id: cache-modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ env.node_version }}-build-${{ hashFiles('package.json') }}
+
       - name: Install
-        run: npm install
+        if: steps.cache-modules.outputs.cache-hit != 'true'
+        run: npm ci
 
       - name: Lint
         run: npm run lint
@@ -37,24 +44,24 @@ jobs:
       - name: Unit Tests
         run: npm run test
 
-    # TODO - Figure out how this work upload stuff works when dealing with multiple packages
-  #      - name: Upload artifact for deployment job
-  #        uses: actions/upload-artifact@v3
-  #        with:
-  #          name: storybook-app
-  #          path: ./dist
+      - name: Upload Artifacts for Publishing
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-folders
+          path: packages/**/dist
+
   # TODO - Test and build Storybook
   #      - name: Storybook Tests
   #        run: npm run storybook:test
 
-  #      - name: Storybook Build
-  #        run: npm run storybook:build
+      - name: Storybook Build
+        run: npm run storybook:build
 
-  #      - name: Upload artifact for deployment job
-  #        uses: actions/upload-artifact@v3
-  #        with:
-  #          name: storybook-app
-  #          path: ./dist
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v3
+        with:
+          name: storybooks
+          path:  packages/**/storybook-static
 
   publish-packages:
     name: Publish NPM Package
@@ -63,51 +70,70 @@ jobs:
       - test
     steps:
       - uses: actions/checkout@v3
-      # TODO - Should run for each updated package
+
+      - name: Cache node_modules
+        id: cache-modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ env.node_version }}-build-${{ hashFiles('package.json') }}
+
+      - name: Install
+        if: steps.cache-modules.outputs.cache-hit != 'true'
+        run: npm ci
+
       - name: Download Artifacts from Build Job
         uses: actions/download-artifact@v3
         with:
-          name: ${{ env.artifact_name }}
-          path: ./dist
+          name: dist-folders
+          path: packages/
 
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ env.node_version }}
           registry-url: https://registry.npmjs.org/
 
-      - run: npm publish
+      - run: lerna publish minor --create-release github --summary-file PUBLISHED_PACKAGES
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
 
+      - name: Upload PUBLISHED_PACKAGES Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: published_packages
+          path: PUBLISHED_PACKAGES
+
   publish-storybook:
     runs-on: ubuntu-latest
-    needs: test
+    needs:
+      - test
     steps:
       - name: Download Artifact from Build Job
         uses: actions/download-artifact@v3
         with:
-          name: storybook-app
+          name: storybooks
+          path: packages/
 
       - name: Upload to Blob Storage
         uses: azure/CLI@v1
         with:
           inlineScript: |
             az storage blob delete-batch --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} --source ${{ vars.BUNDLES_CONTAINER_NAME}} --pattern "bundles/${{ env.app_name }}/main/*"
-            az storage blob upload-batch --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} --auth-mode key -d ${{ vars.BUNDLES_CONTAINER_NAME}} --destination-path "bundles/${{ env.app_name }}/main" -s .
-
-  release:
-    runs-on: ubuntu-latest
-    needs:
-      - publish-storybook
-      - publish-packages
-    name: Release
-    env:
-      # TODO - how do we handle versioning? - Lerna?
-      tag_version: 'test'
-    steps:
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: ${{ env.tag_version }}
-          body: |
-            Release of ${{ env.tag_version }}
+            az storage blob upload-batch --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} --auth-mode key -d ${{ vars.BUNDLES_CONTAINER_NAME}} --destination-path "bundles/${{ env.app_name }}/main" -s ./packages/**/storybook-static
+#
+#  release:
+#    runs-on: ubuntu-latest
+#    needs:
+#      - publish-storybook
+#      - publish-packages
+#    name: Release
+#    env:
+#      # TODO - how do we handle versioning? - Lerna?
+#      tag_version: 'test'
+#    steps:
+#      - name: Release
+#        uses: softprops/action-gh-release@v1
+#        with:
+#          tag_name: ${{ env.tag_version }}
+#          body: |
+#            Release of ${{ env.tag_version }}
