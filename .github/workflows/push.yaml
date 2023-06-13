@@ -96,7 +96,7 @@ jobs:
           node-version: ${{ env.node_version }}
           registry-url: https://registry.npmjs.org/
 
-      - run: lerna publish minor --yes --create-release github --summary-file PUBLISHED_PACKAGES
+      - run: lerna publish minor --yes --create-release github --conventional-commits true --summary-file PUBLISHED_PACKAGES
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -123,7 +123,7 @@ jobs:
         with:
           inlineScript: |
             az storage blob delete-batch --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} --source ${{ vars.BUNDLES_CONTAINER_NAME}} --pattern "bundles/${{ env.app_name }}/main/*"
-            az storage blob upload-batch --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} --auth-mode key -d ${{ vars.BUNDLES_CONTAINER_NAME}} --destination-path "bundles/${{ env.app_name }}/main" -s ./packages/**/storybook-static
+            az storage blob upload-batch --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} --auth-mode key -d ${{ vars.BUNDLES_CONTAINER_NAME}} --destination-path "bundles/${{ env.app_name }}/main" -s ./packages/**/storybook-static/*
 #
 #  release:
 #    runs-on: ubuntu-latest
