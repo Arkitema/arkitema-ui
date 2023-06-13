@@ -22,9 +22,8 @@
     "fix": "npm run fix --workspaces --if-present",
     "format:fix": "npm run format:fix --workspaces --if-present",
     "format": "npm run format --workspaces --if-present",
-    "storybook": "npm run storybook --workspaces --if-present",
     "storybook:build": "npm run storybook:build --workspaces --if-present",
-    "chromatic": "npm run chromatic --workspaces --if-present"
+    "storybook:test": "npm run storybook:test --workspaces --if-present"
   },
   "dependencies": {
     "@apollo/client": "^3.7.12",

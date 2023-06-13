@@ -53,9 +53,8 @@ jobs:
           name: dist-folders
           path: packages/**/dist
 
-  # TODO - Test and build Storybook
-  #      - name: Storybook Tests
-  #        run: npm run storybook:test
+      - name: Storybook Tests
+        run: npm run storybook:test
 
       - name: Storybook Build
         run: npm run storybook:build
@@ -82,7 +81,6 @@ jobs:
           key: ${{ env.node_version }}-build-${{ hashFiles('package.json') }}
 
       - name: Install
-        if: steps.cache-modules.outputs.cache-hit != 'true'
         run: npm ci
 
       - name: Download Artifacts from Build Job
@@ -108,6 +106,7 @@ jobs:
           path: PUBLISHED_PACKAGES
 
   publish-storybook:
+    name: Publish Storybooks
     runs-on: ubuntu-latest
     needs:
       - test
