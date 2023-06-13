@@ -80,21 +80,21 @@ jobs:
           path: node_modules
           key: ${{ env.node_version }}-build-${{ hashFiles('package.json') }}
 
-      - name: Install
-        run: npm ci
-
       - name: Download Artifacts from Build Job
         uses: actions/download-artifact@v3
         with:
           name: dist-folders
           path: packages/
 
+      - name: Install
+        run: npm ci
+
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ env.node_version }}
           registry-url: https://registry.npmjs.org/
 
-      - run: lerna publish minor --yes --create-release github --conventional-commits true --summary-file PUBLISHED_PACKAGES
+      - run: lerna publish --yes --create-release github --conventional-commits true --summary-file PUBLISHED_PACKAGES
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
