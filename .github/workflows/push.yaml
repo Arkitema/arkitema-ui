@@ -26,7 +26,7 @@ jobs:
 
       - name: Cache node_modules
         id: cache-modules
-        uses: actions/cache@v1
+        uses: actions/cache@v3
         with:
           path: node_modules
           key: ${{ env.node_version }}-build-${{ hashFiles('package.json') }}
@@ -99,6 +99,7 @@ jobs:
       - run: lerna publish minor --yes --create-release github --summary-file PUBLISHED_PACKAGES
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload PUBLISHED_PACKAGES Artifact
         uses: actions/upload-artifact@v3
