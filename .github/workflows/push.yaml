@@ -9,6 +9,9 @@ env:
   node_version: '18.x'
   app_name: 'ui'
 
+permissions:
+  contents: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -73,7 +76,7 @@ jobs:
 
       - name: Cache node_modules
         id: cache-modules
-        uses: actions/cache@v1
+        uses: actions/cache@v3
         with:
           path: node_modules
           key: ${{ env.node_version }}-build-${{ hashFiles('package.json') }}
@@ -93,7 +96,7 @@ jobs:
           node-version: ${{ env.node_version }}
           registry-url: https://registry.npmjs.org/
 
-      - run: lerna publish minor --create-release github --summary-file PUBLISHED_PACKAGES
+      - run: lerna publish minor --yes --create-release github --summary-file PUBLISHED_PACKAGES
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
 
