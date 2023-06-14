@@ -11,6 +11,9 @@ env:
   node_version: '18.x'
   app_name: 'ui'
 
+permissions:
+  contents: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -23,8 +26,15 @@ jobs:
           node-version: ${{ env.node_version }}
           cache: 'npm'
 
-      # TODO - Make this into workspace commands
+      - name: Cache node_modules
+        id: cache-modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ env.node_version }}-build-${{ hashFiles('package.json') }}
+
       - name: Install
+        if: steps.cache-modules.outputs.cache-hit != 'true'
         run: npm ci
 
       - name: Lint
@@ -38,24 +48,34 @@ jobs:
 
       - name: Build
         run: npm build
-    # TODO - Figure out how this work upload stuff works when dealing with multiple packages
-  #      - name: Upload artifact for deployment job
-  #        uses: actions/upload-artifact@v3
-  #        with:
-  #          name: storybook-app
-  #          path: ./dist
-  # TODO - Test and build Storybook
-  #      - name: Storybook Tests
-  #        run: npm run storybook:test
 
-  #      - name: Storybook Build
-  #        run: npm run storybook:build
+      - name: Storybook Tests
+        run: npm run storybook:test
 
-  #      - name: Upload artifact for deployment job
-  #        uses: actions/upload-artifact@v3
-  #        with:
-  #          name: storybook-app
-  #          path: ./dist
+      - name: Storybook Build
+        run: npm run storybook:build
+
+      - name: Changed Package Paths
+        run: echo "CHANGED_PACKAGE_PATHS=$(for pkg in $(lerna changed | xargs); do echo 'packages/$pkg/storybook-static'; done)" >> $GITHUB_ENV
+
+      - name: Changed Package URLs
+        run: echo "CHANGED_PACKAGE_URLS=$(for pkg in $(lerna changed | xargs); do echo 'https://ui.arkitema.com/${{ github.ref_name }}/$pkg/'; done)" >> $GITHUB_ENV
+
+      - name: Upload Storybook Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: storybooks
+          path: |
+            ${{ env.CHANGED_PACKAGE_PATHS }}
+
+      - name: Create Comment on PR
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            Changed Storybooks can be found at:
+            ${{ env.CHANGED_PACKAGE_URLS }}
+
   publish-storybook:
     runs-on: ubuntu-latest
     needs: test
@@ -63,11 +83,21 @@ jobs:
       - name: Download Artifact from Build Job
         uses: actions/download-artifact@v3
         with:
-          name: storybook-app
+          name: storybooks
 
       - name: Upload to Blob Storage
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            az storage blob delete-batch --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} --source ${{ vars.BUNDLES_CONTAINER_NAME}} --pattern "bundles/${{ env.app_name }}/${{ github.ref_name }}/*"
-            az storage blob upload-batch --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} --auth-mode key -d ${{ vars.BUNDLES_CONTAINER_NAME}} --destination-path "bundles/${{ env.app_name }}/${{ github.ref_name }}" -s .
+            az storage blob delete-batch \
+              --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} \
+              --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} \
+              --source ${{ vars.BUNDLES_CONTAINER_NAME}} \
+              --pattern "bundles/${{ env.app_name }}/${{ github.ref_name }}/*"
+            az storage blob upload-batch \
+              --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} \
+              --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} \
+              --auth-mode key -d ${{ vars.BUNDLES_CONTAINER_NAME}} \
+              --destination-path "bundles/${{ env.app_name }}/${{ github.ref_name }}" \
+              -s ./packages \
+              --pattern **/storybook-static/*
