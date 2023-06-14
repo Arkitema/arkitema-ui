@@ -79,6 +79,7 @@ jobs:
   publish-storybook:
     runs-on: ubuntu-latest
     needs: test
+    name: Publish Storybooks
     steps:
       - name: Download Artifact from Build Job
         uses: actions/download-artifact@v3
