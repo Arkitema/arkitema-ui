@@ -1,6 +1,6 @@
 {
   "name": "@arkitema/inputs",
-  "version": "0.1.0",
+  "version": "1.0.5",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "license": "Apache-2.0",
@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.12",
+    "@arkitema/brand": "^1.0.5",
     "@azure/msal-browser": "^2.36.0",
     "@azure/msal-react": "^1.5.6",
     "@emotion/react": "^11.10.6",
@@ -30,8 +31,7 @@
     "browser-image-compression": "^2.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.10.0",
-    "@arkitema/brand": "^0.1.0"
+    "react-router-dom": "^6.10.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.7",

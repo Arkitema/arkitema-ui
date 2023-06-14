@@ -1,6 +1,6 @@
 {
   "name": "@arkitema/brand",
-  "version": "0.1.0",
+  "version": "1.0.5",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "license": "Apache-2.0",
@@ -34,7 +34,6 @@
     "react-router-dom": "^6.10.0"
   },
   "devDependencies": {
-    "copyfiles": "^2.4.1",
     "@storybook/addon-essentials": "^7.0.7",
     "@storybook/addon-interactions": "^7.0.7",
     "@storybook/addon-links": "^7.0.7",
@@ -49,6 +48,7 @@
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
     "@vitejs/plugin-react": "^4.0.0",
+    "copyfiles": "^2.4.1",
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
