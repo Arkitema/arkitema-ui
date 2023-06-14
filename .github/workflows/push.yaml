@@ -96,7 +96,7 @@ jobs:
 
       - uses: fregante/setup-git-user@v2
 
-      - run: lerna publish --yes --create-release github --conventional-commits true --summary-file published_packages.json
+      - run: lerna publish --yes --create-release github --conventional-commits true --summary-file
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -105,7 +105,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: published_packages
-          path: published_packages.json
+          path: lerna-publish-summary.json
 
   publish-storybook:
     name: Publish Storybooks
