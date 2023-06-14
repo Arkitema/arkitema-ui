@@ -94,6 +94,8 @@ jobs:
           node-version: ${{ env.node_version }}
           registry-url: https://registry.npmjs.org/
 
+      - uses: fregante/setup-git-user@v2
+
       - run: lerna publish --yes --create-release github --conventional-commits true --summary-file PUBLISHED_PACKAGES
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
