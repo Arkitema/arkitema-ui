@@ -63,7 +63,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: storybooks
-          path:  packages/**/storybook-static
+          path: packages/**/storybook-static
 
   publish-packages:
     name: Publish NPM Package
