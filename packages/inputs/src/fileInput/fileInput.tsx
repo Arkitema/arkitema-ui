@@ -40,7 +40,7 @@ export const FileInput = (props: FileInputProps) => {
   }
 
   return (
-    <div style={{ width: '250px', marginTop: '30px' }}>
+    <div style={{ width: '250px', marginTop: '30px' }} aria-label='file-input'>
       <Typography
         component='div'
         sx={{
