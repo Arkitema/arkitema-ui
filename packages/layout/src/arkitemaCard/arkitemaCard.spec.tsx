@@ -28,7 +28,10 @@ describe('CarbonCard', () => {
     const { baseElement } = render(
       <MemoryRouter initialEntries={['/projects']}>
         <Routes>
-          <Route path='/projects' element={<ArkitemaCard cardInfo={cardInfo} cardKey={1} data-testid='carbon-card' />} />
+          <Route
+            path='/projects'
+            element={<ArkitemaCard cardInfo={cardInfo} cardKey={1} data-testid='carbon-card' />}
+          />
         </Routes>
       </MemoryRouter>,
     )

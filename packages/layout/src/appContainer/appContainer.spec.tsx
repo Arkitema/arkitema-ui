@@ -7,8 +7,8 @@ describe('AppContainer', () => {
   it('renders children', () => {
     const { getByTestId } = render(
       <AppContainer>
-        <div data-testid="child-component">Content</div>
-      </AppContainer>
+        <div data-testid='child-component'>Content</div>
+      </AppContainer>,
     )
     expect(getByTestId('child-component')).toBeInTheDocument()
   })

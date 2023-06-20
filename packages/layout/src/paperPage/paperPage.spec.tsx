@@ -9,7 +9,7 @@ describe('PaperPage', () => {
     const { getByText } = render(
       <PaperPage>
         <div>{childText}</div>
-      </PaperPage>
+      </PaperPage>,
     )
     expect(getByText(childText)).toBeInTheDocument()
   })
@@ -18,7 +18,7 @@ describe('PaperPage', () => {
     const { getByTestId } = render(
       <PaperPage data-testid={testId}>
         <div>Hello, world!</div>
-      </PaperPage>
+      </PaperPage>,
     )
 
     expect(getByTestId(testId)).toBeInTheDocument()
@@ -28,7 +28,7 @@ describe('PaperPage', () => {
     const { container } = render(
       <PaperPage sx={customStyles}>
         <div>Hello, world!</div>
-      </PaperPage>
+      </PaperPage>,
     )
 
     expect(container.firstChild).toHaveStyle('background-color: red')
@@ -36,9 +36,9 @@ describe('PaperPage', () => {
 
   it('applies maxWidth correctly', () => {
     const { container } = render(
-      <PaperPage maxWidth="sm">
+      <PaperPage maxWidth='sm'>
         <div>Hello, world!</div>
-      </PaperPage>
+      </PaperPage>,
     )
 
     expect(container.querySelector('.MuiContainer-maxWidthSm')).toBeInTheDocument()
