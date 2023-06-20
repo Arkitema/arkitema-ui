@@ -10,8 +10,8 @@ interface AppContainerProps {
 export const AppContainer: React.FC<AppContainerProps> = ({ children }) => {
   return (
     <React.Suspense fallback={null}>
-      <ErrorBoundary>
-        <ThemeProvider theme={theme}>
+      <ErrorBoundary >
+        <ThemeProvider theme={theme} >
           <Container
             data-testid='app-container'
             maxWidth={false}

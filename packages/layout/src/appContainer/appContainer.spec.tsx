@@ -1,16 +1,15 @@
 import '@testing-library/jest-dom'
+import React from 'react'
 import { render, screen } from '@testing-library/react'
 import { AppContainer } from './appContainer'
-import React from 'react'
 
-describe('appContainer', () => {
-  it('should render successfully', async () => {
-    const { baseElement } = render(
+describe('AppContainer', () => {
+  it('renders children', () => {
+    const { getByTestId } = render(
       <AppContainer>
-        <></>
-      </AppContainer>,
+        <div data-testid="child-component">Content</div>
+      </AppContainer>
     )
-    expect(baseElement).toBeTruthy()
-    expect(await screen.findByTestId('app-container')).toBeInTheDocument()
+    expect(getByTestId('child-component')).toBeInTheDocument()
   })
 })
