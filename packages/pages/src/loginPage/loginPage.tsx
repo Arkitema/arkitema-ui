@@ -60,15 +60,6 @@ export const LoginPage: React.FC<LoginProps> = (props) => {
             Login
           </Button>
           <ErrorMessage error={error} />
-          <Typography
-            variant='caption'
-            fontSize={11}
-            color='grey'
-            component='div'
-            sx={{ float: 'right', marginTop: 3 }}
-          >
-            By logging in you accept the {<a href='https://www.lcacollect.dk'>terms and conditions</a>} for LCAcollect.
-          </Typography>
         </Paper>
       </Stack>
     </Container>
