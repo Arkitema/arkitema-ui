@@ -64,6 +64,45 @@ export const ArkitemaCard: React.FC<CardProps> = (props) => {
         >
           <StyledLinearGradient />
           <Typography
+  variant={size === 'large' ? 'h3' : 'h4'}
+  component='div'
+  sx={
+    (size === 'large' || size === 'xl')
+      ? {
+          position: 'absolute',
+          top: '83%',
+          display: 'flex',
+          alignItems: 'center',
+          color: theme.palette.common.white,
+          zIndex: 2,
+          ...(size === 'large'
+            ? {
+                right: '10px',
+                fontSize: theme.typography.h5,
+              }
+            : {
+                right: '15px',
+                fontSize: theme.typography.h4,
+              }),
+        }
+      : {
+          position: 'absolute',
+          top: '83%',
+          display: 'flex',
+          alignItems: 'center',
+          color: theme.palette.common.white,
+          zIndex: 2,
+          left: '10px', // Adjusted to grow from the left
+          fontSize: theme.typography.h4,
+        }
+  }
+>
+  <div style={{ marginLeft: 'auto' }}>
+    {cardInfo.title}
+  </div>
+</Typography>
+
+          {/* <Typography
             variant={size === 'large' ? 'h3' : 'h4'}
             component='div'
             sx={
@@ -96,7 +135,7 @@ export const ArkitemaCard: React.FC<CardProps> = (props) => {
             }
           >
             {cardInfo.title}
-          </Typography>
+          </Typography> */}
           <Typography
             variant={size === 'large' ? 'h2' : 'h3'}
             component='div'
