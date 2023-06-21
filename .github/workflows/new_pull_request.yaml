@@ -43,11 +43,11 @@ jobs:
       - name: Format
         run: npm run format
 
+      - name: Build
+        run: npm run build
+
       - name: Unit Tests
         run: npm run test
-
-      - name: Build
-        run: npm build
 
       - name: Storybook Tests
         run: npm run storybook:test
