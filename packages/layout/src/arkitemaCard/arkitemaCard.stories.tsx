@@ -16,8 +16,8 @@ type Story = StoryObj<typeof ArkitemaCard>
 export const Primary: Story = {
   args: {
     cardKey: 1,
-    cardInfo: { id: 'id', title: 'Card Title', subtitle: 'Subtitle', unit: 'CO2', imageUrl: 'URL' },
-    size: 'large',
+    cardInfo: { id: 'id', title: 'Kronborg Strandby', subtitle: '76', unit: 'CO2/m2/year', imageUrl: StockImage },
+    size: 'small',
   },
   decorators: [
     (StoryComponent) => (
