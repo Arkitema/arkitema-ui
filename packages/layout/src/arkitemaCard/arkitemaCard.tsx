@@ -70,8 +70,9 @@ export const ArkitemaCard: React.FC<CardProps> = (props) => {
               size === 'large'
                 ? {
                     position: 'absolute',
-                    left: 'calc(50% - 7vw)',
+                    left: 'calc(50% - 10vw)',
                     top: '12%',
+                    fontSize: theme.typography.h2,
                     color: theme.palette.common.white,
                     zIndex: 2,
                   }
@@ -98,13 +99,33 @@ export const ArkitemaCard: React.FC<CardProps> = (props) => {
           <Typography
             variant={size === 'large' ? 'h2' : 'h3'}
             component='div'
-            sx={{
-              position: 'absolute',
-              top: '74%',
-              right: 'calc(50% - 5vw)',
-              color: theme.palette.common.white,
-              zIndex: 2,
-            }}
+            sx={
+              size === 'large'
+                ? {
+                    position: 'absolute',
+                    top: '74%',
+                    right: 'calc(50% - 11vw)',
+                    fontSize: theme.typography.h3,
+                    color: theme.palette.common.white,
+                    zIndex: 2,
+                  }
+                : size === 'xl'
+                ? {
+                    position: 'absolute',
+                    top: '12%',
+                    left: '14%',
+                    fontSize: theme.typography.h1,
+                    color: theme.palette.common.white,
+                    zIndex: 2,
+                  }
+                : {
+                    position: 'absolute',
+                    left: 'calc(50% - 4vw)',
+                    top: '12%',
+                    color: theme.palette.common.white,
+                    zIndex: 2,
+                  }
+            }
           >
             {cardInfo.subtitle}
             {size === 'small' && cardInfo.unit}
@@ -117,7 +138,7 @@ export const ArkitemaCard: React.FC<CardProps> = (props) => {
                 top: '85%',
                 left: '73%',
                 transform: 'translateX(-50%)',
-                fontSize: theme.typography.h5,
+                fontSize: theme.typography.h6,
                 color: theme.palette.common.white,
                 zIndex: 2,
               }}
