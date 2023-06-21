@@ -7,13 +7,18 @@
     <style>
       @font-face {
         font-family: 'Matter';
-        src: url('packages/brand/src/fonts/font-file.woff2') format('woff2'),
-          url('packages/brand/src/fonts/font-file.woff') format('woff');
+        src: url('packages/brand/src/fonts/Matter-Medium.otf') format('opentype');
       }
       body {
         display: flex;
         flex-direction: column;
-        justify-items: center;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      h1 {
+        font-family: 'Matter', 'sans-serif';
       }
       a.custom-link {
         font-family: 'Matter', 'sans-serif';
@@ -30,15 +35,17 @@
       .link-container {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
+        align-items: flex-start; /* Left align the items */
+        width: 100%; /* Occupy the full width of the container */
+        max-width: 250px; /* Optional: Set a max width to limit the container's width */
+        padding: 0 20px; /* Optional: Add padding for spacing */
+        box-sizing: border-box; /* Include padding in the container's width */
       }
     </style>
   </head>
   <body>
-    <h1>Arkitema UI</h1>
     <div class="link-container">
+      <h1>Arkitema UI</h1>
       <a href="" class="custom-link">Brand</a>
       <a href="" class="custom-link">Data Fetching</a>
       <a href="" class="custom-link">Error Handling</a>
