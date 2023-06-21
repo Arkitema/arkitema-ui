@@ -49,7 +49,7 @@ export const ArkitemaCard: React.FC<CardProps> = (props) => {
   })
 
   return (
-    <Grid item xs={2} sm={5} md={md} key={cardKey} data-testid='carbon-card'>
+    <Grid item xs={2} sm={5} md={md} key={cardKey} data-testid='arkitema-card'>
       <Link href={`${pathname}/${cardInfo.id}`}>
         <Paper
           sx={{
