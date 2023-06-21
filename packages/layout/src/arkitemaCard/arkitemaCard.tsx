@@ -13,13 +13,13 @@ export interface CardInfo {
 }
 
 export interface CardProps {
-  key: number
+  cardKey: number
   cardInfo: CardInfo
   size?: 'small' | 'large' | 'xl'
 }
 
 export const ArkitemaCard: React.FC<CardProps> = (props) => {
-  const { key, cardInfo, size = 'large' } = props
+  const { cardKey, cardInfo, size = 'large' } = props
   const { pathname } = useLocation()
 
   const [height, setHeight] = useState('350px')
@@ -49,7 +49,7 @@ export const ArkitemaCard: React.FC<CardProps> = (props) => {
   })
 
   return (
-    <Grid item xs={2} sm={5} md={md} key={key} data-testid='carbon-card'>
+    <Grid item xs={2} sm={5} md={md} key={cardKey} data-testid='arkitema-card'>
       <Link href={`${pathname}/${cardInfo.id}`}>
         <Paper
           sx={{
