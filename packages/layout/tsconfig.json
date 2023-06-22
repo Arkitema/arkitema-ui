@@ -5,7 +5,7 @@
   },
   "extends": "../../tsconfig.json",
   "exclude": ["node_modules", "**/*.spec.tsx", "**/__mocks__/*.*"],
-  "include": ["src/**/*", "assets"],
+  "include": ["src/**/*", ".storybook"],
   "references": [
     {
       "path": "../errorhandling"

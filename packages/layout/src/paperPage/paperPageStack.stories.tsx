@@ -2,8 +2,6 @@ import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { PaperPageStack, PaperPage } from '.'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { StockImage } from '../assets'
-import { ArkitemaCard, CardProps } from '../arkitemaCard'
 import { Typography } from '@mui/material'
 import { theme } from '@arkitema/brand'
 

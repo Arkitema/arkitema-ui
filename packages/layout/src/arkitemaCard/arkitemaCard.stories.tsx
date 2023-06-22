@@ -2,7 +2,7 @@ import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { ArkitemaCard } from '.'
 import { BrowserRouter as Router } from 'react-router-dom'
-import KronborgStrandby from '@arkitema/brand'
+import { KronborgStrandby } from '../../.storybook/assets';
 
 const meta: Meta<typeof ArkitemaCard> = {
   title: 'ArkitemaCard',

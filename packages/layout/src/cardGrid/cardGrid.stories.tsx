@@ -2,7 +2,7 @@ import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { CardGrid } from '.'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { StockImage } from '../assets'
+import { KronborgStrandby } from '../../.storybook/assets';
 import { ArkitemaCard, CardProps } from '../arkitemaCard'
 
 const meta: Meta<typeof CardGrid> = {
@@ -21,7 +21,7 @@ const cardProps: CardProps = {
     title: 'Kronborg Strandby',
     subtitle: '76',
     unit: 'CO2/m2/year',
-    imageUrl: StockImage,
+    imageUrl: KronborgStrandby,
   },
   size: 'small',
 }
