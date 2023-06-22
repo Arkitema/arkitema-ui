@@ -15,16 +15,16 @@ export default meta
 type Story = StoryObj<typeof ArkitemaAppBar>
 
 const navItems: LinkItem[] = [
-    { link: "/projects", title: "Projects" },
-    { link: "/constructions", title: "Constructions" },
-    { link: "/materials", title: "Materials" },
-  ];
+  { link: '/projects', title: 'Projects' },
+  { link: '/constructions', title: 'Constructions' },
+  { link: '/materials', title: 'Materials' },
+]
 
 export const Primary: Story = {
   args: {
     showPageLinks: true,
     navItems: navItems,
-    logoProps: {link: '', title: 'Arkitema UI'}
+    logoProps: { link: '', title: 'Arkitema UI' },
   },
   decorators: [
     (StoryComponent) => (
@@ -34,5 +34,3 @@ export const Primary: Story = {
     ),
   ],
 }
-
-
