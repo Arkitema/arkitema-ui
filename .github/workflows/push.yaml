@@ -135,10 +135,9 @@ jobs:
               --destination-path "bundles/${{ env.app_name }}/main" \
               -s ./packages \
               --pattern **/storybook-static/*
-            az storage blob upload-batch \
+            az storage blob upload \
               --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} \
               --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} \
               --auth-mode key -d ${{ vars.BUNDLES_CONTAINER_NAME}} \
-              --destination-path "bundles/${{ env.app_name }}/main" \
-              -s . \
-              --pattern *.html
+              -f ./index.html \
+              --name "bundles/${{ env.app_name }}/main/index.html"
