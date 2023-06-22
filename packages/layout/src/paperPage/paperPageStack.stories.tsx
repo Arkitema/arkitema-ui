@@ -45,15 +45,15 @@ const paperPageChild = (
   </PaperPage>
 )
 
-
-
 export const Primary: Story = {
   args: {
-    children: <>
-    {paperPageChild}
-    {paperPageChild}
-    {paperPageChild}
-    </>,
+    children: (
+      <>
+        {paperPageChild}
+        {paperPageChild}
+        {paperPageChild}
+      </>
+    ),
   },
   decorators: [
     (StoryComponent) => (
