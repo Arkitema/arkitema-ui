@@ -11,7 +11,6 @@ export interface LinkItem {
 export interface ArkitemaAppBarProps {
   showPageLinks: boolean
   navItems?: LinkItem[]
-  title: string
   logoProps: LogoProps
 }
 
