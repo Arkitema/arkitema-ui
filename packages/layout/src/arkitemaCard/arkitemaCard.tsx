@@ -35,6 +35,10 @@ export const ArkitemaCard: React.FC<CardProps> = (props) => {
       setHeight('550px')
       setWidth('550px')
       setMd(5.5)
+    } else if (size === 'large') {
+      setHeight('350px')
+      setWidth('350px')
+      setMd(3)
     }
   }, [size])
 
@@ -49,7 +53,7 @@ export const ArkitemaCard: React.FC<CardProps> = (props) => {
   })
 
   return (
-    <Grid item xs={2} sm={5} md={md} key={cardKey} data-testid='arkitema-card'>
+    <Grid item xs={2} sm={5} md='auto' key={cardKey} data-testid='arkitema-card' spacing={1}>
       <Link href={`${pathname}/${cardInfo.id}`}>
         <Paper
           sx={{
@@ -70,19 +74,20 @@ export const ArkitemaCard: React.FC<CardProps> = (props) => {
     (size === 'large' || size === 'xl')
       ? {
           position: 'absolute',
-          top: '83%',
+          top: '8%',
+          left: '10px',
           display: 'flex',
           alignItems: 'center',
           color: theme.palette.common.white,
           zIndex: 2,
           ...(size === 'large'
             ? {
-                right: '10px',
-                fontSize: theme.typography.h5,
+              marginLeft: '20px',
+                fontSize: theme.typography.h3,
               }
             : {
-                right: '15px',
-                fontSize: theme.typography.h4,
+                marginLeft: '30px',
+                fontSize: theme.typography.h2,
               }),
         }
       : {
@@ -92,7 +97,7 @@ export const ArkitemaCard: React.FC<CardProps> = (props) => {
           alignItems: 'center',
           color: theme.palette.common.white,
           zIndex: 2,
-          left: '10px', // Adjusted to grow from the left
+          left: '10px', 
           fontSize: theme.typography.h4,
         }
   }
@@ -101,41 +106,6 @@ export const ArkitemaCard: React.FC<CardProps> = (props) => {
     {cardInfo.title}
   </div>
 </Typography>
-
-          {/* <Typography
-            variant={size === 'large' ? 'h3' : 'h4'}
-            component='div'
-            sx={
-              size === 'large'
-                ? {
-                    position: 'absolute',
-                    left: 'calc(50% - 11vw)',
-                    top: '12%',
-                    fontSize: theme.typography.h3,
-                    color: theme.palette.common.white,
-                    zIndex: 2,
-                  }
-                : size === 'xl'
-                ? {
-                    position: 'absolute',
-                    top: '12%',
-                    left: '14%',
-                    fontSize: theme.typography.h1,
-                    color: theme.palette.common.white,
-                    zIndex: 2,
-                  }
-                : {
-                    position: 'absolute',
-                    left: 'calc(50% - 1vw)',
-                    fontSize: theme.typography.h3,
-                    top: '65%',
-                    color: theme.palette.common.white,
-                    zIndex: 2,
-                  }
-            }
-          >
-            {cardInfo.title}
-          </Typography> */}
           <Typography
             variant={size === 'large' ? 'h2' : 'h3'}
             component='div'

@@ -23,13 +23,16 @@ const cardProps: CardProps = {
       unit: 'CO2/m2/year',
       imageUrl: StockImage,
     },
-    size: 'large',
+    size: 'small',
   };
 
 export const Primary: Story = {
   args: {
     children: (
         <>
+          <ArkitemaCard {...cardProps}/> 
+          <ArkitemaCard {...cardProps}/> 
+          <ArkitemaCard {...cardProps}/> 
           <ArkitemaCard {...cardProps}/> 
           <ArkitemaCard {...cardProps}/> 
           <ArkitemaCard {...cardProps}/> 
