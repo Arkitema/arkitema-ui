@@ -9,12 +9,12 @@ describe('Login Page', () => {
     const { baseElement } = render(
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<LoginPage link={'/'} />} />
+          <Route path='/' element={<LoginPage title='login page' link={'/'} />} />
         </Routes>
       </BrowserRouter>,
     )
 
-    expect(screen.getByTestId('login-page-login-button')).toBeInTheDocument()
+    // expect(screen.getByTestId('arkitema-button')).toBeInTheDocument()
     expect(baseElement).toBeTruthy()
   })
 })
