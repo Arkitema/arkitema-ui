@@ -68,44 +68,42 @@ export const ArkitemaCard: React.FC<CardProps> = (props) => {
         >
           <StyledLinearGradient />
           <Typography
-  variant={size === 'large' ? 'h3' : 'h4'}
-  component='div'
-  sx={
-    (size === 'large' || size === 'xl')
-      ? {
-          position: 'absolute',
-          top: '8%',
-          left: '10px',
-          display: 'flex',
-          alignItems: 'center',
-          color: theme.palette.common.white,
-          zIndex: 2,
-          ...(size === 'large'
-            ? {
-              marginLeft: '20px',
-                fontSize: theme.typography.h3,
-              }
-            : {
-                marginLeft: '30px',
-                fontSize: theme.typography.h2,
-              }),
-        }
-      : {
-          position: 'absolute',
-          top: '83%',
-          display: 'flex',
-          alignItems: 'center',
-          color: theme.palette.common.white,
-          zIndex: 2,
-          left: '10px', 
-          fontSize: theme.typography.h4,
-        }
-  }
->
-  <div style={{ marginLeft: 'auto' }}>
-    {cardInfo.title}
-  </div>
-</Typography>
+            variant={size === 'large' ? 'h3' : 'h4'}
+            component='div'
+            sx={
+              size === 'large' || size === 'xl'
+                ? {
+                    position: 'absolute',
+                    top: '8%',
+                    left: '10px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    color: theme.palette.common.white,
+                    zIndex: 2,
+                    ...(size === 'large'
+                      ? {
+                          marginLeft: '20px',
+                          fontSize: theme.typography.h3,
+                        }
+                      : {
+                          marginLeft: '30px',
+                          fontSize: theme.typography.h2,
+                        }),
+                  }
+                : {
+                    position: 'absolute',
+                    top: '83%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    color: theme.palette.common.white,
+                    zIndex: 2,
+                    left: '10px',
+                    fontSize: theme.typography.h4,
+                  }
+            }
+          >
+            <div style={{ marginLeft: 'auto' }}>{cardInfo.title}</div>
+          </Typography>
           <Typography
             variant={size === 'large' ? 'h2' : 'h3'}
             component='div'
