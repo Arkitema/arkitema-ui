@@ -14,8 +14,8 @@ type Story = StoryObj<typeof MobileWarningPage>
 
 export const Primary: Story = {
   args: {
-      link: '',
-      title: 'Arkitema UI'
+    link: '',
+    title: 'Arkitema UI',
   },
   decorators: [
     (StoryComponent) => (

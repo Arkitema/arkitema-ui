@@ -13,8 +13,7 @@ export default meta
 type Story = StoryObj<typeof NotFoundPage>
 
 export const Primary: Story = {
-  args: {
-  },
+  args: {},
   decorators: [
     (StoryComponent) => (
       <Router>

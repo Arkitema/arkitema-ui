@@ -9,7 +9,7 @@ export interface ArkitemaButtonProps {
   onclick: any
   disabled?: boolean
   sx?: any
-  dataTestId?: string;
+  dataTestId?: string
 }
 
 export const ArkitemaButton: React.FC<ArkitemaButtonProps> = (props) => {

@@ -52,7 +52,11 @@ export const LoginPage: React.FC<LoginProps> = (props) => {
           <Typography variant='h4' gutterBottom component='div' sx={{ marginBottom: 2 }}>
             {title}
           </Typography>
-          <ArkitemaButton text='Login' onclick={handleLogin} sx={{ float: 'right', textTransform: 'none' }}></ArkitemaButton>
+          <ArkitemaButton
+            text='Login'
+            onclick={handleLogin}
+            sx={{ float: 'right', textTransform: 'none' }}
+          ></ArkitemaButton>
           <ErrorMessage error={error} />
         </Paper>
       </Stack>
