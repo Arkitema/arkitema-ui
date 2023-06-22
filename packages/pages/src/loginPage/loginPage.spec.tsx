@@ -14,7 +14,7 @@ describe('Login Page', () => {
       </BrowserRouter>,
     )
 
-    //expect(screen.getByTestId('arkitema-button')).toBeInTheDocument()
+    // expect(screen.getByTestId('arkitema-button')).toBeInTheDocument()
     expect(baseElement).toBeTruthy()
   })
 })

@@ -16,6 +16,7 @@ export const LoginPage: React.FC<LoginProps> = (props) => {
   const { link, title } = props
   LoginPage.propTypes = {
     link: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
   }
 
   const { instance, inProgress } = useMsal()
