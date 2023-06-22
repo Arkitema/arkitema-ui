@@ -2,8 +2,6 @@ import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { ArkitemaAppBar, LinkItem } from '.'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { Typography } from '@mui/material'
-import { LogoProps, Logo, theme } from '@arkitema/brand'
 
 const meta: Meta<typeof ArkitemaAppBar> = {
   title: 'ArkitemaAppBar',
