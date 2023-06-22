@@ -113,6 +113,7 @@ jobs:
     needs:
       - test
     steps:
+      - uses: actions/checkout@v3
       - name: Download Artifact from Build Job
         uses: actions/download-artifact@v3
         with:
@@ -140,5 +141,5 @@ jobs:
               --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} \
               --auth-mode key \
               --container-name ${{ vars.BUNDLES_CONTAINER_NAME}} \
-              -f ./index.html \
+              -f index.html \
               --name "bundles/${{ env.app_name }}/main/index.html"
