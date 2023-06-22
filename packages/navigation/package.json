@@ -20,5 +20,18 @@
   },
   "dependencies": {
     "@arkitema/brand": "^0.1.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.23",
+    "@storybook/addon-interactions": "^7.0.23",
+    "@storybook/addon-links": "^7.0.23",
+    "@storybook/blocks": "^7.0.23",
+    "@storybook/react": "^7.0.23",
+    "@storybook/react-vite": "^7.0.23",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.23"
   }
 }
