@@ -1,5 +1,3 @@
-
-
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { AppContainer } from '.'
@@ -19,14 +17,14 @@ export default meta
 type Story = StoryObj<typeof AppContainer>
 
 const Child = () => {
-    throw new Error()
-  }
-
+  throw new Error()
+}
 
 export const Primary: Story = {
   args: {
-    children: (<>
-    <Typography
+    children: (
+      <>
+        <Typography
           component='div'
           sx={{
             color: '#333333',
@@ -49,7 +47,8 @@ export const Primary: Story = {
           {
             'If the app loads as expected, this component will simply load its content. If not, it will render an error as displayed in the error story.'
           }
-        </Typography></>
+        </Typography>
+      </>
     ),
   },
   decorators: [
@@ -62,16 +61,18 @@ export const Primary: Story = {
 }
 
 export const ErrorStory: Story = {
-    args: {
-      children: (<>
-      <Child></Child></>
-      ),
-    },
-    decorators: [
-      (StoryComponent) => (
-        <Router>
-          <StoryComponent />
-        </Router>
-      ),
-    ],
-  }
+  args: {
+    children: (
+      <>
+        <Child></Child>
+      </>
+    ),
+  },
+  decorators: [
+    (StoryComponent) => (
+      <Router>
+        <StoryComponent />
+      </Router>
+    ),
+  ],
+}
