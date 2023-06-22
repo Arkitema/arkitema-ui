@@ -138,6 +138,7 @@ jobs:
             az storage blob upload \
               --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} \
               --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} \
-              --auth-mode key -d ${{ vars.BUNDLES_CONTAINER_NAME}} \
+              --auth-mode key \
+              --container-name ${{ vars.BUNDLES_CONTAINER_NAME}} \
               -f ./index.html \
               --name "bundles/${{ env.app_name }}/main/index.html"
