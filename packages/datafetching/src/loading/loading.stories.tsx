@@ -14,7 +14,7 @@ type Story = StoryObj<typeof Loading>
 
 export const Primary: Story = {
   args: {
-    loading: true
+    loading: true,
   },
   decorators: [
     (StoryComponent) => (
