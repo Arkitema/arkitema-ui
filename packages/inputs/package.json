@@ -15,6 +15,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "storybook:test": "if [ \"$RUN_STORYBOOK_TEST\" != \"true\" ]; then export RUN_STORYBOOK_TEST=\"true\"; npm run storybook:test; fi",
     "format:fix": "prettier --write src/",
     "format": "prettier --check src/"
   },
