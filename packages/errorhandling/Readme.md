@@ -8,5 +8,5 @@ The error handling package deals with displaying appropriate messages when an er
 ## Installation
 
 ```
-npm install --save @arkitema/inputs
+npm install --save @arkitema/errorhandling
 ```
