@@ -2,7 +2,7 @@ import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { CardGrid } from '.'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { KronborgStrandby } from '../../.storybook/assets';
+import { KronborgStrandby } from '../../.storybook/assets'
 import { ArkitemaCard, CardProps } from '../arkitemaCard'
 
 const meta: Meta<typeof CardGrid> = {

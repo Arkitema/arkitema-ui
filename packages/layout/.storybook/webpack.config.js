@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = async ({ config }) => {
   config.module.rules.push({
@@ -14,7 +14,7 @@ module.exports = async ({ config }) => {
       },
     ],
     include: path.resolve(__dirname, '../src'),
-  });
+  })
 
-  return config;
-};
+  return config
+}

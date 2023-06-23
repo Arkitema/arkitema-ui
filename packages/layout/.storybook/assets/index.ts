@@ -1,2 +1,2 @@
-const kronborgStrandby = './kronborg_strandby.png';
+const kronborgStrandby = './kronborg_strandby.png'
 export const KronborgStrandby = kronborgStrandby
