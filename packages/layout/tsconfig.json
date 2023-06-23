@@ -4,8 +4,8 @@
     "rootDir": "./src"
   },
   "extends": "../../tsconfig.json",
-  "exclude": ["node_modules", "**/*.spec.tsx", "**/__mocks__/*.*"],
-  "include": ["src/**/*", ".storybook"],
+  "exclude": ["node_modules", "**/*.spec.tsx", "**/__mocks__/*.*", ".storybook"],
+  "include": ["src/**/*"],
   "references": [
     {
       "path": "../errorhandling"
