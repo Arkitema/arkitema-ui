@@ -1,5 +1,5 @@
 import { ArkitemaAppBarProps } from '../src/arkitemaAppBar/arkitemaAppBar'
-export const appBarMock = {
+export const appBarMock: ArkitemaAppBarProps = {
   navItems: [
     { link: '/projects/acfa456f-6628-4c0d-a0c8-1a53b1a46785/settings', title: 'Settings' },
     { link: '/projects/acfa456f-6628-4c0d-a0c8-1a53b1a46785/assemblies', title: 'Assemblies' },
@@ -11,8 +11,4 @@ export const appBarMock = {
     title: 'My Project',
   },
   showPageLinks: true,
-}
-
-const appBarProps: ArkitemaAppBarProps = {
-  ...appBarMock,
 }
