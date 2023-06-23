@@ -9,10 +9,11 @@ export interface ArkitemaButtonProps {
   onclick: any
   disabled?: boolean
   sx?: any
+  dataTestId?: string
 }
 
 export const ArkitemaButton: React.FC<ArkitemaButtonProps> = (props) => {
-  const { text, onclick, disabled, sx } = props
+  const { text, onclick, disabled, sx, dataTestId = 'arkitema-button' } = props
 
   const CustomButton = styled(Button)({
     paddingLeft: '20px',
@@ -31,7 +32,7 @@ export const ArkitemaButton: React.FC<ArkitemaButtonProps> = (props) => {
   })
 
   return (
-    <CustomButton onClick={onclick} disabled={disabled}>
+    <CustomButton onClick={onclick} disabled={disabled} data-testid={dataTestId}>
       {text}
     </CustomButton>
   )
