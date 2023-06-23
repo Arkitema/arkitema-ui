@@ -4,6 +4,7 @@ import { ArkitemaCard } from '.'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { KronborgStrandby } from '../../.storybook/assets';
 
+
 const meta: Meta<typeof ArkitemaCard> = {
   title: 'ArkitemaCard',
   component: ArkitemaCard,
