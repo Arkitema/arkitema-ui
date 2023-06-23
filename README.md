@@ -1,42 +1,32 @@
 # Arkitema UI
+<Purpose>
 
-## Inspiration
+## Getting started
+#### Installation
+```
+npm install --save @arkitema/brand @arkitema/datafetching @arkitema/errorhandling @arkitema/inputs @arkitema/layout @arkitema/navigation @arkitema/pages @arkitema/visualisations
+```
 
-[VisX](https://github.com/airbnb/visx)
+#### Testing 
+Run unit tests: 
+```
+npm run test
+```
 
-## Package Structure
+#### Build
+```
+npm run build
+```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-packages/
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-- visualizations/
-- pages/
-  - 404Page
-  - loginPage
-  - mobileWarningPage
-- inputs/
-  - arkitemaButton
-  - informationInput
-  - fileInput
-- dataFetching/
-  - apolloTokenProvider
-  - dataFetchWrapper
-  - loading
-- errorHandling/
-  - errorBoundary
-  - errorMessage
-- layout/
-  - appContainer
-  - cardGrid
-  - paperPages
-  - arkitemaCard
-  - arkitemaTable
-- navigation/
-  - breadCrumb
-  - arkitemaAppBar
-- brand/
-  - logo
-  - theme
-  - fonts
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+#### Storybook
+
 
 # License
 
