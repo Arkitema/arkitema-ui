@@ -149,7 +149,16 @@ export default function StackedBarChart({
   })
 
   return width < 10 ? null : (
-    <div style={{ display: 'flex', flexDirection: 'row', marginLeft: margin.left, marginTop: margin.top, alignItems: 'center', height: '100%' }}>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        marginLeft: margin.left,
+        marginTop: margin.top,
+        alignItems: 'center',
+        height: '100%',
+      }}
+    >
       <svg ref={containerRef} width={width + margin.left} height={height + 150} style={{ margin: 50 }}>
         <rect x={margin.left} y={0} width={width} height={height} fill={backgroundColor} rx={14} />
         <GridColumns
@@ -297,11 +306,10 @@ export type LegendElement = {
 }
 
 function LegendElement({ colorScale, fontFamily }: LegendElement) {
-
   return (
     <div
       style={{
-        marginLeft: '20px', 
+        marginLeft: '20px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',

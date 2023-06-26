@@ -24,27 +24,27 @@
 // }
 
 // Template.args = {
-  // width: 1000,
-  // height: 1000,
-  // colors: [
-  //   'rgba(100, 160, 136, 1)',
-  //   'rgba(74, 82, 64, 1)',
-  //   'rgba(111, 94, 92, 1)',
-  //   'rgba(162, 132, 151, 1)',
-  //   'rgba(198, 202, 237, 1)',
-  //   'rgba(173, 168, 190, 1)',
-  // ],
-  // data: components,
-  // yLabel: 'CO2',
-  // fontFamily: 'sans-serif',
-  // backgroundColor: '#FFFFFF',
-  // verticalStrokeColor: '#000000',
-  // verticalStrokeOpacity: 0.1,
-  // verticalStrokeDasharray: '3.3',
-  // horizontalStrokeColor: '#000000',
-  // horizontalStrokeOpacity: 0.1,
-  // horizontalStrokeDasharray: '3.3',
-  // borderRadius: 0,
+// width: 1000,
+// height: 1000,
+// colors: [
+//   'rgba(100, 160, 136, 1)',
+//   'rgba(74, 82, 64, 1)',
+//   'rgba(111, 94, 92, 1)',
+//   'rgba(162, 132, 151, 1)',
+//   'rgba(198, 202, 237, 1)',
+//   'rgba(173, 168, 190, 1)',
+// ],
+// data: components,
+// yLabel: 'CO2',
+// fontFamily: 'sans-serif',
+// backgroundColor: '#FFFFFF',
+// verticalStrokeColor: '#000000',
+// verticalStrokeOpacity: 0.1,
+// verticalStrokeDasharray: '3.3',
+// horizontalStrokeColor: '#000000',
+// horizontalStrokeOpacity: 0.1,
+// horizontalStrokeDasharray: '3.3',
+// borderRadius: 0,
 // }
 
 import React from 'react'
