@@ -14,12 +14,15 @@
     "lint": "eslint src --ext ts,tsx ",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "storybook:build": "storybook build",
     "format:fix": "prettier --write src/",
     "format": "prettier --check src/"
   },
   "dependencies": {
     "@arkitema/brand": "^0.1.2",
     "@arkitema/errorhandling": "^0.1.2"
+  },
+  "devDependencies": {
+    "file-loader": "^6.2.0"
   }
 }
