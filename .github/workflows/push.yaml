@@ -47,13 +47,13 @@ jobs:
 
       - name: Unit Tests
         run: npm run test
-      
+
       - name: 'Coverage Test'
         run: npx vitest --coverage
 
       - name: 'Report Coverage'
         if: always()
-        uses:  davelosert/vitest-coverage-report-action@v2
+        uses: davelosert/vitest-coverage-report-action@v2
 
       - name: Upload Artifacts for Publishing
         uses: actions/upload-artifact@v3
