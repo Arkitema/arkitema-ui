@@ -50,6 +50,13 @@ jobs:
 
       - name: Unit Tests
         run: npm run test
+      
+      - name: 'Coverage Test'
+        run: npx vitest --coverage
+
+      - name: 'Report Coverage'
+        if: always()
+        uses:  davelosert/vitest-coverage-report-action@v2
 
       - name: Storybook Tests
         run: npm run storybook:test
