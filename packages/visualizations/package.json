@@ -33,6 +33,7 @@
     "@visx/scale": "^3.0.0",
     "@visx/shape": "^3.0.0",
     "@visx/tooltip": "^3.0.0",
-    "d3-interpolate": "^3.0.1"
+    "d3-interpolate": "^3.0.1",
+    "eslint-plugin-prettier": "^4.2.1"
   }
 }
