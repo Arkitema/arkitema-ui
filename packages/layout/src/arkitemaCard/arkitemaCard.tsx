@@ -35,6 +35,10 @@ export const ArkitemaCard: React.FC<CardProps> = (props) => {
       setHeight('550px')
       setWidth('550px')
       setMd(5.5)
+    } else if (size === 'large') {
+      setHeight('350px')
+      setWidth('350px')
+      setMd(3)
     }
   }, [size])
 
@@ -49,7 +53,7 @@ export const ArkitemaCard: React.FC<CardProps> = (props) => {
   })
 
   return (
-    <Grid item xs={2} sm={5} md={md} key={cardKey} data-testid='arkitema-card'>
+    <Grid item xs={2} sm={5} md='auto' key={cardKey} data-testid='arkitema-card' spacing={1}>
       <Link href={`${pathname}/${cardInfo.id}`}>
         <Paper
           sx={{
@@ -67,33 +71,38 @@ export const ArkitemaCard: React.FC<CardProps> = (props) => {
             variant={size === 'large' ? 'h3' : 'h4'}
             component='div'
             sx={
-              size === 'large'
+              size === 'large' || size === 'xl'
                 ? {
                     position: 'absolute',
-                    left: 'calc(50% - 7vw)',
-                    top: '12%',
+                    top: '8%',
+                    left: '10px',
+                    display: 'flex',
+                    alignItems: 'center',
                     color: theme.palette.common.white,
                     zIndex: 2,
-                  }
-                : size === 'xl'
-                ? {
-                    position: 'absolute',
-                    top: '12%',
-                    left: '14%',
-                    fontSize: theme.typography.h1,
-                    color: theme.palette.common.white,
-                    zIndex: 2,
+                    ...(size === 'large'
+                      ? {
+                          marginLeft: '20px',
+                          fontSize: theme.typography.h3,
+                        }
+                      : {
+                          marginLeft: '30px',
+                          fontSize: theme.typography.h2,
+                        }),
                   }
                 : {
                     position: 'absolute',
-                    left: 'calc(50% - 4vw)',
-                    top: '12%',
+                    top: '83%',
+                    display: 'flex',
+                    alignItems: 'center',
                     color: theme.palette.common.white,
                     zIndex: 2,
+                    left: '10px',
+                    fontSize: theme.typography.h4,
                   }
             }
           >
-            {cardInfo.title}
+            <div style={{ marginLeft: 'auto' }}>{cardInfo.title}</div>
           </Typography>
           <Typography
             variant={size === 'large' ? 'h2' : 'h3'}
@@ -101,30 +110,62 @@ export const ArkitemaCard: React.FC<CardProps> = (props) => {
             sx={{
               position: 'absolute',
               top: '74%',
-              right: 'calc(50% - 5vw)',
+              display: 'flex',
+              alignItems: 'center',
               color: theme.palette.common.white,
               zIndex: 2,
+              ...(size === 'large'
+                ? {
+                    right: '0',
+                    fontSize: theme.typography.h3,
+                  }
+                : size === 'xl'
+                ? {
+                    right: '0',
+                    marginRight: '30px',
+                    fontSize: theme.typography.h2,
+                  }
+                : {
+                    left: '0',
+                    margin: '15px',
+                    fontSize: theme.typography.h4,
+                    top: '2%',
+                  }),
             }}
           >
-            {cardInfo.subtitle}
-            {size === 'small' && cardInfo.unit}
+            <div style={{ marginLeft: 'auto', marginRight: '30px' }}>
+              {cardInfo.subtitle}
+              {size === 'small' && cardInfo.unit}
+            </div>
           </Typography>
-          {size === 'large' && (
+
+          {(size === 'large' || size === 'xl') && (
             <Typography
               component='div'
               sx={{
                 position: 'absolute',
-                top: '85%',
-                left: '73%',
-                transform: 'translateX(-50%)',
-                fontSize: theme.typography.h5,
+                top: '83%',
+                display: 'flex',
+                alignItems: 'center',
                 color: theme.palette.common.white,
                 zIndex: 2,
+                ...(size === 'large'
+                  ? {
+                      right: '30px',
+                      fontSize: theme.typography.h5,
+                    }
+                  : size === 'xl'
+                  ? { right: '60px', fontSize: theme.typography.h4 }
+                  : {
+                      right: '35px',
+                      fontSize: theme.typography.h4,
+                    }),
               }}
             >
-              {cardInfo.subtitle && cardInfo.unit}
+              <div style={{ marginLeft: 'auto' }}>{cardInfo.subtitle && cardInfo.unit}</div>
             </Typography>
           )}
+
           <img src={cardInfo.imageUrl} height={height} style={{ position: 'absolute', top: 0, left: 0, zIndex: 0 }} />
         </Paper>
       </Link>

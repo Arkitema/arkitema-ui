@@ -37,6 +37,7 @@
     "@visx/scale": "^3.0.0",
     "browser-image-compression": "^2.0.2",
     "d3-scale": "^4.0.2",
+    "pre-commit": "^1.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0"
