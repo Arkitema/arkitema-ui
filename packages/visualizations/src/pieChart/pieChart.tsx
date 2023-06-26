@@ -195,11 +195,9 @@ function TextElement({ textContent, chartWidth, height, fontSize, fontFamily = d
   )
 }
 
-// react-spring transition definitions
 type AnimatedStyles = { startAngle: number; endAngle: number; opacity: number }
 
 const fromLeaveTransition = ({ endAngle }: PieArcDatum<any>) => ({
-  // enter from 360° if end angle is > 180°
   startAngle: endAngle > Math.PI ? 2 * Math.PI : 0,
   endAngle: endAngle > Math.PI ? 2 * Math.PI : 0,
   opacity: 0,
@@ -243,7 +241,6 @@ function AnimatedPie<Datum>({
     return (
       <g key={key}>
         <animated.path
-          // compute interpolated path d attribute from intermediate angle values
           d={to([props.startAngle, props.endAngle], (startAngle, endAngle) =>
             path({
               ...arc,
