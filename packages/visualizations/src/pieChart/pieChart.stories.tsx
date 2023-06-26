@@ -28,6 +28,7 @@ export const Primary: Story = {
   args: {
     width: 500,
     height: 500,
+    donutThickness: 150,
     colors: [
       'rgba(100, 160, 136, 1)',
       'rgba(74, 82, 64, 1)',
@@ -37,7 +38,6 @@ export const Primary: Story = {
       'rgba(173, 168, 190, 1)',
     ],
     data: browsers,
-    donutThickness: 150,
     fontFamily: theme.typography.fontFamily,
     labelFontSize: 14,
     centerText: {
