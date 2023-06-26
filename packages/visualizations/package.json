@@ -21,76 +21,6 @@
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=e003d5105384"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Arkitema/arkitema-ui.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "Apache-2.0",
-  "devDependencies": {
-    "@storybook/addon-actions": "^6.5.16",
-    "@storybook/addon-essentials": "^7.0.23",
-    "@storybook/addon-interactions": "^7.0.23",
-    "@storybook/addon-links": "^7.0.23",
-    "@storybook/blocks": "^7.0.23",
-    "@storybook/builder-vite": "^0.1.37",
-    "@storybook/node-logger": "^6.5.16",
-    "@storybook/react": "^6.5.16",
-    "@storybook/react-vite": "^7.0.23",
-    "@storybook/testing-library": "^0.0.13",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@tsconfig/create-react-app": "^1.0.2",
-    "@types/node": "^18.8.5",
-    "@types/react": "^18.0.21",
-    "@types/storybook__react": "^5.2.1",
-    "@typescript-eslint/eslint-plugin": "^5.40.0",
-    "@typescript-eslint/parser": "^5.40.0",
-    "@vitejs/plugin-react": "^3.0.0",
-    "chromatic": "^6.17.0",
-    "eslint": "^8.25.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.31.10",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-storybook": "^0.6.12",
-    "husky": "^8.0.1",
-    "jest-environment-jsdom": "^29.1.2",
-    "pre-commit": "^1.2.2",
-    "prettier": "^2.7.1",
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "storybook": "^7.0.23",
-    "ts-node": "^10.9.1",
-    "typescript": "^4.8.4",
-    "vitest": "^0.28.5"
-  },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-router-dom": "^6.4.2"
-  },
-  "pre-commit": [
-    "lint",
-    "format"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.+(ts|tsx)": [
-      "eslint --fix src/**/*.{tsx,ts}",
-      "prettier --write",
-      "git add"
-    ],
-    "*.+(json|css|md)": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "dependencies": {
     "@react-spring/web": "^9.6.1",
     "@visx/axis": "^3.0.1",
@@ -104,18 +34,6 @@
     "@visx/scale": "^3.0.0",
     "@visx/shape": "^3.0.0",
     "@visx/tooltip": "^3.0.0",
-    "d3-interpolate": "^3.0.1",
-    "react-dom": "^18.2.0"
-  },
-  "bugs": {
-    "url": "https://github.com/lcacollect/shared-components-frontend/issues"
-  },
-  "readme": "ERROR: No README data found!",
-  "homepage": "https://github.com/lcacollect/shared-components-frontend#readme",
-  "_id": "@arkitema/visualizations@1.0.2",
-  "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
+    "d3-interpolate": "^3.0.1"
   }
 }
