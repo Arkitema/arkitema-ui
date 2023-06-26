@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "test": "vitest run",
+    "test:jest": "jest",
     "build": "tsc -p ./tsconfig.json && tsc -p ./tsconfig.cjs.json",
     "postbuild": "copyfiles --flat ./src/assets/*.{png,svg,ico} ./dist/esm/assets/ && copyfiles --flat ./src/fonts/*.{css,otf} ./dist/esm/fonts/ && copyfiles --flat ./src/{assets,fonts}/*.{png,svg,ico,css} ./dist/cjs/assets/ && copyfiles --flat ./src/fonts/*.{css,otf} ./dist/cjs/fonts/",
     "build:watch": "tsc --watch",
@@ -16,10 +17,15 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
+    "storybook:test": "npm run storybook:test --workspaces --if-present",
     "format:fix": "prettier --write src/",
     "format": "prettier --check src/"
   },
   "devDependencies": {
-    "copyfiles": "^2.4.1"
+    "@storybook/addon-storyshots": "^7.0.23",
+    "copyfiles": "^2.4.1",
+    "jest": "^29.5.0",
+    "react-test-renderer": "^18.2.0",
+    "ts-jest": "^29.1.0"
   }
 }
