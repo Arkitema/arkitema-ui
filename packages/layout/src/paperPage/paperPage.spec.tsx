@@ -31,7 +31,7 @@ describe('PaperPage', () => {
       </PaperPage>,
     )
 
-    expect(container.firstChild).toHaveStyle('background-color: red')
+    expect(container.firstChild).toHaveStyle('background-color: rgb(255, 0, 0);')
   })
 
   it('applies maxWidth correctly', () => {
