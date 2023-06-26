@@ -23,7 +23,8 @@
     "format:fix": "npm run format:fix --workspaces --if-present",
     "format": "npm run format --workspaces --if-present",
     "storybook:build": "npm run storybook:build --workspaces --if-present",
-    "storybook:test": "npm run storybook:test --workspaces --if-present"
+    "storybook:test": "npm run storybook:test --workspaces --if-present",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@apollo/client": "^3.7.12",
@@ -56,6 +57,7 @@
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
     "@vitejs/plugin-react": "^4.0.0",
+    "@vitest/coverage-istanbul": "^0.32.2",
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
@@ -67,6 +69,6 @@
     "storybook": "^7.0.7",
     "typescript": "^5.0.2",
     "vite": "^4.3.9",
-    "vitest": "^0.31.4"
+    "vitest": "^0.32.0"
   }
 }
