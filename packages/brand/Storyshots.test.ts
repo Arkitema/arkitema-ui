@@ -3,5 +3,5 @@ import initStoryshots from '@storybook/addon-storyshots';
 
 initStoryshots({
   framework: 'react',
-  configPath: path.join(__dirname, '.storybook'), // Update this path according to your setup
+  configPath: '/Users/ingridforre/Desktop/arkitema/arkitema-ui/packages/brand/.storybook', 
 });
