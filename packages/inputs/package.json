@@ -19,6 +19,7 @@
     "format": "prettier --check src/"
   },
   "dependencies": {
-    "@arkitema/brand": "^0.1.2"
+    "@arkitema/brand": "^0.1.2",
+    "browser-image-compression": "^2.0.2"
   }
 }
