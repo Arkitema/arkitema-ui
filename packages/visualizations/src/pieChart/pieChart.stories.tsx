@@ -2,6 +2,7 @@ import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import PieChart, { Value, centerText } from './pieChart'
 import { BrowserRouter as Router } from 'react-router-dom'
+import { theme } from '@arkitema/brand'
 
 const meta: Meta<typeof PieChart> = {
   title: 'PieChart',
@@ -25,8 +26,9 @@ type Story = StoryObj<typeof PieChart>
 
 export const Primary: Story = {
   args: {
-    width: 700,
-    height: 700,
+    width: 500,
+    height: 500,
+    donutThickness: 150,
     colors: [
       'rgba(100, 160, 136, 1)',
       'rgba(74, 82, 64, 1)',
@@ -36,14 +38,14 @@ export const Primary: Story = {
       'rgba(173, 168, 190, 1)',
     ],
     data: browsers,
-    donutThickness: 280,
-    fontFamily: 'Arial, Helvetica, sans-serif',
+    fontFamily: theme.typography.fontFamily,
+    labelFontSize: 14,
     centerText: {
       enabled: true,
-      text: 'kg CO2-eq/m2/year',
+      text: 'kg CO₂/m²/y',
       textSize: 36,
       aggregation: 'sum',
-      unitTextSize: 24,
+      unitTextSize: 15,
     } as centerText,
   },
   decorators: [

@@ -18,8 +18,7 @@
     "format:fix": "prettier --write src/",
     "format": "prettier --check src/",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=e003d5105384"
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@react-spring/web": "^9.6.1",
@@ -34,7 +33,6 @@
     "@visx/scale": "^3.0.0",
     "@visx/shape": "^3.0.0",
     "@visx/tooltip": "^3.0.0",
-    "d3-interpolate": "^3.0.1",
     "eslint-plugin-prettier": "^4.2.1"
   }
 }
