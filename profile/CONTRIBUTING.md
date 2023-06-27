@@ -1,6 +1,6 @@
 # How to contribute
 
-We are really happy you're reading this and are willing to contribute to the project. All contributions are welcome, but to ensure some govornance, all changes must be submitted as Pull Requests and will only be adopted in the solution after a review. This is to both ensure that only features relevant to the solution and the industry is included and to ensure the stability of the solution. 
+We are really happy you're reading this and are willing to contribute to the project. All contributions are welcome, but to ensure some govornance, all changes must be submitted as Pull Requests and will only be adopted in the solution after a review. This is to both ensure that only features relevant to the solution and the industry is included and to ensure the stability of the solution.
 
 A good advice is also to ensure adoption in solution before starting a new feature - this can be done by engaging with the user group and ensure their support.
 

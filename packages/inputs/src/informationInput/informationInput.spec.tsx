@@ -1,33 +1,55 @@
 import React from 'react'
-import { render, screen, fireEvent, waitFor, act } from '@testing-library/react'
+import '@testing-library/jest-dom'
+import { render, screen, fireEvent, waitFor, act, renderHook } from '@testing-library/react'
 import { InformationInput } from './informationInput'
 import { describe, expect, it, vi } from 'vitest'
 
 describe('InformationInput', () => {
-  it('successfully renders information input ast textfield', async () => {
-    const setValueMock = vi.fn().mockImplementation(()=>{})
+  it('successfully renders information input', async () => {
+    const setValueMock = vi.fn().mockImplementation(() => {})
     const { baseElement } = render(<InformationInput id='1' label='Name' setValue={setValueMock} value='' />)
     expect(baseElement).toBeTruthy()
-    // const textField = screen.getByLabelText('text-field') as HTMLInputElement;
-    // const { getByLabelText } = render(<InformationInput id='1' label='Name' setValue={setValueMock} value='' />)
-    // //const textField = getByLabelText('Name *') as HTMLInputElement;
-    // console.log('textfield before: ', textField)
-    // fireEvent.change(textField, { target: { value: 'John Doe' } });
-    // console.log('textfield after: ', textField.value)
-    // await act(async () => {
-    //     await new Promise((resolve) => setTimeout(resolve, 0));
-    //     console.log('textfield after:', textField.value);
-  
-    //     expect(setValueMock).toHaveBeenCalledTimes(1);
-    //     expect(setValueMock).toHaveBeenCalledWith('John Doe');
-    //     expect(hasInputValue(textField, "John Doe")).toBe(true)
-    //     //expect(textField.value).toBe('John Doe');
-    //   });
+  })
+  it('successfully updates information input value', async () => {
+    const { result } = renderHook(() => React.useState(''))
+    const [value, setValue] = result.current
+
+    const { getByLabelText } = render(<InformationInput id='1' label='Name' setValue={setValue} value={value} />)
+    const textField = getByLabelText('Name *') as HTMLInputElement
+
+    await act(async () => {
+      fireEvent.change(textField, { target: { value: 'John Doe' } })
+      await new Promise((r) => setTimeout(r, 2000))
+    })
+
+    expect(result.current[0]).toBe('John Doe')
+  })
+
+  it('renders FormControl when options are present', async () => {
+    const setValueMock = vi.fn().mockImplementation(() => {})
+    const { getByRole } = render(
+      <InformationInput
+        id='test'
+        label='Test'
+        setValue={setValueMock}
+        value='option1'
+        options={['option1', 'option2']}
+      />,
+    )
+
+    const controlElement = getByRole('button')
+    expect(controlElement).toBeInTheDocument()
+    await act(async () => {
+      fireEvent.mouseDown(controlElement)
+      await new Promise((r) => setTimeout(r, 2000))
+    })
+
+    const listItem = screen.getByText('option2')
+    await act(async () => {
+      fireEvent.click(listItem)
+      await new Promise((r) => setTimeout(r, 2000))
+    })
+
+    expect(setValueMock).toHaveBeenCalledWith('option2')
   })
 })
-
-// type TestElement = Document | Element | Window | Node
-
-// function hasInputValue(e: TestElement, inputValue: string) {
-//     return screen.getByDisplayValue(inputValue) === e
-//   }
