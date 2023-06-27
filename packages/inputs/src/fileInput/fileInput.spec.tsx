@@ -5,12 +5,22 @@ import { describe, expect, it, vi } from 'vitest'
 
 describe('FileInput', () => {
   it('renders the upload project image text', () => {
-    render(<FileInput text='Upload Project Image' imageData='' setImageData={() => {}} />)
+    render(
+      <FileInput
+        text='Upload Project Image'
+        imageData=''
+        setImageData={() => {
+          console.log('')
+        }}
+      />,
+    )
     const textElement = screen.getByText('Upload Project Image')
     expect(textElement).toBeTruthy()
   })
   it('file is uploaded', async () => {
-    const setImageDataMock = vi.fn().mockImplementation(() => {})
+    const setImageDataMock = vi.fn().mockImplementation(() => {
+      console.log('')
+    })
     const file = new File(['(⌐□_□)'], 'image.jpg', { type: 'image/jpeg' })
 
     const { getByLabelText } = render(
@@ -24,6 +34,6 @@ describe('FileInput', () => {
       fireEvent.change(fileInput, { target: { files: [file] } })
       await new Promise((r) => setTimeout(r, 2000))
     })
-    expect(fileInput.files[0]).toBeInstanceOf(File)
+    expect(fileInput?.files[0]).toBeInstanceOf(File)
   })
 })

@@ -12,17 +12,6 @@ const Child = () => {
 }
 
 describe('Error Boundary', () => {
-  // let originalConsoleError: any;
-
-  beforeAll(() => {
-    // originalConsoleError = console.error;
-    console.error = () => {}
-  })
-
-  afterAll(() => {
-    console.error = () => {}
-  })
-
   it('should render an error message when an error occurs', () => {
     const { baseElement } = render(
       <ErrorBoundary>

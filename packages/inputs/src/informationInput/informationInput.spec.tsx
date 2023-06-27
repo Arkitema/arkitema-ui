@@ -1,12 +1,14 @@
 import React from 'react'
 import '@testing-library/jest-dom'
-import { render, screen, fireEvent, waitFor, act, renderHook } from '@testing-library/react'
+import { render, screen, fireEvent, act, renderHook } from '@testing-library/react'
 import { InformationInput } from './informationInput'
 import { describe, expect, it, vi } from 'vitest'
 
 describe('InformationInput', () => {
   it('successfully renders information input', async () => {
-    const setValueMock = vi.fn().mockImplementation(() => {})
+    const setValueMock = vi.fn().mockImplementation(() => {
+      console.log('log')
+    })
     const { baseElement } = render(<InformationInput id='1' label='Name' setValue={setValueMock} value='' />)
     expect(baseElement).toBeTruthy()
   })
@@ -26,7 +28,9 @@ describe('InformationInput', () => {
   })
 
   it('renders FormControl when options are present', async () => {
-    const setValueMock = vi.fn().mockImplementation(() => {})
+    const setValueMock = vi.fn().mockImplementation(() => {
+      console.log('')
+    })
     const { getByRole } = render(
       <InformationInput
         id='test'
