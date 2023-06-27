@@ -1,22 +1,29 @@
 # Arkitema UI
-Arkitema UI is a collection of reusable React components that adhere to design guidelines, developed to expedite development across Arkitema platforms. 
+
+Arkitema UI is a collection of reusable React components that adhere to design guidelines, developed to expedite development across Arkitema platforms.
 
 ## Getting started
+
 #### Installation
+
 ```
 npm install --save @arkitema/brand @arkitema/datafetching @arkitema/errorhandling @arkitema/inputs @arkitema/layout @arkitema/navigation @arkitema/pages @arkitema/visualisations
 ```
 
-#### Testing 
-Run unit tests: 
+#### Testing
+
+Run unit tests:
+
 ```
 npm run test
 ```
 
 #### Build
+
 ```
 npm run build
 ```
+
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
@@ -26,12 +33,14 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 #### Storybook
+
 ```
 npm run storybook:test
 ```
 
 ### Contributing Guidelines
-We encourage everyone to participate and in order to ensure fairness we have adopted the Contributor Covenant Code of Conduct. [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](/profile/CODE_OF_CONDUCT.md) 
+
+We encourage everyone to participate and in order to ensure fairness we have adopted the Contributor Covenant Code of Conduct. [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](/profile/CODE_OF_CONDUCT.md)
 
 Please also see our [contributing](/profile/CONTRIBUTING.md) section.
 

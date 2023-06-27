@@ -14,7 +14,7 @@ export const InformationInput = (props: InformationInputProps) => {
   const { id, label, setValue, value, options, type, sx } = props
 
   return options && options.length > 0 ? (
-    <FormControl variant='standard' sx={{ width: '250px', marginTop: '30px' }} required>
+    <FormControl variant='standard' sx={{ width: '250px', marginTop: '30px' }} required aria-label='drop-down'>
       <InputLabel id='demo-simple-select-standard-label'>{label}</InputLabel>
       <Select
         required
@@ -38,6 +38,7 @@ export const InformationInput = (props: InformationInputProps) => {
       required
       id={id}
       label={label}
+      aria-label='text-field'
       variant='standard'
       type={type ? type : 'string'}
       value={value}
