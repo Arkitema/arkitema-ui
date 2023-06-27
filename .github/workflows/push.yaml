@@ -81,6 +81,8 @@ jobs:
       - test
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: Cache node_modules
         id: cache-modules
