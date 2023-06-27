@@ -1,7 +1,7 @@
-import { render, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
-// import PieChart, { PieProps } from './pieChart'
-import React from 'react'
+// import { render, screen } from '@testing-library/react'
+// import userEvent from '@testing-library/user-event'
+// // import PieChart, { PieProps } from './pieChart'
+// import React from 'react'
 
 // const testProps: PieProps = {
 //   width: 400,

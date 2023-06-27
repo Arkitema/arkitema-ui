@@ -1,6 +1,7 @@
 import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
-import Example, { Item } from './horizontalStackedBarChart'
+import type { Meta, StoryObj } from '@storybook/react'
+import HorizontalStackedBarChart, { Item } from './horizontalStackedBarChart'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 const tasks: Item[] = [
   { label: 'Architecture', values: { Pending: 2, Done: 7, Approved: 5 } },
@@ -9,30 +10,39 @@ const tasks: Item[] = [
   { label: 'Contractor', values: { Pending: 9, Done: 7, Approved: 3 } },
 ]
 
-export default {
-  title: 'Example/HorizontalStackedBarChart',
-  component: Example,
-} as ComponentMeta<typeof Example>
-
-export const Template: ComponentStory<typeof Example> = ({ ...rest }) => {
-  return <Example {...rest} />
+const meta: Meta<typeof HorizontalStackedBarChart> = {
+  title: 'HorizontalStackedBarChart',
+  component: HorizontalStackedBarChart,
 }
 
-Template.args = {
-  width: 1500,
-  height: 1000,
-  data: tasks,
-  colors: ['#E06763', '#FEA943', '#6C8E85'],
-  xLabel: 'Number of Tasks',
-  xLabelSize: 18,
-  fontFamily: 'sans-serif',
-  backgroundColor: '#FFFFFF',
-  barPadding: 0.4,
-  borderRadius: 0,
-  verticalStrokeColor: '#000000',
-  verticalStrokeOpacity: 0.1,
-  verticalStrokeDasharray: '3.3',
-  horizontalStrokeColor: '#000000',
-  horizontalStrokeOpacity: 0.1,
-  horizontalStrokeDasharray: '3.3',
+export default meta
+
+type Story = StoryObj<typeof HorizontalStackedBarChart>
+
+export const Primary: Story = {
+  args: {
+    width: 1000,
+    height: 800,
+    data: tasks,
+    colors: ['#E06763', '#FEA943', '#6C8E85'],
+    xLabel: 'Number of Tasks',
+    xLabelSize: 18,
+    fontFamily: 'sans-serif',
+    backgroundColor: '#FFFFFF',
+    barPadding: 0.4,
+    borderRadius: 0,
+    verticalStrokeColor: '#000000',
+    verticalStrokeOpacity: 0.1,
+    verticalStrokeDasharray: '3.3',
+    horizontalStrokeColor: '#000000',
+    horizontalStrokeOpacity: 0.1,
+    horizontalStrokeDasharray: '3.3',
+  },
+  decorators: [
+    (StoryComponent) => (
+      <Router>
+        <StoryComponent />
+      </Router>
+    ),
+  ],
 }

@@ -57,7 +57,7 @@ export default function PieChart({
   data,
   donutThickness = 280,
   fontFamily = defaultFontFamily,
-  labelFontSize = 16,
+  labelFontSize = 14,
   centerText = defaultCenterText,
 }: PieProps) {
   const [selectedDataPoint, setSelectedDataPoint] = useState<string | null>(null)
@@ -173,12 +173,8 @@ function TextElement({ textContent, chartWidth, height, fontSize, fontFamily = d
 
     if (textElement) {
       const { width } = textElement.getBBox()
-
-      // Calculate the x and y position based on the width of the text element
-      const x = chartWidth - chartWidth / 2 + width / 2
+      const x = chartWidth / 2
       const y = height
-
-      // Set the x and y position of the text element
       textElement.setAttribute('x', String(x))
       textElement.setAttribute('y', String(y))
     }
@@ -187,7 +183,7 @@ function TextElement({ textContent, chartWidth, height, fontSize, fontFamily = d
   return (
     <text
       ref={textRef}
-      textAnchor='end'
+      textAnchor='middle'
       fill='black'
       fontSize={fontSize}
       fontWeight={300}
@@ -199,11 +195,9 @@ function TextElement({ textContent, chartWidth, height, fontSize, fontFamily = d
   )
 }
 
-// react-spring transition definitions
 type AnimatedStyles = { startAngle: number; endAngle: number; opacity: number }
 
 const fromLeaveTransition = ({ endAngle }: PieArcDatum<any>) => ({
-  // enter from 360° if end angle is > 180°
   startAngle: endAngle > Math.PI ? 2 * Math.PI : 0,
   endAngle: endAngle > Math.PI ? 2 * Math.PI : 0,
   opacity: 0,
@@ -247,7 +241,6 @@ function AnimatedPie<Datum>({
     return (
       <g key={key}>
         <animated.path
-          // compute interpolated path d attribute from intermediate angle values
           d={to([props.startAngle, props.endAngle], (startAngle, endAngle) =>
             path({
               ...arc,
