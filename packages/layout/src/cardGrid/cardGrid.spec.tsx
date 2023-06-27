@@ -2,7 +2,6 @@ import '@testing-library/jest-dom'
 import { render, screen, cleanup } from '@testing-library/react'
 import React from 'react'
 import { CardGrid } from './cardGrid'
-import { MockedProvider } from '@apollo/client/testing'
 
 describe('CardGrid', () => {
   afterEach(cleanup)

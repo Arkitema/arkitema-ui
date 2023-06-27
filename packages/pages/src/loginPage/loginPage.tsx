@@ -2,18 +2,21 @@ import { InteractionStatus } from '@azure/msal-browser'
 import { useMsal } from '@azure/msal-react'
 import PropTypes from 'prop-types'
 import { useCallback, useState } from 'react'
-import { Button, Container, Paper, Stack, Typography } from '@mui/material'
+import { Container, Paper, Stack, Typography } from '@mui/material'
 import { ErrorMessage } from '@arkitema/errorhandling'
+import { ArkitemaButton } from '@arkitema/inputs'
 import { useNavigate } from 'react-router-dom'
 
 export interface LoginProps {
   link: string
+  title: string
 }
 
 export const LoginPage: React.FC<LoginProps> = (props) => {
-  const { link } = props
+  const { link, title } = props
   LoginPage.propTypes = {
     link: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
   }
 
   const { instance, inProgress } = useMsal()
@@ -48,27 +51,14 @@ export const LoginPage: React.FC<LoginProps> = (props) => {
       <Stack justifyContent='center' sx={{ minHeight: '100vh' }}>
         <Paper elevation={5} sx={{ borderRadius: 3, p: 5 }}>
           <Typography variant='h4' gutterBottom component='div' sx={{ marginBottom: 2 }}>
-            Login
+            {title}
           </Typography>
-          <Button
-            color='primary'
-            variant='contained'
-            onClick={handleLogin}
+          <ArkitemaButton
+            text='Login'
+            onclick={handleLogin}
             sx={{ float: 'right', textTransform: 'none' }}
-            data-testid='login-page-login-button'
-          >
-            Login
-          </Button>
+          ></ArkitemaButton>
           <ErrorMessage error={error} />
-          <Typography
-            variant='caption'
-            fontSize={11}
-            color='grey'
-            component='div'
-            sx={{ float: 'right', marginTop: 3 }}
-          >
-            By logging in you accept the {<a href='https://www.lcacollect.dk'>terms and conditions</a>} for LCAcollect.
-          </Typography>
         </Paper>
       </Stack>
     </Container>

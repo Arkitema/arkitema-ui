@@ -11,6 +11,7 @@ env:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   test:
@@ -46,6 +47,13 @@ jobs:
 
       - name: Unit Tests
         run: npm run test
+
+      - name: 'Coverage Test'
+        run: npx vitest --coverage
+
+      - name: 'Report Coverage'
+        if: always()
+        uses: davelosert/vitest-coverage-report-action@v2
 
       - name: Upload Artifacts for Publishing
         uses: actions/upload-artifact@v3
@@ -96,7 +104,7 @@ jobs:
 
       - uses: fregante/setup-git-user@v2
 
-      - run: lerna publish --yes --create-release github --conventional-commits true --summary-file
+      - run: lerna publish --yes --create-release github --conventional-commits true --summary-file ./
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -105,7 +113,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: published_packages
-          path: lerna-publish-summary.json
+          path: ./lerna-publish-summary.json
 
   publish-storybook:
     name: Publish Storybooks
@@ -113,6 +121,7 @@ jobs:
     needs:
       - test
     steps:
+      - uses: actions/checkout@v3
       - name: Download Artifact from Build Job
         uses: actions/download-artifact@v3
         with:
@@ -135,3 +144,10 @@ jobs:
               --destination-path "bundles/${{ env.app_name }}/main" \
               -s ./packages \
               --pattern **/storybook-static/*
+            az storage blob upload \
+              --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} \
+              --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} \
+              --auth-mode key \
+              --container-name ${{ vars.BUNDLES_CONTAINER_NAME}} \
+              -f index.html \
+              --name "bundles/${{ env.app_name }}/main/index.html"

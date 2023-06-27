@@ -12,28 +12,31 @@ const cardInfo: CardInfo = {
   imageUrl: '',
 }
 
-describe('CarbonCard', () => {
+describe('ArkitemaCard', () => {
   afterEach(cleanup)
-  it('should render carbon card successfully', async () => {
+  it('should render arkitema card successfully', async () => {
     const { baseElement } = render(
       <MemoryRouter initialEntries={['/projects']}>
         <Routes>
-          <Route path='/projects' element={<ArkitemaCard cardInfo={cardInfo} key={1} />} />
+          <Route path='/projects' element={<ArkitemaCard cardInfo={cardInfo} cardKey={1} />} />
         </Routes>
       </MemoryRouter>,
     )
     expect(baseElement).toBeDefined()
   })
-  it('should render carbon card successfully', async () => {
+  it('should render arkitema card successfully', async () => {
     const { baseElement } = render(
       <MemoryRouter initialEntries={['/projects']}>
         <Routes>
-          <Route path='/projects' element={<ArkitemaCard cardInfo={cardInfo} key={1} data-testid='carbon-card' />} />
+          <Route
+            path='/projects'
+            element={<ArkitemaCard cardInfo={cardInfo} cardKey={1} data-testid='arkitema-card' />}
+          />
         </Routes>
       </MemoryRouter>,
     )
     expect(baseElement).toBeDefined()
     expect(baseElement).toBeTruthy()
-    expect(await screen.findByTestId('carbon-card')).toBeInTheDocument()
+    expect(await screen.findByTestId('arkitema-card')).toBeInTheDocument()
   })
 })

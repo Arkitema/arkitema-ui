@@ -14,6 +14,9 @@ export default defineConfig({
     },
     setupFiles: './vitest.setup.ts',
     css: false,
-    silent: true
+    coverage: {
+      provider: 'istanbul',
+      reporter: ['text', 'json-summary', 'json'],
+    },
   },
 })

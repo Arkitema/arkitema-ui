@@ -13,6 +13,8 @@ env:
 
 permissions:
   contents: write
+  pull-requests: write
+  issues: write
 
 jobs:
   test:
@@ -43,11 +45,18 @@ jobs:
       - name: Format
         run: npm run format
 
+      - name: Build
+        run: npm run build
+
       - name: Unit Tests
         run: npm run test
 
-      - name: Build
-        run: npm build
+      - name: 'Coverage Test'
+        run: npx vitest --coverage
+
+      - name: 'Report Coverage'
+        if: always()
+        uses: davelosert/vitest-coverage-report-action@v2
 
       - name: Storybook Tests
         run: npm run storybook:test

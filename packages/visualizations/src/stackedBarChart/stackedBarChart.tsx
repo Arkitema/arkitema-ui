@@ -149,7 +149,16 @@ export default function StackedBarChart({
   })
 
   return width < 10 ? null : (
-    <div style={{ position: 'relative', marginTop: margin.top, marginLeft: margin.left, width: width }}>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+        marginLeft: margin.left,
+        marginTop: margin.top,
+        alignItems: 'center',
+        height: '100%',
+      }}
+    >
       <svg ref={containerRef} width={width + margin.left} height={height + 150} style={{ margin: 50 }}>
         <rect x={margin.left} y={0} width={width} height={height} fill={backgroundColor} rx={14} />
         <GridColumns
@@ -296,42 +305,17 @@ export type LegendElement = {
   chartHeight: number
 }
 
-function LegendElement({ colorScale, fontFamily, data, chartWidth, chartHeight }: LegendElement) {
-  const legendElement = useRef(null)
-
-  // useEffect(() => {
-  //   // @ts-ignore: Object is possibly 'null'.
-  //   const { width } = legendElement.current.getBoundingClientRect();
-
-  //   // Calculate the x and y position based on the width of the text element
-  //    // @ts-ignore: Object is possibly 'null'.
-  //   const parentWidth = legendElement.current.parentNode.clientWidth;
-  //    // @ts-ignore: Object is possibly 'null'.
-  //     const parentHeight = legendElement.current.parentNode.clientHeight;
-  //     const x = parentWidth / 2 - width / 2;
-  //     const y = parentHeight / 2 - parentHeight / 4;
-
-  //   // Set the x and y position of the text element
-  //   // @ts-ignore: Object is possibly 'null'.
-  //   legendElement.current.style.left = `${x}px`;
-  //   // @ts-ignore: Object is possibly 'null'.
-  //   legendElement.current.style.top = `${y}px`;
-  // }, [data])
-
+function LegendElement({ colorScale, fontFamily }: LegendElement) {
   return (
     <div
-      ref={legendElement}
       style={{
-        position: 'absolute',
-        left: '30%',
-        top: '40%',
-        transform: 'translateY(-50%)',
-        width: '100%',
+        marginLeft: '20px',
         display: 'flex',
+        flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'flex-end',
         fontSize: '16px',
         fontFamily: fontFamily,
+        transform: 'translateY(-90%)',
       }}
     >
       <LegendOrdinal scale={colorScale} direction='column' labelMargin='0 30px 0 0' />
