@@ -17,7 +17,7 @@ describe('InformationInput', () => {
     const [value, setValue] = result.current
 
     const { getByLabelText } = render(<InformationInput id='1' label='Name' setValue={setValue} value={value} />)
-    const textField = getByLabelText('Name *') as HTMLInputElement
+    const textField = getByLabelText('Name') as HTMLInputElement
 
     await act(async () => {
       fireEvent.change(textField, { target: { value: 'John Doe' } })
