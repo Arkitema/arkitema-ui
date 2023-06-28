@@ -24,7 +24,7 @@ describe('FileInput', () => {
     const file = new File(['(⌐□_□)'], 'image.jpg', { type: 'image/jpeg' })
 
     const { getByLabelText } = render(
-      <FileInput text='Upload Project Image' data='' setData={setImageDataMock} setUpdateImageData={true} />,
+      <FileInput text='Upload Project Image' data='' setData={setImageDataMock} fileType={'image'} allowedExtensions={['.jpg', '.jpeg', '.png'] }/>,
     )
 
     const fileInput = getByLabelText('file-input') as HTMLInputElement
