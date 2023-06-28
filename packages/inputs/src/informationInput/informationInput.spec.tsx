@@ -12,20 +12,20 @@ describe('InformationInput', () => {
     const { baseElement } = render(<InformationInput id='1' label='Name' setValue={setValueMock} value='' />)
     expect(baseElement).toBeTruthy()
   })
-  // it('successfully updates information input value', async () => {
-  //   const { result } = renderHook(() => React.useState(''))
-  //   const [value, setValue] = result.current
+  it('successfully updates information input value', async () => {
+    const { result } = renderHook(() => React.useState(''))
+    const [value, setValue] = result.current
 
-  //   const { getByLabelText } = render(<InformationInput id='1' label='Name' setValue={setValue} value={value} />)
-  //   const textField = getByLabelText('Name *') as HTMLInputElement
+    const { getByLabelText } = render(<InformationInput id='1' label='Name' setValue={setValue} value={value} />)
+    const textField = getByLabelText('Name *') as HTMLInputElement
 
-  //   await act(async () => {
-  //     fireEvent.change(textField, { target: { value: 'John Doe' } })
-  //     await new Promise((r) => setTimeout(r, 2000))
-  //   })
+    await act(async () => {
+      fireEvent.change(textField, { target: { value: 'John Doe' } })
+      await new Promise((r) => setTimeout(r, 2000))
+    })
 
-  //   expect(result.current[0]).toBe('John Doe')
-  // })
+    expect(result.current[0]).toBe('John Doe')
+  })
 
   // it('renders FormControl when options are present', async () => {
   //   const setValueMock = vi.fn().mockImplementation(() => {
