@@ -8,10 +8,11 @@ interface InformationInputProps {
   options?: string[]
   type?: 'number' | 'string'
   sx?: Record<string, unknown>
+  required?: boolean;
 }
 
 export const InformationInput = (props: InformationInputProps) => {
-  const { id, label, setValue, value, options, type, sx } = props
+  const { id, label, setValue, value, options, type, sx, required = false } = props
 
   return options && options.length > 0 ? (
     <FormControl variant='standard' sx={{ width: '250px', marginTop: '30px' }} required aria-label='drop-down'>

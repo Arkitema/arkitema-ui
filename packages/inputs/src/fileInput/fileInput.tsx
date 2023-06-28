@@ -1,59 +1,144 @@
-import { Typography } from '@mui/material'
-import React from 'react'
-import imageCompression from 'browser-image-compression'
-import { theme } from '@arkitema/brand'
+import { Typography } from "@mui/material";
+import React, { useState } from "react";
+import imageCompression from "browser-image-compression";
+import { Loading } from '@arkitema/datafetching'
 
 interface FileInputProps {
-  imageData: string
-  setImageData: React.Dispatch<React.SetStateAction<string>>
-  setUpdateImageData?: any
-  text: string
+  data: string;
+  setData: React.Dispatch<React.SetStateAction<string>>;
+  text: string;
+  allowedExtensions: string[];
+  fileType: "image" | "json";
+  loading?: boolean;
+  setLoading?:  React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export const FileInput = (props: FileInputProps) => {
-  const { imageData, setImageData, setUpdateImageData, text } = props
+  const { data, setData, text, allowedExtensions, fileType, loading, setLoading } =
+    props;
+  const [error, setError] = useState<string | null>(null);
+  const [updateData, setUpdateData] = useState(false)
+    
+  // If loading is not passed from the parent, a local state is used
+  const [localLoading, setLocalLoading] = useState(false);
+  const isLoading = props.loading !== undefined ? props.loading : localLoading;
+
+  const handleSetLoading = (loadingState: boolean) => {
+    if(props.setLoading !== undefined) {
+      props.setLoading(loadingState);
+    } else {
+      setLocalLoading(loadingState);
+    }
+  }
 
   const fileToBase64 = (file: File) => {
+    console.log('file to base64')
     return new Promise((resolve, reject) => {
-      const reader = new FileReader()
+      const reader = new FileReader();
       reader.onloadend = () => {
-        if (typeof reader.result === 'string') {
-          resolve(reader.result.replace(/^data:.+;base64,/, ''))
+        if (typeof reader.result === "string") {
+          resolve(reader.result.replace(/^data:.+;base64,/, ""));
         }
-      }
-      reader.onerror = reject
-      reader.readAsDataURL(file)
-    })
-  }
+      };
+      reader.onerror = () => {
+        reject(new Error("Failed to read file."));
+      };
+      reader.readAsDataURL(file);
+    });
+  };
 
   const options = {
     maxSizeMB: 0.1,
     maxWidthOrHeight: 500,
-  }
+  };
 
   const handleFileInputChange = async (event: any) => {
-    const file = event.target.files[0]
-    const compressedFile = await imageCompression(file, options)
-    const base64 = await fileToBase64(compressedFile)
-    setImageData(base64 as string)
-    setUpdateImageData && setUpdateImageData(true)
-  }
+    handleSetLoading(true)
+    console.log('handle file input change')
+    const fileExist = event.target.files && event.target.files[0];
+    if (!fileExist) {
+      setError("No file selected.");
+      handleSetLoading(false)
+      return;
+    }
+    const file = event.target.files[0];
+    const fileName = file.name.toLowerCase();
+    const isValidExtension = allowedExtensions.some((ext) =>
+      fileName.endsWith(ext)
+    );
+    console.log("valid extension: ", isValidExtension);
+    if (!isValidExtension) {
+      handleSetLoading(false)
+      setError(
+        "Invalid file format. Please upload one of these file types: " +
+          allowedExtensions.map((type: string) => {
+            return type;
+          })
+      );
+      return;
+    }
+
+    try {
+      if (fileType == "image") {
+        const compressedFile = await imageCompression(file, options);
+        const base64 = await fileToBase64(compressedFile);
+        handleSetLoading(false)
+        setData(base64 as string);
+      } else if (fileType == "json") {
+        const base64 = await fileToBase64(file);
+        handleSetLoading(false)
+        setData(base64 as string);
+      }
+      setError(null);
+      handleSetLoading(false)
+      setUpdateData && setUpdateData(true);
+    } catch (error) {
+      setError("Failed to process the file.");
+    }
+  };
 
   return (
-    <div style={{ width: '250px', marginTop: '30px' }} aria-label='file-input'>
+    <div style={{ width: "250px", marginTop: "30px" }} aria-label='file-input'>
       <Typography
-        component='div'
+        component="div"
         sx={{
-          color: '#333333',
-          font: theme.typography.fontFamily,
-          fontSize: '12px',
-          paddingBottom: '20px',
+          color: "#333333",
+          font: "Matter",
+          fontSize: "12px",
+          paddingBottom: "20px",
         }}
       >
         {text}
       </Typography>
-      <input type='file' onChange={handleFileInputChange} />
-      {imageData && <img src={imageData} alt='uploaded image' />}
+      <input type="file" onChange={handleFileInputChange} />
+      <Typography
+        component="div"
+        sx={{
+          color: "Red",
+          font: "Matter",
+          fontSize: "12px",
+          paddingBottom: "20px",
+          paddingTop: "10px",
+        }}
+      >
+        {error}
+      </Typography>
+      {(isLoading) ? (<Loading/>) : (updateData && fileType == "image") ? (
+        <img src={data} alt="uploaded image" />
+      ) : (
+        <Typography
+          component="div"
+          sx={{
+            color: "#333333",
+            font: "Matter",
+            fontSize: "12px",
+            paddingBottom: "20px",
+            paddingTop: "10px",
+          }}
+        >
+          {data && ("Added file: " + data)}
+        </Typography>
+      )}
     </div>
-  )
-}
+  );
+};
