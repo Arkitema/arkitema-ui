@@ -4,9 +4,9 @@ The 'input' package provides a set of reusable input components, designed to han
 
 The package is composed of the following components:
 
-- Standard Arkitema button
-- File upload
-- Input field (both text and dropdown)
+- ArkitemaButton
+- FileInput
+- InformationInput (both text and dropdown)
 
 ## Installation
 
