@@ -11,21 +11,21 @@ export default meta
 
 type Story = StoryObj<typeof FileInput>
 const setImageData = (data: React.SetStateAction<string>) => {
-  console.log('setImageData mock:', data);
-};
+  console.log('setImageData mock:', data)
+}
 
-let updateData = false;
+let updateData = false
 
 const setUpdateData = (data: React.SetStateAction<string>) => {
   updateData = true
-};
+}
 
 export const Primary: Story = {
   args: {
     text: 'Upload Image',
     data: '',
     setData: setImageData,
-    allowedExtensions: [".jpg", ".jpeg", ".png"],
-    fileType: "image",
+    allowedExtensions: ['.jpg', '.jpeg', '.png'],
+    fileType: 'image',
   },
 }
