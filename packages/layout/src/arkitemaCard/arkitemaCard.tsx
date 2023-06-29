@@ -10,7 +10,7 @@ export interface CardInfo {
   subtitle: string
   unit: string
   imageUrl: any
-  link?: string
+  urlLink?: string
 }
 
 export interface CardProps {
@@ -55,7 +55,7 @@ export const ArkitemaCard: React.FC<CardProps> = (props) => {
 
   return (
     <Grid item xs={2} sm={5} md='auto' key={cardKey} data-testid='arkitema-card' spacing={1}>
-      <Link href={cardInfo.link ? cardInfo.link : `${pathname}/${cardInfo.id}`}>
+      <Link href={cardInfo.urlLink ? cardInfo.urlLink : `${pathname}/${cardInfo.id}`}>
         <Paper
           sx={{
             height: height,
