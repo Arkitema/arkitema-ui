@@ -1,6 +1,6 @@
 {
   "name": "@arkitema/layout",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "license": "Apache-2.0",

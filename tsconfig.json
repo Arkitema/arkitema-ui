@@ -23,5 +23,6 @@
     "paths": {
       "@arkitema/*": ["./packages/*/"]
     }
-  }
+  },
+  "exclude": ["node_modules", "**/*.spec.tsx", "**/__mocks__/*.*", "**/*.stories.tsx"]
 }
