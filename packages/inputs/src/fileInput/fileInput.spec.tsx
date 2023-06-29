@@ -8,8 +8,10 @@ describe('FileInput', () => {
     render(
       <FileInput
         text='Upload Project Image'
-        imageData=''
-        setImageData={() => {
+        data=''
+        allowedExtensions={['.jpg', '.jpeg', '.png']}
+        fileType={'image'}
+        setData={() => {
           console.log('')
         }}
       />,
