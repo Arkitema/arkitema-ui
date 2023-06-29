@@ -108,10 +108,10 @@ jobs:
       - uses: fregante/setup-git-user@v2
         name: Setup Git User
 
-      - run: npx lerna version --conventional-commits --conventional-graduate --yes
+      - run: npx lerna version --conventional-commits --yes
         name: Version Packages
 
-      - run: lerna publish --from-git --yes --create-release github --summary-file
+      - run: lerna publish from-git --yes --create-release github --summary-file
         name: Publish Packages
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
