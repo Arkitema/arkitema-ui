@@ -19,4 +19,8 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            az storage blob delete-batch --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} --source ${{ vars.BUNDLES_CONTAINER_NAME}} --pattern "bundles/${{ env.app_name }}/${{ github.ref_name }}/*"
+            az storage blob delete-batch \
+              --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} \
+              --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} \
+              --source ${{ vars.BUNDLES_CONTAINER_NAME}} \
+              --pattern "bundles/${{ env.app_name }}/${{ github.ref_name }}/*"

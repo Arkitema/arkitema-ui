@@ -106,8 +106,13 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - uses: fregante/setup-git-user@v2
+        name: Setup Git User
 
-      - run: lerna publish --yes --create-release github --conventional-commits true --summary-file
+      - run: npx lerna version --conventional-commits --conventional-graduate --yes
+        name: Version Packages
+
+      - run: lerna publish --from-git --yes --create-release github --summary-file
+        name: Publish Packages
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
