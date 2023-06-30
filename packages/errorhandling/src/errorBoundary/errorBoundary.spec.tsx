@@ -9,7 +9,7 @@ describe('Error Boundary', () => {
     const consoleError = console.error
     console.error = () => {}
     const ErrorChild = () => {
-      throw new Error('Sorry.. an error occurred')
+      throw new Error('This is a test error')
     }
     
     const { baseElement } = render(
