@@ -30,7 +30,7 @@
     "@visx/legend": "^3.0.0",
     "@visx/mock-data": "^3.0.0",
     "@visx/responsive": "^3.0.0",
-    "@visx/scale": "^3.0.0",
+    "@visx/scale": "^3.2.0",
     "@visx/shape": "^3.0.0",
     "@visx/tooltip": "^3.0.0"
   }
