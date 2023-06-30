@@ -13,6 +13,10 @@ const Child = () => {
 
 describe('Error Boundary', () => {
   it('should render an error message when an error occurs', () => {
+    // Temporarily mock console.error to silence
+    const consoleError = console.error
+    console.error = () => {}
+
     const { baseElement } = render(
       <ErrorBoundary>
         <ErrorChild />
@@ -21,6 +25,9 @@ describe('Error Boundary', () => {
 
     expect(baseElement).toBeTruthy()
     expect(baseElement.innerHTML).toContain('Try going back or refresh the page')
+
+    // Restore console.error
+    console.error = consoleError
   })
 
   it('should render the child component without error', () => {
