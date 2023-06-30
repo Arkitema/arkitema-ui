@@ -4,9 +4,7 @@
     "rootDir": "./src"
   },
   "extends": "../../tsconfig.cjs.json",
-  "include": [
-    "src/**/*"
-  ],
+  "include": ["src/**/*"],
   "references": [
     {
       "path": "../errorhandling"

@@ -16,8 +16,8 @@ const testProps: PieProps = {
 
 describe('PieChart', () => {
   it('renders correctly', () => {
-    const { container } = render(<PieChart {...testProps} />);
-    expect(container.querySelector('svg')).toBeInTheDocument();
+    const { container } = render(<PieChart {...testProps} />)
+    expect(container.querySelector('svg')).toBeInTheDocument()
   })
   it('displays the correct values', () => {
     render(<PieChart {...testProps} />)

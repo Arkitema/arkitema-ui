@@ -179,11 +179,8 @@ function TextElement({ textContent, chartWidth, height, fontSize, fontFamily = d
     >
       {textContent}
     </text>
-  );
+  )
 }
-
-
-
 
 type AnimatedStyles = { startAngle: number; endAngle: number; opacity: number }
 
