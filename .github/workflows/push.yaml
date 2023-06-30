@@ -47,10 +47,7 @@ jobs:
         run: npm run build
 
       - name: Unit Tests
-        run: npm run test
-
-      - name: 'Coverage Test'
-        run: npx vitest --coverage
+        run: npm run test:coverage
 
       - name: 'Report Coverage'
         if: always()
