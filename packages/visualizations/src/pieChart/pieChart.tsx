@@ -21,7 +21,7 @@ const defaultColors = [
 ]
 const defaultCenterText = {
   enabled: true,
-  text: 'kg CO2-eq/m2/year',
+  text: 'kg CO₂/m²/y',
   textSize: 36,
   aggregation: 'sum',
   unitTextSize: 24,
@@ -124,7 +124,7 @@ export default function PieChart({
   )
 
   return (
-    <svg width={width} height={height}>
+    <svg width={width} height={height} data-testid='pie-chart-svg'>
       <rect rx={14} width={width} height={height} fill="url('#visx-pie-gradient')" />
       <Group top={centerY + margin.top} left={centerX + margin.left}>
         <Pie
@@ -166,23 +166,10 @@ export type TextProps = {
 }
 
 function TextElement({ textContent, chartWidth, height, fontSize, fontFamily = defaultFontFamily }: TextProps) {
-  const textRef = useRef<SVGTextElement>(null)
-
-  useEffect(() => {
-    const textElement = textRef.current
-
-    if (textElement) {
-      const { width } = textElement.getBBox()
-      const x = chartWidth / 2
-      const y = height
-      textElement.setAttribute('x', String(x))
-      textElement.setAttribute('y', String(y))
-    }
-  }, [textContent, chartWidth, height])
-
   return (
     <text
-      ref={textRef}
+      x={chartWidth / 2}
+      y={height}
       textAnchor='middle'
       fill='black'
       fontSize={fontSize}

@@ -18,6 +18,6 @@ export default defineConfig({
       provider: 'istanbul',
       reporter: ['text', 'json-summary', 'json'],
     },
-    silent: true,
+    // silent: true,
   },
 })

@@ -22,7 +22,7 @@ export const Primary: Story = {
       unit: 'CO2/m2/year',
       imageUrl: '/kronborg_strandby.png',
     },
-    size: 'small',
+    size: 'large',
   },
   decorators: [
     (StoryComponent) => (

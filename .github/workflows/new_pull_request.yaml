@@ -37,7 +37,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: node_modules
-          key: ${{ env.node_version }}-build-${{ hashFiles('package.json') }}
+          key: ${{ env.node_version }}-build-${{ hashFiles('package-lock.json') }}
 
       - name: Install
         if: steps.cache-modules.outputs.cache-hit != 'true'
@@ -53,10 +53,7 @@ jobs:
         run: npm run build
 
       - name: Unit Tests
-        run: npm run test
-
-      - name: 'Coverage Test'
-        run: npx vitest --coverage
+        run: npm run test:coverage
 
       - name: 'Report Coverage'
         if: always()
