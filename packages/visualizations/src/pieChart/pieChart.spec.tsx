@@ -1,7 +1,6 @@
-import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
+import { render, screen } from '@testing-library/react'
 import PieChart, { PieProps } from './pieChart'
-import React from 'react'
 
 const testProps: PieProps = {
   width: 400,
