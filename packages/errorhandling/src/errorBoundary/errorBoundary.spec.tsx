@@ -7,11 +7,11 @@ describe('Error Boundary', () => {
   it('should render an error message when an error occurs', () => {
     // Temporarily mock console.error to silence
     const consoleError = console.error
-    console.error = () => {}
+    console.error = () => {} // eslint-disable-line @typescript-eslint/no-empty-function
     const ErrorChild = () => {
       throw new Error('This is a test error')
     }
-    
+
     const { baseElement } = render(
       <ErrorBoundary>
         <ErrorChild />
@@ -29,7 +29,7 @@ describe('Error Boundary', () => {
     const Child = () => {
       return <h1>No error</h1>
     }
-    
+
     const { baseElement } = render(
       <ErrorBoundary>
         <Child />
