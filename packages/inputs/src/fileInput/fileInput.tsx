@@ -31,7 +31,6 @@ export const FileInput = (props: FileInputProps) => {
   }
 
   const fileToBase64 = (file: File) => {
-    console.log('file to base64')
     return new Promise((resolve, reject) => {
       const reader = new FileReader()
       reader.onloadend = () => {
@@ -53,7 +52,6 @@ export const FileInput = (props: FileInputProps) => {
 
   const handleFileInputChange = async (event: any) => {
     handleSetLoading(true)
-    console.log('handle file input change')
     const fileExist = event.target.files && event.target.files[0]
     if (!fileExist) {
       setError('No file selected.')
@@ -63,7 +61,7 @@ export const FileInput = (props: FileInputProps) => {
     const file = event.target.files[0]
     const fileName = file.name.toLowerCase()
     const isValidExtension = allowedExtensions.some((ext) => fileName.endsWith(ext))
-    console.log('valid extension: ', isValidExtension)
+
     if (!isValidExtension) {
       handleSetLoading(false)
       setError(
