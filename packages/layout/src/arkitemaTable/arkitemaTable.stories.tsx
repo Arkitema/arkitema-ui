@@ -1,5 +1,3 @@
-// -- Required routing using -save-dev storybook-addon-react-router-v6 but is not compatible with storybook 7
-import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { ArkitemaTable } from '.'
 

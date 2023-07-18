@@ -1,6 +1,5 @@
-import React from 'react'
 import '@testing-library/jest-dom'
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { LoginPage } from './index'
 
@@ -14,7 +13,6 @@ describe('Login Page', () => {
       </BrowserRouter>,
     )
 
-    // expect(screen.getByTestId('arkitema-button')).toBeInTheDocument()
     expect(baseElement).toBeTruthy()
   })
 })

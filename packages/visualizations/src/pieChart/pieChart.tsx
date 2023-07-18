@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react'
-import Pie, { ProvidedProps, PieArcDatum } from '@visx/shape/lib/shapes/Pie'
+import React, { useState } from 'react'
+import Pie, { PieArcDatum, ProvidedProps } from '@visx/shape/lib/shapes/Pie'
 import { scaleOrdinal } from '@visx/scale'
 import { Group } from '@visx/group'
-import { animated, useTransition, to } from '@react-spring/web'
+import { animated, to, useTransition } from '@react-spring/web'
 
 export interface Value {
   label: string
@@ -197,9 +197,12 @@ const enterUpdateTransition = ({ startAngle, endAngle }: PieArcDatum<any>) => ({
 
 type AnimatedPieProps<Datum> = ProvidedProps<Datum> & {
   animate?: boolean
-  getKey: (d: PieArcDatum<Datum>) => string
-  getColor: (d: PieArcDatum<Datum>) => string
-  onClickDatum: (d: PieArcDatum<Datum>) => void
+  // eslint-disable-next-line no-unused-vars
+  getKey: (date: PieArcDatum<Datum>) => string
+  // eslint-disable-next-line no-unused-vars
+  getColor: (date: PieArcDatum<Datum>) => string
+  // eslint-disable-next-line no-unused-vars
+  onClickDatum: (date: PieArcDatum<Datum>) => void
   delay?: number
   fontFamily: string
   fontSize: number

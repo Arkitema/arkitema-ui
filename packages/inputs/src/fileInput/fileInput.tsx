@@ -14,7 +14,7 @@ interface FileInputProps {
 }
 
 export const FileInput = (props: FileInputProps) => {
-  const { data, setData, text, allowedExtensions, fileType, loading, setLoading } = props
+  const { data, setData, text, allowedExtensions, fileType } = props
   const [error, setError] = useState<string | null>(null)
   const [updateData, setUpdateData] = useState(false)
 

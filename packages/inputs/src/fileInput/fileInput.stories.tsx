@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { FileInput } from '.'
 
@@ -12,12 +11,6 @@ export default meta
 type Story = StoryObj<typeof FileInput>
 const setImageData = (data: React.SetStateAction<string>) => {
   console.log('setImageData mock:', data)
-}
-
-let updateData = false
-
-const setUpdateData = (data: React.SetStateAction<string>) => {
-  updateData = true
 }
 
 export const Primary: Story = {

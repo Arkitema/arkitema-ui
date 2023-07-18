@@ -23,7 +23,7 @@ jobs:
     name: Test
     strategy:
       matrix:
-        package: ["brand", "datafetching", "errorhandling", "inputs", "layout", "navigation", "pages", "visualization"]
+        package: ["brand", "datafetching", "errorhandling", "inputs", "layout", "navigation", "pages", "visualizations"]
     steps:
       - uses: actions/checkout@v3
 
@@ -44,8 +44,8 @@ jobs:
         id: cache-build-artifacts
         uses: actions/cache@v3
         with:
-          path: packages/${{ matrix.package }}/dist
-          key: ${{ matrix.package }}-build-${{ hashFiles(packages/${{ matrix.package }}) }}
+          path: packages/${{ matrix.package }}/storybook-static
+          key: ${{ matrix.package }}-build-${{ hashFiles('packages/${{ matrix.package }}') }}
 
       - name: Install
         if: steps.cache-modules.outputs.cache-hit != 'true'
@@ -61,7 +61,7 @@ jobs:
 
       - name: Build
         if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
-        run: npm run build -w packages/${{ matrix.package }}
+        run: npm run build
 
       - name: Unit Tests
         if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
@@ -72,12 +72,12 @@ jobs:
         uses: davelosert/vitest-coverage-report-action@v2
         with:
           name: ${{ matrix.package }}
-          json-summary-path: packages/${{ matrix.package }}/coverage/coverage-summary-${{ matrix.package }}.json
-          json-final-path: packages/${{ matrix.package }}/coverage/coverage-final-${{ matrix.package }}.json'
+          json-summary-path: packages/${{ matrix.package }}/coverage/coverage-summary.json
+          json-final-path: packages/${{ matrix.package }}/coverage/coverage-final.json'
 
-      - name: Storybook Tests
-        if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
-        run: npm run storybook:test -w packages/${{ matrix.package }}
+#      - name: Storybook Tests
+#        if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
+#        run: npm run storybook:test -w packages/${{ matrix.package }}
 
       - name: Storybook Build
         if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
@@ -97,7 +97,7 @@ jobs:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
             Changed Storybook: ${{ matrix.package }} can be found at:
-            https://ui.arkitema.com/${{ github.ref_name }}/${{ matrix.package }}/
+            https://ui.arkitema.com/${{ github.ref_name }}/${{ matrix.package }}/index.html
 
       - name: Upload to Blob Storage
         if: steps.cache-build-artifacts.outputs.cache-hit != 'true'

@@ -1,11 +1,11 @@
-import React, { useRef, useEffect } from 'react'
+import React from 'react'
 import { BarStack } from '@visx/shape'
 import { SeriesPoint } from '@visx/shape/lib/types'
 import { Group } from '@visx/group'
 import { GridColumns, GridRows } from '@visx/grid'
 import { AxisBottom, AxisLeft } from '@visx/axis'
 import { scaleBand, scaleLinear, scaleOrdinal } from '@visx/scale'
-import { useTooltip, useTooltipInPortal, defaultStyles } from '@visx/tooltip'
+import { defaultStyles, useTooltip, useTooltipInPortal } from '@visx/tooltip'
 import { LegendOrdinal } from '@visx/legend'
 import { localPoint } from '@visx/event'
 
@@ -104,7 +104,7 @@ export default function StackedBarChart({
   const valueTotals: number[] = []
   data.forEach((item) => {
     let total = 0
-    Object.values(item.values).forEach((value, index) => {
+    Object.values(item.values).forEach((value) => {
       value === undefined ? (total += 0) : (total += value)
     })
     valueTotals.push(Number(total.toFixed(1)))

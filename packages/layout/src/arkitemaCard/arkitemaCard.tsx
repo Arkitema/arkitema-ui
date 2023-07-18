@@ -25,7 +25,7 @@ export const ArkitemaCard: React.FC<CardProps> = (props) => {
 
   const [height, setHeight] = useState('350px')
   const [width, setWidth] = useState('350px')
-  const [md, setMd] = useState(3)
+  const [, setMd] = useState(3)
 
   useEffect(() => {
     if (size === 'small') {
