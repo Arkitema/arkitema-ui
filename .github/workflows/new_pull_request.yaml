@@ -97,7 +97,7 @@ jobs:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
             Changed Storybook: ${{ matrix.package }} can be found at:
-            https://ui.arkitema.com/${{ github.ref_name }}/${{ matrix.package }}/
+            https://ui.arkitema.com/${{ github.ref_name }}/${{ matrix.package }}/index.html
 
       - name: Upload to Blob Storage
         if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
