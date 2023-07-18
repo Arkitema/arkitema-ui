@@ -8,7 +8,7 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    include: ['packages/**/src/**/*.spec.{ts,tsx}'],
+    // include: ['*.spec.{ts,tsx}'],
     deps: {
       inline: ['**/@arkitema/**'],
     },

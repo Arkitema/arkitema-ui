@@ -1,6 +1,7 @@
 {
   "name": "@arkitema/brand",
   "version": "0.1.3",
+  "description": "Arkitema Brand Library",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "license": "Apache-2.0",
@@ -9,6 +10,7 @@
   ],
   "scripts": {
     "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "build": "tsc -p ./tsconfig.json && tsc -p ./tsconfig.cjs.json",
     "postbuild": "copyfiles --flat ./src/assets/*.{png,svg,ico} ./dist/esm/assets/ && copyfiles --flat ./src/fonts/*.{css,otf} ./dist/esm/fonts/ && copyfiles --flat ./src/{assets,fonts}/*.{png,svg,ico,css} ./dist/cjs/assets/ && copyfiles --flat ./src/fonts/*.{css,otf} ./dist/cjs/fonts/",
     "build:watch": "tsc --watch",

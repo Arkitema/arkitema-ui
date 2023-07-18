@@ -21,10 +21,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     name: Test
+    strategy:
+      matrix:
+        package: ["brand", "datafetching", "errorhandling", "inputs", "layout", "navigation", "pages", "visualization"]
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -39,64 +40,67 @@ jobs:
           path: node_modules
           key: ${{ env.node_version }}-build-${{ hashFiles('package-lock.json') }}
 
+      - name: Cache Build Artifacts
+        id: cache-build-artifacts
+        uses: actions/cache@v3
+        with:
+          path: packages/${{ matrix.package }}/dist
+          key: ${{ matrix.package }}-build-${{ hashFiles(packages/${{ matrix.package }}) }}
+
       - name: Install
         if: steps.cache-modules.outputs.cache-hit != 'true'
         run: npm ci
 
       - name: Lint
-        run: npm run lint
+        if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
+        run: npm run lint -w packages/${{ matrix.package }}
 
       - name: Format
-        run: npm run format
+        if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
+        run: npm run format -w packages/${{ matrix.package }}
 
       - name: Build
-        run: npm run build
+        if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
+        run: npm run build -w packages/${{ matrix.package }}
 
       - name: Unit Tests
-        run: npm run test:coverage
+        if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
+        run: npm run test:coverage -w packages/${{ matrix.package }}
 
       - name: 'Report Coverage'
-        if: always()
+        if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
         uses: davelosert/vitest-coverage-report-action@v2
+        with:
+          name: ${{ matrix.package }}
+          json-summary-path: packages/${{ matrix.package }}/coverage/coverage-summary-${{ matrix.package }}.json
+          json-final-path: packages/${{ matrix.package }}/coverage/coverage-final-${{ matrix.package }}.json'
 
       - name: Storybook Tests
-        run: npm run storybook:test
+        if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
+        run: npm run storybook:test -w packages/${{ matrix.package }}
 
       - name: Storybook Build
-        run: npm run storybook:build
-
-      - name: Changed Package Paths
-        run: echo "CHANGED_PACKAGE_PATHS=$(for pkg in $(lerna changed | xargs); do echo 'packages/$pkg/storybook-static'; done)" >> $GITHUB_ENV
-
-      - name: Changed Package URLs
-        run: echo "CHANGED_PACKAGE_URLS=$(for pkg in $(lerna changed | xargs); do echo 'https://ui.arkitema.com/${{ github.ref_name }}/$pkg/'; done)" >> $GITHUB_ENV
+        if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
+        run: npm run storybook:build -w packages/${{ matrix.package }}
 
       - name: Upload Storybook Artifacts
+        if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
         uses: actions/upload-artifact@v3
         with:
-          name: storybooks
-          path: |
-            ${{ env.CHANGED_PACKAGE_PATHS }}
+          name: storybook-${{ matrix.package }}
+          path: packages/${{ matrix.package }}/storybook-static
 
       - name: Create Comment on PR
+        if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
         uses: peter-evans/create-or-update-comment@v3
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            Changed Storybooks can be found at:
-            ${{ env.CHANGED_PACKAGE_URLS }}
-
-  publish-storybook:
-    runs-on: ubuntu-latest
-    needs: test
-    name: Publish Storybooks
-    steps:
-      - name: Download Artifact from Build Job
-        uses: actions/download-artifact@v3
-        with:
-          name: storybooks
+            Changed Storybook: ${{ matrix.package }} can be found at:
+            https://ui.arkitema.com/${{ github.ref_name }}/${{ matrix.package }}/
 
       - name: Upload to Blob Storage
+        if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
         uses: azure/CLI@v1
         with:
           inlineScript: |
@@ -104,11 +108,10 @@ jobs:
               --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} \
               --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} \
               --source ${{ vars.BUNDLES_CONTAINER_NAME}} \
-              --pattern "bundles/${{ env.app_name }}/${{ github.ref_name }}/*"
+              --pattern "bundles/${{ env.app_name }}/${{ github.ref_name }}/${{ matrix.package }}/*"
             az storage blob upload-batch \
               --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} \
               --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} \
               --auth-mode key -d ${{ vars.BUNDLES_CONTAINER_NAME}} \
-              --destination-path "bundles/${{ env.app_name }}/${{ github.ref_name }}" \
-              -s ./packages \
-              --pattern **/storybook-static/*
+              --destination-path "bundles/${{ env.app_name }}/${{ github.ref_name }}/${{ matrix.package }}" \
+              -s ./packages/${{ matrix.package }}/storybook-static

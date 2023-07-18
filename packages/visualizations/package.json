@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json",
     "build:watch": "npm run postbuild && tsc --watch",
     "lint": "eslint src/**/*.{tsx,ts}",
