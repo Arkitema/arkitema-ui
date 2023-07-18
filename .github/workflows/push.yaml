@@ -102,23 +102,14 @@ jobs:
           node-version: ${{ env.node_version }}
           registry-url: https://registry.npmjs.org/
 
-      - uses: fregante/setup-git-user@v2
-        name: Setup Git User
+#      - uses: fregante/setup-git-user@v2
+#        name: Setup Git User
 
-      - run: npx lerna version --conventional-commits --yes
-        name: Version Packages
-
-      - run: lerna publish from-git --yes --create-release github --summary-file
+      - run: npm run publish:packages
         name: Publish Packages
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Upload PUBLISHED_PACKAGES Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: published_packages
-          path: ./lerna-publish-summary.json
 
   publish-storybook:
     name: Publish Storybooks

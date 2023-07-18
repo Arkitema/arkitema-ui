@@ -24,7 +24,8 @@
     "format:fix": "npm run format:fix --workspaces --if-present",
     "format": "npm run format --workspaces --if-present",
     "storybook:build": "npm run storybook:build --workspaces --if-present",
-    "storybook:test": "npm run storybook:test --workspaces --if-present"
+    "storybook:test": "npm run storybook:test --workspaces --if-present",
+    "publish:packages": "semantic-release"
   },
   "dependencies": {
     "@apollo/client": "^3.7.12",
@@ -41,6 +42,8 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@storybook/addon-essentials": "^7.0.7",
     "@storybook/addon-interactions": "^7.0.7",
     "@storybook/addon-links": "^7.0.7",
@@ -72,12 +75,13 @@
     "lerna": "^7.0.1",
     "prettier": "^2.8.4",
     "prop-types": "^15.8.1",
+    "semantic-release": "^21.0.7",
     "storybook": "^7.0.7",
     "typescript": "^5.0.2",
     "vite": "^4.3.9",
     "vitest": "^0.32.0"
   },
-    "husky": {
+  "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
@@ -92,5 +96,19 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      "@semantic-release/git"
+    ],
+    "preset": "conventionalcommits"
   }
 }
