@@ -49,7 +49,7 @@ jobs:
 
       - name: Install
         if: steps.cache-modules.outputs.cache-hit != 'true'
-        run: npm ci
+        run: npm install
 
       - name: Lint
         if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
