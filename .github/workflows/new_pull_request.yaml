@@ -23,7 +23,7 @@ jobs:
     name: Test
     strategy:
       matrix:
-        package: ["brand", "datafetching", "errorhandling", "inputs", "layout", "navigation", "pages", "visualization"]
+        package: ["brand", "datafetching", "errorhandling", "inputs", "layout", "navigation", "pages", "visualizations"]
     steps:
       - uses: actions/checkout@v3
 
