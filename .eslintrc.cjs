@@ -28,6 +28,7 @@ module.exports = {
     quotes: ['error', 'single'],
     'no-duplicate-imports': 'error',
     'prettier/prettier': 'error',
+    "no-unused-vars": "error"
   },
   settings: {
     react: {

@@ -109,7 +109,7 @@ export default withTooltip<BarStackHorizontalProps, TooltipData>(
     const valueTotals: number[] = []
     data.forEach((item) => {
       let total = 0
-      Object.values(item.values).forEach((value, index) => {
+      Object.values(item.values).forEach((value) => {
         value === undefined ? (total += 0) : (total += value)
       })
       valueTotals.push(Number(total.toFixed(1)))
@@ -179,7 +179,7 @@ export default withTooltip<BarStackHorizontalProps, TooltipData>(
             >
               {(barStacks) =>
                 barStacks.map((barStack) =>
-                  barStack.bars.map((bar, index) => (
+                  barStack.bars.map((bar) => (
                     <rect
                       key={`barstack-horizontal-${barStack.index}-${bar.index}`}
                       x={bar.x}
