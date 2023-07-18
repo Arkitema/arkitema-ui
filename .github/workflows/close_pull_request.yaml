@@ -23,4 +23,4 @@ jobs:
               --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} \
               --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} \
               --source ${{ vars.BUNDLES_CONTAINER_NAME}} \
-              --pattern "bundles/${{ env.app_name }}/${{ github.ref_name }}/*"
+              --pattern "bundles/${{ env.app_name }}/${{ github.head_ref }}/*"
