@@ -72,8 +72,8 @@ jobs:
         uses: davelosert/vitest-coverage-report-action@v2
         with:
           name: ${{ matrix.package }}
-          json-summary-path: packages/${{ matrix.package }}/coverage/coverage-summary-${{ matrix.package }}.json
-          json-final-path: packages/${{ matrix.package }}/coverage/coverage-final-${{ matrix.package }}.json'
+          json-summary-path: packages/${{ matrix.package }}/coverage/coverage-summary.json
+          json-final-path: packages/${{ matrix.package }}/coverage/coverage-final.json'
 
       - name: Storybook Tests
         if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
