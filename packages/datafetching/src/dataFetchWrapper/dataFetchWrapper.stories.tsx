@@ -1,8 +1,9 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { DataFetchWrapper } from '.'
+import { DataFetchWrapper } from './dataFetchWrapper'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { ApolloError } from '@apollo/react-hooks'
+import { Typography } from '@mui/material'
 
 const meta: Meta<typeof DataFetchWrapper> = {
   title: 'DataFetchWrapper',
@@ -33,8 +34,10 @@ export const Primary: Story = {
     }),
     children: (
       <>
-        <h1>This is an example</h1>
-        <p>If the data is fetched properly without errors, the contents will be displayed as expected.</p>
+        <Typography variant='h1'>This is an example</Typography>
+        <Typography>
+          If the data is fetched properly without errors, the contents will be displayed as expected.
+        </Typography>
       </>
     ),
   },
