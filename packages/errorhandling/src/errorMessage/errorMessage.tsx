@@ -3,7 +3,7 @@ import { ApolloError } from '@apollo/react-hooks'
 import { Alert, AlertTitle, Box } from '@mui/material'
 
 export interface ErrorProps {
-  error?: ApolloError
+  error?: ApolloError | Error | null
 }
 
 export const ErrorMessage: React.FC<ErrorProps> = ({ error = null }) => {
