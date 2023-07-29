@@ -1,0 +1,27 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Storybook Snapshots > 'Logo' > LogoStory 1`] = `
+<div>
+  <a
+    aria-label="logo"
+    data-testid="logo"
+    href="/not_working_currently"
+    style="text-decoration: none; display: inline-block;"
+  >
+    <div
+      style="display: flex; flex-direction: row;"
+    >
+      <img
+        alt="arkitema-logo"
+        src="/src/assets/Arkitema_Logo_Black_RGB.svg"
+        style="margin-top: -3.2px; width: 200px;"
+      />
+      <div
+        class="MuiTypography-root MuiTypography-h1 css-1k6hlhp-MuiTypography-root"
+      >
+        Carbon
+      </div>
+    </div>
+  </a>
+</div>
+`;

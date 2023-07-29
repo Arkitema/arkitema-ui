@@ -1,6 +1,6 @@
 {
   "name": "@arkitema/brand",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Arkitema Brand Library",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
