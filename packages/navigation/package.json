@@ -1,6 +1,6 @@
 {
   "name": "@arkitema/navigation",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Arkitema Navigation Library",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -22,6 +22,6 @@
     "format": "prettier --check src/"
   },
   "dependencies": {
-    "@arkitema/brand": "^0.1.2"
+    "@arkitema/brand": "^0.2.0"
   }
 }
