@@ -61,7 +61,7 @@ exports[`Storybook Snapshots > 'AppContainer' > ErrorStory 1`] = `
             class="MuiTypography-root MuiTypography-caption css-1sn4lm3-MuiTypography-root"
           >
             Error: 
-    at Child (/home/chrk/git/arkitema/arkitema-ui/packages/layout/src/appContainer/appContainer.stories.tsx:18:9)
+    at Child (/home/chrk/git/arkitema/arkitema-ui/packages/layout/src/appContainer/appContainer.stories.tsx:25:10)
     at renderWithHooks (/home/chrk/git/arkitema/arkitema-ui/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
     at mountIndeterminateComponent (/home/chrk/git/arkitema/arkitema-ui/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
     at beginWork (/home/chrk/git/arkitema/arkitema-ui/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
