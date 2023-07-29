@@ -8,7 +8,6 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    // include: ['*.spec.{ts,tsx}'],
     deps: {
       inline: ['**/@arkitema/**'],
     },
@@ -18,6 +17,5 @@ export default defineConfig({
       provider: 'istanbul',
       reporter: ['text', 'json-summary', 'json'],
     },
-    silent: true,
   },
 })
