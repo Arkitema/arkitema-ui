@@ -1,4 +1,4 @@
-// / <reference types="vite/client"/>
+/// <reference types="vite/client"/>
 import { Meta, StoryFn } from '@storybook/react'
 import { composeStories } from '@storybook/testing-react'
 import { render } from '@testing-library/react'
