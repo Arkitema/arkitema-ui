@@ -55,7 +55,7 @@ export const LoginPage: React.FC<LoginProps> = (props) => {
           </Typography>
           <ArkitemaButton
             text='Login'
-            onclick={handleLogin}
+            onClick={handleLogin}
             sx={{ float: 'right', textTransform: 'none' }}
           ></ArkitemaButton>
           <ErrorMessage error={error} />
