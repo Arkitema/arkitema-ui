@@ -38,7 +38,7 @@ export type BarStackHorizontalProps = {
   colors?: string[]
   xLabel: string
   xLabelSize: number
-  fontFamily: string
+  fontFamily?: string
   backgroundColor: string
   barPadding: number
   borderRadius: number
@@ -81,7 +81,7 @@ export default withTooltip<BarStackHorizontalProps, TooltipData>(
     data,
     colors = defaultColors,
     xLabel,
-    fontFamily,
+    fontFamily = 'Matter',
     backgroundColor,
     barPadding,
     xLabelSize = 18,

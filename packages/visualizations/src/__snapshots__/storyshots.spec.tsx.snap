@@ -1,0 +1,2865 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Storybook Snapshots > 'HorizontalStackedBarChart' > Primary 1`] = `
+<div>
+  <div
+    style="position: relative; width: inherit; height: inherit;"
+  >
+    <div
+      style="font-family: Matter;"
+    >
+      <svg
+        height="800"
+        width="1000"
+      >
+        <rect
+          fill="#FFFFFF"
+          height="800"
+          rx="14"
+          width="1000"
+        />
+        <g
+          class="visx-group"
+          transform="translate(170, 100)"
+        >
+          <g
+            class="visx-group visx-columns"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="#000000"
+              stroke-dasharray="3.3"
+              stroke-opacity="0.1"
+              stroke-width="1"
+              x1="0"
+              x2="0"
+              y1="0"
+              y2="500"
+            />
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="#000000"
+              stroke-dasharray="3.3"
+              stroke-opacity="0.1"
+              stroke-width="1"
+              x1="73"
+              x2="73"
+              y1="0"
+              y2="500"
+            />
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="#000000"
+              stroke-dasharray="3.3"
+              stroke-opacity="0.1"
+              stroke-width="1"
+              x1="146"
+              x2="146"
+              y1="0"
+              y2="500"
+            />
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="#000000"
+              stroke-dasharray="3.3"
+              stroke-opacity="0.1"
+              stroke-width="1"
+              x1="219"
+              x2="219"
+              y1="0"
+              y2="500"
+            />
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="#000000"
+              stroke-dasharray="3.3"
+              stroke-opacity="0.1"
+              stroke-width="1"
+              x1="292"
+              x2="292"
+              y1="0"
+              y2="500"
+            />
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="#000000"
+              stroke-dasharray="3.3"
+              stroke-opacity="0.1"
+              stroke-width="1"
+              x1="365"
+              x2="365"
+              y1="0"
+              y2="500"
+            />
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="#000000"
+              stroke-dasharray="3.3"
+              stroke-opacity="0.1"
+              stroke-width="1"
+              x1="438"
+              x2="438"
+              y1="0"
+              y2="500"
+            />
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="#000000"
+              stroke-dasharray="3.3"
+              stroke-opacity="0.1"
+              stroke-width="1"
+              x1="511"
+              x2="511"
+              y1="0"
+              y2="500"
+            />
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="#000000"
+              stroke-dasharray="3.3"
+              stroke-opacity="0.1"
+              stroke-width="1"
+              x1="584"
+              x2="584"
+              y1="0"
+              y2="500"
+            />
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="#000000"
+              stroke-dasharray="3.3"
+              stroke-opacity="0.1"
+              stroke-width="1"
+              x1="657"
+              x2="657"
+              y1="0"
+              y2="500"
+            />
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="#000000"
+              stroke-dasharray="3.3"
+              stroke-opacity="0.1"
+              stroke-width="1"
+              x1="730"
+              x2="730"
+              y1="0"
+              y2="500"
+            />
+          </g>
+          <g
+            class="visx-group visx-rows"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="#000000"
+              stroke-dasharray="3.3"
+              stroke-opacity="0.1"
+              stroke-width="1"
+              x1="0"
+              x2="730"
+              y1="454"
+              y2="454"
+            />
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="#000000"
+              stroke-dasharray="3.3"
+              stroke-opacity="0.1"
+              stroke-width="1"
+              x1="0"
+              x2="730"
+              y1="341"
+              y2="341"
+            />
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="#000000"
+              stroke-dasharray="3.3"
+              stroke-opacity="0.1"
+              stroke-width="1"
+              x1="0"
+              x2="730"
+              y1="228"
+              y2="228"
+            />
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="#000000"
+              stroke-dasharray="3.3"
+              stroke-opacity="0.1"
+              stroke-width="1"
+              x1="0"
+              x2="730"
+              y1="115"
+              y2="115"
+            />
+          </g>
+          <rect
+            fill="#E06763"
+            height="68"
+            ry="0"
+            width="73"
+            x="0"
+            y="386"
+          />
+          <rect
+            fill="#E06763"
+            height="68"
+            ry="0"
+            width="183"
+            x="0"
+            y="273"
+          />
+          <rect
+            fill="#E06763"
+            height="68"
+            ry="0"
+            width="73"
+            x="0"
+            y="160"
+          />
+          <rect
+            fill="#E06763"
+            height="68"
+            ry="0"
+            width="329"
+            x="0"
+            y="47"
+          />
+          <rect
+            fill="#FEA943"
+            height="68"
+            ry="0"
+            width="256"
+            x="73"
+            y="386"
+          />
+          <rect
+            fill="#FEA943"
+            height="68"
+            ry="0"
+            width="255"
+            x="183"
+            y="273"
+          />
+          <rect
+            fill="#FEA943"
+            height="68"
+            ry="0"
+            width="329"
+            x="73"
+            y="160"
+          />
+          <rect
+            fill="#FEA943"
+            height="68"
+            ry="0"
+            width="255"
+            x="329"
+            y="47"
+          />
+          <rect
+            fill="#6C8E85"
+            height="68"
+            ry="0"
+            width="182"
+            x="329"
+            y="386"
+          />
+          <rect
+            fill="#6C8E85"
+            height="68"
+            ry="0"
+            width="183"
+            x="438"
+            y="273"
+          />
+          <rect
+            fill="#6C8E85"
+            height="68"
+            ry="0"
+            width="182"
+            x="402"
+            y="160"
+          />
+          <rect
+            fill="#6C8E85"
+            height="68"
+            ry="0"
+            width="110"
+            x="584"
+            y="47"
+          />
+          <g
+            class="visx-group visx-axis visx-axis-left"
+            transform="translate(0, 0)"
+          >
+            <g
+              class="visx-group visx-axis-tick"
+              transform="translate(0, 0)"
+            >
+              <svg
+                font-size="16"
+                style="overflow: visible;"
+                x="0"
+                y="0.33em"
+              >
+                <text
+                  fill="#5A5A5A"
+                  font-family="Matter"
+                  font-size="16"
+                  text-anchor="end"
+                  transform=""
+                  x="-8"
+                  y="420"
+                >
+                  <tspan
+                    dy="0em"
+                    x="-8"
+                  >
+                    Architecture
+                  </tspan>
+                </text>
+              </svg>
+            </g>
+            <g
+              class="visx-group visx-axis-tick"
+              transform="translate(0, 0)"
+            >
+              <svg
+                font-size="16"
+                style="overflow: visible;"
+                x="0"
+                y="0.33em"
+              >
+                <text
+                  fill="#5A5A5A"
+                  font-family="Matter"
+                  font-size="16"
+                  text-anchor="end"
+                  transform=""
+                  x="-8"
+                  y="307"
+                >
+                  <tspan
+                    dy="0em"
+                    x="-8"
+                  >
+                    Structures
+                  </tspan>
+                </text>
+              </svg>
+            </g>
+            <g
+              class="visx-group visx-axis-tick"
+              transform="translate(0, 0)"
+            >
+              <svg
+                font-size="16"
+                style="overflow: visible;"
+                x="0"
+                y="0.33em"
+              >
+                <text
+                  fill="#5A5A5A"
+                  font-family="Matter"
+                  font-size="16"
+                  text-anchor="end"
+                  transform=""
+                  x="-8"
+                  y="194"
+                >
+                  <tspan
+                    dy="0em"
+                    x="-8"
+                  >
+                    Mechanical
+                  </tspan>
+                </text>
+              </svg>
+            </g>
+            <g
+              class="visx-group visx-axis-tick"
+              transform="translate(0, 0)"
+            >
+              <svg
+                font-size="16"
+                style="overflow: visible;"
+                x="0"
+                y="0.33em"
+              >
+                <text
+                  fill="#5A5A5A"
+                  font-family="Matter"
+                  font-size="16"
+                  text-anchor="end"
+                  transform=""
+                  x="-8"
+                  y="81"
+                >
+                  <tspan
+                    dy="0em"
+                    x="-8"
+                  >
+                    Contractor
+                  </tspan>
+                </text>
+              </svg>
+            </g>
+          </g>
+          <g
+            class="visx-group visx-axis visx-axis-bottom"
+            transform="translate(0, 500)"
+          >
+            <g
+              class="visx-group visx-axis-tick"
+              transform="translate(0, 0)"
+            >
+              <line
+                class="visx-line"
+                fill="transparent"
+                shape-rendering="crispEdges"
+                stroke="black"
+                stroke-linecap="square"
+                stroke-width="1"
+                x1="0"
+                x2="0"
+                y1="0"
+                y2="8"
+              />
+              <svg
+                font-size="16"
+                style="overflow: visible;"
+                x="0"
+                y="0"
+              >
+                <text
+                  fill="#5A5A5A"
+                  font-family="Matter"
+                  font-size="16"
+                  text-anchor="middle"
+                  transform=""
+                  x="0"
+                  y="24"
+                >
+                  <tspan
+                    dy="0em"
+                    x="0"
+                  >
+                    0
+                  </tspan>
+                </text>
+              </svg>
+            </g>
+            <g
+              class="visx-group visx-axis-tick"
+              transform="translate(0, 0)"
+            >
+              <line
+                class="visx-line"
+                fill="transparent"
+                shape-rendering="crispEdges"
+                stroke="black"
+                stroke-linecap="square"
+                stroke-width="1"
+                x1="73"
+                x2="73"
+                y1="0"
+                y2="8"
+              />
+              <svg
+                font-size="16"
+                style="overflow: visible;"
+                x="0"
+                y="0"
+              >
+                <text
+                  fill="#5A5A5A"
+                  font-family="Matter"
+                  font-size="16"
+                  text-anchor="middle"
+                  transform=""
+                  x="73"
+                  y="24"
+                >
+                  <tspan
+                    dy="0em"
+                    x="73"
+                  >
+                    2
+                  </tspan>
+                </text>
+              </svg>
+            </g>
+            <g
+              class="visx-group visx-axis-tick"
+              transform="translate(0, 0)"
+            >
+              <line
+                class="visx-line"
+                fill="transparent"
+                shape-rendering="crispEdges"
+                stroke="black"
+                stroke-linecap="square"
+                stroke-width="1"
+                x1="146"
+                x2="146"
+                y1="0"
+                y2="8"
+              />
+              <svg
+                font-size="16"
+                style="overflow: visible;"
+                x="0"
+                y="0"
+              >
+                <text
+                  fill="#5A5A5A"
+                  font-family="Matter"
+                  font-size="16"
+                  text-anchor="middle"
+                  transform=""
+                  x="146"
+                  y="24"
+                >
+                  <tspan
+                    dy="0em"
+                    x="146"
+                  >
+                    4
+                  </tspan>
+                </text>
+              </svg>
+            </g>
+            <g
+              class="visx-group visx-axis-tick"
+              transform="translate(0, 0)"
+            >
+              <line
+                class="visx-line"
+                fill="transparent"
+                shape-rendering="crispEdges"
+                stroke="black"
+                stroke-linecap="square"
+                stroke-width="1"
+                x1="219"
+                x2="219"
+                y1="0"
+                y2="8"
+              />
+              <svg
+                font-size="16"
+                style="overflow: visible;"
+                x="0"
+                y="0"
+              >
+                <text
+                  fill="#5A5A5A"
+                  font-family="Matter"
+                  font-size="16"
+                  text-anchor="middle"
+                  transform=""
+                  x="219"
+                  y="24"
+                >
+                  <tspan
+                    dy="0em"
+                    x="219"
+                  >
+                    6
+                  </tspan>
+                </text>
+              </svg>
+            </g>
+            <g
+              class="visx-group visx-axis-tick"
+              transform="translate(0, 0)"
+            >
+              <line
+                class="visx-line"
+                fill="transparent"
+                shape-rendering="crispEdges"
+                stroke="black"
+                stroke-linecap="square"
+                stroke-width="1"
+                x1="292"
+                x2="292"
+                y1="0"
+                y2="8"
+              />
+              <svg
+                font-size="16"
+                style="overflow: visible;"
+                x="0"
+                y="0"
+              >
+                <text
+                  fill="#5A5A5A"
+                  font-family="Matter"
+                  font-size="16"
+                  text-anchor="middle"
+                  transform=""
+                  x="292"
+                  y="24"
+                >
+                  <tspan
+                    dy="0em"
+                    x="292"
+                  >
+                    8
+                  </tspan>
+                </text>
+              </svg>
+            </g>
+            <g
+              class="visx-group visx-axis-tick"
+              transform="translate(0, 0)"
+            >
+              <line
+                class="visx-line"
+                fill="transparent"
+                shape-rendering="crispEdges"
+                stroke="black"
+                stroke-linecap="square"
+                stroke-width="1"
+                x1="365"
+                x2="365"
+                y1="0"
+                y2="8"
+              />
+              <svg
+                font-size="16"
+                style="overflow: visible;"
+                x="0"
+                y="0"
+              >
+                <text
+                  fill="#5A5A5A"
+                  font-family="Matter"
+                  font-size="16"
+                  text-anchor="middle"
+                  transform=""
+                  x="365"
+                  y="24"
+                >
+                  <tspan
+                    dy="0em"
+                    x="365"
+                  >
+                    10
+                  </tspan>
+                </text>
+              </svg>
+            </g>
+            <g
+              class="visx-group visx-axis-tick"
+              transform="translate(0, 0)"
+            >
+              <line
+                class="visx-line"
+                fill="transparent"
+                shape-rendering="crispEdges"
+                stroke="black"
+                stroke-linecap="square"
+                stroke-width="1"
+                x1="438"
+                x2="438"
+                y1="0"
+                y2="8"
+              />
+              <svg
+                font-size="16"
+                style="overflow: visible;"
+                x="0"
+                y="0"
+              >
+                <text
+                  fill="#5A5A5A"
+                  font-family="Matter"
+                  font-size="16"
+                  text-anchor="middle"
+                  transform=""
+                  x="438"
+                  y="24"
+                >
+                  <tspan
+                    dy="0em"
+                    x="438"
+                  >
+                    12
+                  </tspan>
+                </text>
+              </svg>
+            </g>
+            <g
+              class="visx-group visx-axis-tick"
+              transform="translate(0, 0)"
+            >
+              <line
+                class="visx-line"
+                fill="transparent"
+                shape-rendering="crispEdges"
+                stroke="black"
+                stroke-linecap="square"
+                stroke-width="1"
+                x1="511"
+                x2="511"
+                y1="0"
+                y2="8"
+              />
+              <svg
+                font-size="16"
+                style="overflow: visible;"
+                x="0"
+                y="0"
+              >
+                <text
+                  fill="#5A5A5A"
+                  font-family="Matter"
+                  font-size="16"
+                  text-anchor="middle"
+                  transform=""
+                  x="511"
+                  y="24"
+                >
+                  <tspan
+                    dy="0em"
+                    x="511"
+                  >
+                    14
+                  </tspan>
+                </text>
+              </svg>
+            </g>
+            <g
+              class="visx-group visx-axis-tick"
+              transform="translate(0, 0)"
+            >
+              <line
+                class="visx-line"
+                fill="transparent"
+                shape-rendering="crispEdges"
+                stroke="black"
+                stroke-linecap="square"
+                stroke-width="1"
+                x1="584"
+                x2="584"
+                y1="0"
+                y2="8"
+              />
+              <svg
+                font-size="16"
+                style="overflow: visible;"
+                x="0"
+                y="0"
+              >
+                <text
+                  fill="#5A5A5A"
+                  font-family="Matter"
+                  font-size="16"
+                  text-anchor="middle"
+                  transform=""
+                  x="584"
+                  y="24"
+                >
+                  <tspan
+                    dy="0em"
+                    x="584"
+                  >
+                    16
+                  </tspan>
+                </text>
+              </svg>
+            </g>
+            <g
+              class="visx-group visx-axis-tick"
+              transform="translate(0, 0)"
+            >
+              <line
+                class="visx-line"
+                fill="transparent"
+                shape-rendering="crispEdges"
+                stroke="black"
+                stroke-linecap="square"
+                stroke-width="1"
+                x1="657"
+                x2="657"
+                y1="0"
+                y2="8"
+              />
+              <svg
+                font-size="16"
+                style="overflow: visible;"
+                x="0"
+                y="0"
+              >
+                <text
+                  fill="#5A5A5A"
+                  font-family="Matter"
+                  font-size="16"
+                  text-anchor="middle"
+                  transform=""
+                  x="657"
+                  y="24"
+                >
+                  <tspan
+                    dy="0em"
+                    x="657"
+                  >
+                    18
+                  </tspan>
+                </text>
+              </svg>
+            </g>
+            <g
+              class="visx-group visx-axis-tick"
+              transform="translate(0, 0)"
+            >
+              <line
+                class="visx-line"
+                fill="transparent"
+                shape-rendering="crispEdges"
+                stroke="black"
+                stroke-linecap="square"
+                stroke-width="1"
+                x1="730"
+                x2="730"
+                y1="0"
+                y2="8"
+              />
+              <svg
+                font-size="16"
+                style="overflow: visible;"
+                x="0"
+                y="0"
+              >
+                <text
+                  fill="#5A5A5A"
+                  font-family="Matter"
+                  font-size="16"
+                  text-anchor="middle"
+                  transform=""
+                  x="730"
+                  y="24"
+                >
+                  <tspan
+                    dy="0em"
+                    x="730"
+                  >
+                    20
+                  </tspan>
+                </text>
+              </svg>
+            </g>
+            <line
+              class="visx-line visx-axis-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="#6C8E85"
+              stroke-width="1"
+              x1="0.5"
+              x2="730.5"
+              y1="0"
+              y2="0"
+            />
+            <svg
+              font-size="18"
+              style="overflow: visible;"
+              x="0"
+              y="0"
+            >
+              <text
+                class="visx-axis-label"
+                font-family="Matter"
+                font-size="18"
+                text-anchor="middle"
+                x="365"
+                y="65"
+              >
+                <tspan
+                  dy="0em"
+                  x="365"
+                >
+                  Number of Tasks
+                </tspan>
+              </text>
+            </svg>
+          </g>
+        </g>
+      </svg>
+      <div
+        style="position: absolute; bottom: 85px; left: 170px; width: 730px; display: flex; justify-content: center; font-size: 14px; font-family: Matter;"
+      >
+        <div
+          style="display: flex; flex-direction: row; font-size: 20px; font-family: Matter;"
+        >
+          <div
+            class="visx-legend-item"
+            style="display: flex; align-items: center; flex-direction: row; margin: 0px 20px;"
+          >
+            <svg
+              height="10"
+              width="10"
+            >
+              <rect
+                fill="#E06763"
+                height="100"
+                width="10"
+              />
+            </svg>
+            <div
+              class="visx-legend-label"
+              style="justify-content: left; display: flex; flex: 1; margin: 0px 0px 0px 7px;"
+            >
+              Pending
+            </div>
+          </div>
+          <div
+            class="visx-legend-item"
+            style="display: flex; align-items: center; flex-direction: row; margin: 0px 20px;"
+          >
+            <svg
+              height="10"
+              width="10"
+            >
+              <rect
+                fill="#FEA943"
+                height="100"
+                width="10"
+              />
+            </svg>
+            <div
+              class="visx-legend-label"
+              style="justify-content: left; display: flex; flex: 1; margin: 0px 0px 0px 7px;"
+            >
+              Done
+            </div>
+          </div>
+          <div
+            class="visx-legend-item"
+            style="display: flex; align-items: center; flex-direction: row; margin: 0px 20px;"
+          >
+            <svg
+              height="10"
+              width="10"
+            >
+              <rect
+                fill="#6C8E85"
+                height="100"
+                width="10"
+              />
+            </svg>
+            <div
+              class="visx-legend-label"
+              style="justify-content: left; display: flex; flex: 1; margin: 0px 0px 0px 7px;"
+            >
+              Approved
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook Snapshots > 'PieChart' > Primary 1`] = `
+<div>
+  <svg
+    data-testid="pie-chart-svg"
+    height="500"
+    width="500"
+  >
+    <rect
+      fill="url('#visx-pie-gradient')"
+      height="500"
+      rx="14"
+      width="500"
+    />
+    <g
+      class="visx-group"
+      transform="translate(250, 250)"
+    >
+      <g>
+        <path
+          d="M-71.19189985695755,215.51812141874126A3,3,0,0,1,-75.02156250320131,217.42071005214353A230,230,0,0,1,-225.95233775791368,-42.95976095992264A3,3,0,0,1,-222.39800554147538,-45.3373399779944L-81.32889376104305,-16.18512603322389A3,3,0,0,1,-78.97447862355985,-12.768387765763096A80,80,0,0,0,-28.17109371630523,74.87582706606418A3,3,0,0,1,-26.37638920402987,78.6170042526673Z"
+          fill="rgba(100, 160, 136, 1)"
+        />
+        <g
+          style="opacity: 1;"
+        >
+          <text
+            dy=".33em"
+            fill="white"
+            font-family="Matter,sans-serif"
+            font-size="14"
+            pointer-events="none"
+            text-anchor="middle"
+            x="-134.0999236262704"
+            y="77.7316568936263"
+          >
+            Google Chrome
+23%
+          </text>
+        </g>
+      </g>
+      <g>
+        <path
+          d="M-222.15159699261216,-46.52972403462548A3,3,0,0,1,-224.47236965547899,-50.12140522026492A230,230,0,0,1,-138.90553913550755,-183.31735105405045A3,3,0,0,1,-134.67413032862243,-182.69982453559064L-49.513357519614814,-66.5189799398726A3,3,0,0,1,-50.055860189370215,-62.405215012066265A80,80,0,0,0,-77.56660954340194,-19.581141027565966A3,3,0,0,1,-81.08248521217982,-17.377510089855Z"
+          fill="rgba(74, 82, 64, 1)"
+        />
+        <g
+          style="opacity: 1;"
+        >
+          <text
+            dy=".33em"
+            fill="white"
+            font-family="Matter,sans-serif"
+            font-size="14"
+            pointer-events="none"
+            text-anchor="middle"
+            x="-130.40899322271474"
+            y="-83.77645544326842"
+          >
+            Internet Explorer
+12%
+          </text>
+        </g>
+      </g>
+      <g>
+        <path
+          d="M-133.69211388977573,-183.41964439173253A3,3,0,0,1,-133.0073955351161,-187.6407011630611A230,230,0,0,1,-17.1685918290808,-229.35832109301467A3,3,0,0,1,-13.949841360845173,-226.543040482628L-5.482129845614602,-82.74233207652652A3,3,0,0,1,-8.170546659814814,-79.58166979449344A80,80,0,0,0,-44.44505412425207,-66.51794617915006A3,3,0,0,1,-48.53134108076831,-67.23879979601435Z"
+          fill="rgba(111, 94, 92, 1)"
+        />
+        <g
+          style="opacity: 1;"
+        >
+          <text
+            dy=".33em"
+            fill="white"
+            font-family="Matter,sans-serif"
+            font-size="14"
+            pointer-events="none"
+            text-anchor="middle"
+            x="-52.51895946778087"
+            y="-145.8312685826383"
+          >
+            Firefox
+9%
+          </text>
+        </g>
+      </g>
+      <g>
+        <path
+          d="M223.34584360460556,40.410164682335264A3,3,0,0,1,225.76439599753203,43.936744302116445A230,230,0,0,1,-68.07151449047362,219.69585547973642A3,3,0,0,1,-70.03474569766942,215.89692369315762L-25.21923504474172,78.99580652708372A3,3,0,0,1,-21.559628451185468,77.04013513128619A80,80,0,0,0,78.07519268450099,17.44317308513684A3,3,0,0,1,81.52921300851548,15.143800425206328Z"
+          fill="rgba(162, 132, 151, 1)"
+        />
+        <g
+          style="opacity: 1;"
+        >
+          <text
+            dy=".33em"
+            fill="white"
+            font-family="Matter,sans-serif"
+            font-size="14"
+            pointer-events="none"
+            text-anchor="middle"
+            x="79.56620926887413"
+            y="133.0196163826288"
+          >
+            Safari
+27%
+          </text>
+        </g>
+      </g>
+      <g>
+        <path
+          d="M0.608789148938472,-226.97131237422604A3,3,0,0,1,3.6564823976028573,-229.97093324260788A230,230,0,0,1,227.0470914811714,36.73715081413611A3,3,0,0,1,223.5594070808974,39.21146223674878L81.74277648480735,13.945097979619831A3,3,0,0,1,79.2953995982198,10.59431935324982A80,80,0,0,0,3.4783509869286484,-79.92434594297117A3,3,0,0,1,0.60878914893848,-82.92150891583259Z"
+          fill="rgba(198, 202, 237, 1)"
+        />
+        <g
+          style="opacity: 1;"
+        >
+          <text
+            dy=".33em"
+            fill="white"
+            font-family="Matter,sans-serif"
+            font-size="14"
+            pointer-events="none"
+            text-anchor="middle"
+            x="118.8254808358708"
+            y="-99.52640405502503"
+          >
+            Microsoft Edge
+28%
+          </text>
+        </g>
+      </g>
+      <g>
+        <path
+          d="M-12.734368534287686,-226.61461365750296A3,3,0,0,1,-9.868272822375403,-229.78820072297702A230,230,0,0,1,-6.859158703403944,-229.89769886164916A3,3,0,0,1,-3.769982413098469,-226.94081716983246L-1.7395902263097491,-81.17704000956519A1.21384972469809,1.21384972469809,0,0,1,-4.165072909679845,-81.08877953531592Z"
+          fill="rgba(173, 168, 190, 1)"
+        />
+      </g>
+      <g>
+        <path
+          d="M-2.5900345448486735,-229.60248245851741A0.38225111906960774,0.38225111906960774,0,1,1,-1.8255701420941306,-229.60983324699663L-0.7692129182003353,-79.99630186131402Z"
+          fill="rgba(100, 160, 136, 1)"
+        />
+      </g>
+      <g>
+        <path
+          d="M-0.6107098979600377,-229.99822754467496A0.0009616494391791032,0.0009616494391791032,0,1,1,-0.608786605840473,-229.99823264351423L-0.2120872352182827,-79.99971886828514Z"
+          fill="rgba(74, 82, 64, 1)"
+        />
+      </g>
+    </g>
+    <text
+      fill="black"
+      font-family="Matter,sans-serif"
+      font-size="36"
+      font-weight="300"
+      pointer-events="none"
+      text-anchor="middle"
+      x="250"
+      y="250"
+    >
+      207
+    </text>
+    <text
+      fill="black"
+      font-family="Matter,sans-serif"
+      font-size="15"
+      font-weight="300"
+      pointer-events="none"
+      text-anchor="middle"
+      x="250"
+      y="272.72727272727275"
+    >
+      kg CO₂/m²/y
+    </text>
+  </svg>
+</div>
+`;
+
+exports[`Storybook Snapshots > 'StackedBarChart' > Primary 1`] = `
+<div>
+  <div
+    style="display: flex; flex-direction: row; margin-left: 110px; margin-top: 0px; align-items: center; height: 100%;"
+  >
+    <svg
+      height="650"
+      style="margin: 50px;"
+      width="1110"
+    >
+      <rect
+        fill="#FFFFFF"
+        height="500"
+        rx="14"
+        width="1000"
+        x="110"
+        y="0"
+      />
+      <g
+        class="visx-group visx-columns"
+        transform="translate(110, 0)"
+      >
+        <line
+          class="visx-line"
+          fill="transparent"
+          shape-rendering="crispEdges"
+          stroke="#000000"
+          stroke-dasharray="3.3"
+          stroke-opacity="0.1"
+          stroke-width="1"
+          x1="110"
+          x2="110"
+          y1="0"
+          y2="400"
+        />
+        <line
+          class="visx-line"
+          fill="transparent"
+          shape-rendering="crispEdges"
+          stroke="#000000"
+          stroke-dasharray="3.3"
+          stroke-opacity="0.1"
+          stroke-width="1"
+          x1="266"
+          x2="266"
+          y1="0"
+          y2="400"
+        />
+        <line
+          class="visx-line"
+          fill="transparent"
+          shape-rendering="crispEdges"
+          stroke="#000000"
+          stroke-dasharray="3.3"
+          stroke-opacity="0.1"
+          stroke-width="1"
+          x1="422"
+          x2="422"
+          y1="0"
+          y2="400"
+        />
+        <line
+          class="visx-line"
+          fill="transparent"
+          shape-rendering="crispEdges"
+          stroke="#000000"
+          stroke-dasharray="3.3"
+          stroke-opacity="0.1"
+          stroke-width="1"
+          x1="578"
+          x2="578"
+          y1="0"
+          y2="400"
+        />
+        <line
+          class="visx-line"
+          fill="transparent"
+          shape-rendering="crispEdges"
+          stroke="#000000"
+          stroke-dasharray="3.3"
+          stroke-opacity="0.1"
+          stroke-width="1"
+          x1="734"
+          x2="734"
+          y1="0"
+          y2="400"
+        />
+        <line
+          class="visx-line"
+          fill="transparent"
+          shape-rendering="crispEdges"
+          stroke="#000000"
+          stroke-dasharray="3.3"
+          stroke-opacity="0.1"
+          stroke-width="1"
+          x1="890"
+          x2="890"
+          y1="0"
+          y2="400"
+        />
+      </g>
+      <g
+        class="visx-group visx-rows"
+        transform="translate(110, -55)"
+      >
+        <line
+          class="visx-line"
+          fill="transparent"
+          shape-rendering="crispEdges"
+          stroke="#000000"
+          stroke-dasharray="3.3"
+          stroke-opacity="0.1"
+          stroke-width="1"
+          x1="0"
+          x2="1000"
+          y1="447"
+          y2="447"
+        />
+        <line
+          class="visx-line"
+          fill="transparent"
+          shape-rendering="crispEdges"
+          stroke="#000000"
+          stroke-dasharray="3.3"
+          stroke-opacity="0.1"
+          stroke-width="1"
+          x1="0"
+          x2="1000"
+          y1="418.42857142857144"
+          y2="418.42857142857144"
+        />
+        <line
+          class="visx-line"
+          fill="transparent"
+          shape-rendering="crispEdges"
+          stroke="#000000"
+          stroke-dasharray="3.3"
+          stroke-opacity="0.1"
+          stroke-width="1"
+          x1="0"
+          x2="1000"
+          y1="389.8571428571429"
+          y2="389.8571428571429"
+        />
+        <line
+          class="visx-line"
+          fill="transparent"
+          shape-rendering="crispEdges"
+          stroke="#000000"
+          stroke-dasharray="3.3"
+          stroke-opacity="0.1"
+          stroke-width="1"
+          x1="0"
+          x2="1000"
+          y1="361.2857142857143"
+          y2="361.2857142857143"
+        />
+        <line
+          class="visx-line"
+          fill="transparent"
+          shape-rendering="crispEdges"
+          stroke="#000000"
+          stroke-dasharray="3.3"
+          stroke-opacity="0.1"
+          stroke-width="1"
+          x1="0"
+          x2="1000"
+          y1="332.7142857142857"
+          y2="332.7142857142857"
+        />
+        <line
+          class="visx-line"
+          fill="transparent"
+          shape-rendering="crispEdges"
+          stroke="#000000"
+          stroke-dasharray="3.3"
+          stroke-opacity="0.1"
+          stroke-width="1"
+          x1="0"
+          x2="1000"
+          y1="304.1428571428571"
+          y2="304.1428571428571"
+        />
+        <line
+          class="visx-line"
+          fill="transparent"
+          shape-rendering="crispEdges"
+          stroke="#000000"
+          stroke-dasharray="3.3"
+          stroke-opacity="0.1"
+          stroke-width="1"
+          x1="0"
+          x2="1000"
+          y1="275.57142857142856"
+          y2="275.57142857142856"
+        />
+        <line
+          class="visx-line"
+          fill="transparent"
+          shape-rendering="crispEdges"
+          stroke="#000000"
+          stroke-dasharray="3.3"
+          stroke-opacity="0.1"
+          stroke-width="1"
+          x1="0"
+          x2="1000"
+          y1="247"
+          y2="247"
+        />
+        <line
+          class="visx-line"
+          fill="transparent"
+          shape-rendering="crispEdges"
+          stroke="#000000"
+          stroke-dasharray="3.3"
+          stroke-opacity="0.1"
+          stroke-width="1"
+          x1="0"
+          x2="1000"
+          y1="218.42857142857144"
+          y2="218.42857142857144"
+        />
+        <line
+          class="visx-line"
+          fill="transparent"
+          shape-rendering="crispEdges"
+          stroke="#000000"
+          stroke-dasharray="3.3"
+          stroke-opacity="0.1"
+          stroke-width="1"
+          x1="0"
+          x2="1000"
+          y1="189.85714285714283"
+          y2="189.85714285714283"
+        />
+        <line
+          class="visx-line"
+          fill="transparent"
+          shape-rendering="crispEdges"
+          stroke="#000000"
+          stroke-dasharray="3.3"
+          stroke-opacity="0.1"
+          stroke-width="1"
+          x1="0"
+          x2="1000"
+          y1="161.28571428571428"
+          y2="161.28571428571428"
+        />
+        <line
+          class="visx-line"
+          fill="transparent"
+          shape-rendering="crispEdges"
+          stroke="#000000"
+          stroke-dasharray="3.3"
+          stroke-opacity="0.1"
+          stroke-width="1"
+          x1="0"
+          x2="1000"
+          y1="132.71428571428572"
+          y2="132.71428571428572"
+        />
+        <line
+          class="visx-line"
+          fill="transparent"
+          shape-rendering="crispEdges"
+          stroke="#000000"
+          stroke-dasharray="3.3"
+          stroke-opacity="0.1"
+          stroke-width="1"
+          x1="0"
+          x2="1000"
+          y1="104.14285714285717"
+          y2="104.14285714285717"
+        />
+        <line
+          class="visx-line"
+          fill="transparent"
+          shape-rendering="crispEdges"
+          stroke="#000000"
+          stroke-dasharray="3.3"
+          stroke-opacity="0.1"
+          stroke-width="1"
+          x1="0"
+          x2="1000"
+          y1="75.57142857142856"
+          y2="75.57142857142856"
+        />
+        <line
+          class="visx-line"
+          fill="transparent"
+          shape-rendering="crispEdges"
+          stroke="#000000"
+          stroke-dasharray="3.3"
+          stroke-opacity="0.1"
+          stroke-width="1"
+          x1="0"
+          x2="1000"
+          y1="47"
+          y2="47"
+        />
+      </g>
+      <g
+        class="visx-group"
+        transform="translate(110, 0)"
+      >
+        <rect
+          fill="rgba(100, 160, 136, 1)"
+          height="32.85714285714289"
+          ry="0"
+          width="94"
+          x="63"
+          y="367.1428571428571"
+        />
+        <rect
+          fill="rgba(100, 160, 136, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="219"
+          y="400"
+        />
+        <rect
+          fill="rgba(100, 160, 136, 1)"
+          height="38.571428571428555"
+          ry="0"
+          width="94"
+          x="375"
+          y="361.42857142857144"
+        />
+        <rect
+          fill="rgba(100, 160, 136, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="531"
+          y="400"
+        />
+        <rect
+          fill="rgba(100, 160, 136, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="687"
+          y="400"
+        />
+        <rect
+          fill="rgba(100, 160, 136, 1)"
+          height="114.28571428571428"
+          ry="0"
+          width="94"
+          x="843"
+          y="285.7142857142857"
+        />
+        <rect
+          fill="rgba(74, 82, 64, 1)"
+          height="65.71428571428567"
+          ry="0"
+          width="94"
+          x="63"
+          y="301.42857142857144"
+        />
+        <rect
+          fill="rgba(74, 82, 64, 1)"
+          height="38.571428571428555"
+          ry="0"
+          width="94"
+          x="219"
+          y="361.42857142857144"
+        />
+        <rect
+          fill="rgba(74, 82, 64, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="375"
+          y="361.42857142857144"
+        />
+        <rect
+          fill="rgba(74, 82, 64, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="531"
+          y="400"
+        />
+        <rect
+          fill="rgba(74, 82, 64, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="687"
+          y="400"
+        />
+        <rect
+          fill="rgba(74, 82, 64, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="843"
+          y="285.7142857142857"
+        />
+        <rect
+          fill="rgba(111, 94, 92, 1)"
+          height="285.7142857142857"
+          ry="0"
+          width="94"
+          x="63"
+          y="15.714285714285747"
+        />
+        <rect
+          fill="rgba(111, 94, 92, 1)"
+          height="94.28571428571433"
+          ry="0"
+          width="94"
+          x="219"
+          y="267.1428571428571"
+        />
+        <rect
+          fill="rgba(111, 94, 92, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="375"
+          y="361.42857142857144"
+        />
+        <rect
+          fill="rgba(111, 94, 92, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="531"
+          y="400"
+        />
+        <rect
+          fill="rgba(111, 94, 92, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="687"
+          y="400"
+        />
+        <rect
+          fill="rgba(111, 94, 92, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="843"
+          y="285.7142857142857"
+        />
+        <rect
+          fill="rgba(162, 132, 151, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="63"
+          y="15.714285714285747"
+        />
+        <rect
+          fill="rgba(162, 132, 151, 1)"
+          height="14.285714285714278"
+          ry="0"
+          width="94"
+          x="219"
+          y="252.85714285714283"
+        />
+        <rect
+          fill="rgba(162, 132, 151, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="375"
+          y="361.42857142857144"
+        />
+        <rect
+          fill="rgba(162, 132, 151, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="531"
+          y="400"
+        />
+        <rect
+          fill="rgba(162, 132, 151, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="687"
+          y="400"
+        />
+        <rect
+          fill="rgba(162, 132, 151, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="843"
+          y="285.7142857142857"
+        />
+        <rect
+          fill="rgba(198, 202, 237, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="63"
+          y="15.714285714285747"
+        />
+        <rect
+          fill="rgba(198, 202, 237, 1)"
+          height="71.42857142857142"
+          ry="0"
+          width="94"
+          x="219"
+          y="181.42857142857142"
+        />
+        <rect
+          fill="rgba(198, 202, 237, 1)"
+          height="108.57142857142861"
+          ry="0"
+          width="94"
+          x="375"
+          y="252.85714285714283"
+        />
+        <rect
+          fill="rgba(198, 202, 237, 1)"
+          height="85.71428571428572"
+          ry="0"
+          width="94"
+          x="531"
+          y="314.2857142857143"
+        />
+        <rect
+          fill="rgba(198, 202, 237, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="687"
+          y="400"
+        />
+        <rect
+          fill="rgba(198, 202, 237, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="843"
+          y="285.7142857142857"
+        />
+        <rect
+          fill="rgba(173, 168, 190, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="63"
+          y="15.714285714285747"
+        />
+        <rect
+          fill="rgba(173, 168, 190, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="219"
+          y="181.42857142857142"
+        />
+        <rect
+          fill="rgba(173, 168, 190, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="375"
+          y="252.85714285714283"
+        />
+        <rect
+          fill="rgba(173, 168, 190, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="531"
+          y="314.2857142857143"
+        />
+        <rect
+          fill="rgba(173, 168, 190, 1)"
+          height="41.42857142857139"
+          ry="0"
+          width="94"
+          x="687"
+          y="358.5714285714286"
+        />
+        <rect
+          fill="rgba(173, 168, 190, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="843"
+          y="285.7142857142857"
+        />
+        <rect
+          fill="rgba(100, 160, 136, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="63"
+          y="15.714285714285747"
+        />
+        <rect
+          fill="rgba(100, 160, 136, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="219"
+          y="181.42857142857142"
+        />
+        <rect
+          fill="rgba(100, 160, 136, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="375"
+          y="252.85714285714283"
+        />
+        <rect
+          fill="rgba(100, 160, 136, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="531"
+          y="314.2857142857143"
+        />
+        <rect
+          fill="rgba(100, 160, 136, 1)"
+          height="57.14285714285717"
+          ry="0"
+          width="94"
+          x="687"
+          y="301.42857142857144"
+        />
+        <rect
+          fill="rgba(100, 160, 136, 1)"
+          height="0"
+          ry="0"
+          width="94"
+          x="843"
+          y="285.7142857142857"
+        />
+      </g>
+      <g
+        class="visx-group"
+        transform="translate(110, 0)"
+      >
+        <g
+          class="visx-group visx-axis visx-axis-bottom"
+          transform="translate(0, 400)"
+        >
+          <g
+            class="visx-group visx-axis-tick"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="rgba(111, 94, 92, 1)"
+              stroke-linecap="square"
+              stroke-width="1"
+              x1="110"
+              x2="110"
+              y1="0"
+              y2="8"
+            />
+            <svg
+              font-size="16"
+              style="overflow: visible;"
+              x="0"
+              y="0"
+            >
+              <text
+                fill="rgba(111, 94, 92, 1)"
+                font-family="Matter"
+                font-size="16"
+                text-anchor="end"
+                transform="rotate(-45, 110, 24)"
+                x="110"
+                y="24"
+              >
+                <tspan
+                  dy="0em"
+                  x="110"
+                >
+                  Building Base
+                </tspan>
+              </text>
+            </svg>
+          </g>
+          <g
+            class="visx-group visx-axis-tick"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="rgba(111, 94, 92, 1)"
+              stroke-linecap="square"
+              stroke-width="1"
+              x1="266"
+              x2="266"
+              y1="0"
+              y2="8"
+            />
+            <svg
+              font-size="16"
+              style="overflow: visible;"
+              x="0"
+              y="0"
+            >
+              <text
+                fill="rgba(111, 94, 92, 1)"
+                font-family="Matter"
+                font-size="16"
+                text-anchor="end"
+                transform="rotate(-45, 266, 24)"
+                x="266"
+                y="24"
+              >
+                <tspan
+                  dy="0em"
+                  x="266"
+                >
+                  Primary Building Parts
+                </tspan>
+              </text>
+            </svg>
+          </g>
+          <g
+            class="visx-group visx-axis-tick"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="rgba(111, 94, 92, 1)"
+              stroke-linecap="square"
+              stroke-width="1"
+              x1="422"
+              x2="422"
+              y1="0"
+              y2="8"
+            />
+            <svg
+              font-size="16"
+              style="overflow: visible;"
+              x="0"
+              y="0"
+            >
+              <text
+                fill="rgba(111, 94, 92, 1)"
+                font-family="Matter"
+                font-size="16"
+                text-anchor="end"
+                transform="rotate(-45, 422, 24)"
+                x="422"
+                y="24"
+              >
+                <tspan
+                  dy="0em"
+                  x="422"
+                >
+                  Supplementary Building parts1
+                </tspan>
+              </text>
+            </svg>
+          </g>
+          <g
+            class="visx-group visx-axis-tick"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="rgba(111, 94, 92, 1)"
+              stroke-linecap="square"
+              stroke-width="1"
+              x1="578"
+              x2="578"
+              y1="0"
+              y2="8"
+            />
+            <svg
+              font-size="16"
+              style="overflow: visible;"
+              x="0"
+              y="0"
+            >
+              <text
+                fill="rgba(111, 94, 92, 1)"
+                font-family="Matter"
+                font-size="16"
+                text-anchor="end"
+                transform="rotate(-45, 578, 24)"
+                x="578"
+                y="24"
+              >
+                <tspan
+                  dy="0em"
+                  x="578"
+                >
+                  Supplementary Building parts3
+                </tspan>
+              </text>
+            </svg>
+          </g>
+          <g
+            class="visx-group visx-axis-tick"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="rgba(111, 94, 92, 1)"
+              stroke-linecap="square"
+              stroke-width="1"
+              x1="734"
+              x2="734"
+              y1="0"
+              y2="8"
+            />
+            <svg
+              font-size="16"
+              style="overflow: visible;"
+              x="0"
+              y="0"
+            >
+              <text
+                fill="rgba(111, 94, 92, 1)"
+                font-family="Matter"
+                font-size="16"
+                text-anchor="end"
+                transform="rotate(-45, 734, 24)"
+                x="734"
+                y="24"
+              >
+                <tspan
+                  dy="0em"
+                  x="734"
+                >
+                  Supplementary Building parts5
+                </tspan>
+              </text>
+            </svg>
+          </g>
+          <g
+            class="visx-group visx-axis-tick"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="rgba(111, 94, 92, 1)"
+              stroke-linecap="square"
+              stroke-width="1"
+              x1="890"
+              x2="890"
+              y1="0"
+              y2="8"
+            />
+            <svg
+              font-size="16"
+              style="overflow: visible;"
+              x="0"
+              y="0"
+            >
+              <text
+                fill="rgba(111, 94, 92, 1)"
+                font-family="Matter"
+                font-size="16"
+                text-anchor="end"
+                transform="rotate(-45, 890, 24)"
+                x="890"
+                y="24"
+              >
+                <tspan
+                  dy="0em"
+                  x="890"
+                >
+                  Supplementary Building parts4
+                </tspan>
+              </text>
+            </svg>
+          </g>
+          <line
+            class="visx-line visx-axis-line"
+            fill="transparent"
+            shape-rendering="crispEdges"
+            stroke="rgba(111, 94, 92, 1)"
+            stroke-width="1"
+            x1="0.5"
+            x2="1000.5"
+            y1="0"
+            y2="0"
+          />
+        </g>
+        <g
+          class="visx-group visx-axis visx-axis-left"
+          transform="translate(0, 0)"
+        >
+          <g
+            class="visx-group visx-axis-tick"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="rgba(111, 94, 92, 1)"
+              stroke-linecap="square"
+              stroke-width="1"
+              x1="0"
+              x2="-8"
+              y1="400"
+              y2="400"
+            />
+            <svg
+              font-size="16"
+              style="overflow: visible;"
+              x="-1.5em"
+              y="0.33em"
+            >
+              <text
+                fill="rgba(111, 94, 92, 1)"
+                font-family="Matter"
+                font-size="16"
+                text-anchor="middle"
+                transform=""
+                x="-8"
+                y="400"
+              >
+                <tspan
+                  dy="0em"
+                  x="-8"
+                >
+                  0
+                </tspan>
+              </text>
+            </svg>
+          </g>
+          <g
+            class="visx-group visx-axis-tick"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="rgba(111, 94, 92, 1)"
+              stroke-linecap="square"
+              stroke-width="1"
+              x1="0"
+              x2="-8"
+              y1="371.42857142857144"
+              y2="371.42857142857144"
+            />
+            <svg
+              font-size="16"
+              style="overflow: visible;"
+              x="-1.5em"
+              y="0.33em"
+            >
+              <text
+                fill="rgba(111, 94, 92, 1)"
+                font-family="Matter"
+                font-size="16"
+                text-anchor="middle"
+                transform=""
+                x="-8"
+                y="371.42857142857144"
+              >
+                <tspan
+                  dy="0em"
+                  x="-8"
+                >
+                  2
+                </tspan>
+              </text>
+            </svg>
+          </g>
+          <g
+            class="visx-group visx-axis-tick"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="rgba(111, 94, 92, 1)"
+              stroke-linecap="square"
+              stroke-width="1"
+              x1="0"
+              x2="-8"
+              y1="342.8571428571429"
+              y2="342.8571428571429"
+            />
+            <svg
+              font-size="16"
+              style="overflow: visible;"
+              x="-1.5em"
+              y="0.33em"
+            >
+              <text
+                fill="rgba(111, 94, 92, 1)"
+                font-family="Matter"
+                font-size="16"
+                text-anchor="middle"
+                transform=""
+                x="-8"
+                y="342.8571428571429"
+              >
+                <tspan
+                  dy="0em"
+                  x="-8"
+                >
+                  4
+                </tspan>
+              </text>
+            </svg>
+          </g>
+          <g
+            class="visx-group visx-axis-tick"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="rgba(111, 94, 92, 1)"
+              stroke-linecap="square"
+              stroke-width="1"
+              x1="0"
+              x2="-8"
+              y1="314.2857142857143"
+              y2="314.2857142857143"
+            />
+            <svg
+              font-size="16"
+              style="overflow: visible;"
+              x="-1.5em"
+              y="0.33em"
+            >
+              <text
+                fill="rgba(111, 94, 92, 1)"
+                font-family="Matter"
+                font-size="16"
+                text-anchor="middle"
+                transform=""
+                x="-8"
+                y="314.2857142857143"
+              >
+                <tspan
+                  dy="0em"
+                  x="-8"
+                >
+                  6
+                </tspan>
+              </text>
+            </svg>
+          </g>
+          <g
+            class="visx-group visx-axis-tick"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="rgba(111, 94, 92, 1)"
+              stroke-linecap="square"
+              stroke-width="1"
+              x1="0"
+              x2="-8"
+              y1="285.7142857142857"
+              y2="285.7142857142857"
+            />
+            <svg
+              font-size="16"
+              style="overflow: visible;"
+              x="-1.5em"
+              y="0.33em"
+            >
+              <text
+                fill="rgba(111, 94, 92, 1)"
+                font-family="Matter"
+                font-size="16"
+                text-anchor="middle"
+                transform=""
+                x="-8"
+                y="285.7142857142857"
+              >
+                <tspan
+                  dy="0em"
+                  x="-8"
+                >
+                  8
+                </tspan>
+              </text>
+            </svg>
+          </g>
+          <g
+            class="visx-group visx-axis-tick"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="rgba(111, 94, 92, 1)"
+              stroke-linecap="square"
+              stroke-width="1"
+              x1="0"
+              x2="-8"
+              y1="257.1428571428571"
+              y2="257.1428571428571"
+            />
+            <svg
+              font-size="16"
+              style="overflow: visible;"
+              x="-1.5em"
+              y="0.33em"
+            >
+              <text
+                fill="rgba(111, 94, 92, 1)"
+                font-family="Matter"
+                font-size="16"
+                text-anchor="middle"
+                transform=""
+                x="-8"
+                y="257.1428571428571"
+              >
+                <tspan
+                  dy="0em"
+                  x="-8"
+                >
+                  10
+                </tspan>
+              </text>
+            </svg>
+          </g>
+          <g
+            class="visx-group visx-axis-tick"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="rgba(111, 94, 92, 1)"
+              stroke-linecap="square"
+              stroke-width="1"
+              x1="0"
+              x2="-8"
+              y1="228.57142857142856"
+              y2="228.57142857142856"
+            />
+            <svg
+              font-size="16"
+              style="overflow: visible;"
+              x="-1.5em"
+              y="0.33em"
+            >
+              <text
+                fill="rgba(111, 94, 92, 1)"
+                font-family="Matter"
+                font-size="16"
+                text-anchor="middle"
+                transform=""
+                x="-8"
+                y="228.57142857142856"
+              >
+                <tspan
+                  dy="0em"
+                  x="-8"
+                >
+                  12
+                </tspan>
+              </text>
+            </svg>
+          </g>
+          <g
+            class="visx-group visx-axis-tick"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="rgba(111, 94, 92, 1)"
+              stroke-linecap="square"
+              stroke-width="1"
+              x1="0"
+              x2="-8"
+              y1="200"
+              y2="200"
+            />
+            <svg
+              font-size="16"
+              style="overflow: visible;"
+              x="-1.5em"
+              y="0.33em"
+            >
+              <text
+                fill="rgba(111, 94, 92, 1)"
+                font-family="Matter"
+                font-size="16"
+                text-anchor="middle"
+                transform=""
+                x="-8"
+                y="200"
+              >
+                <tspan
+                  dy="0em"
+                  x="-8"
+                >
+                  14
+                </tspan>
+              </text>
+            </svg>
+          </g>
+          <g
+            class="visx-group visx-axis-tick"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="rgba(111, 94, 92, 1)"
+              stroke-linecap="square"
+              stroke-width="1"
+              x1="0"
+              x2="-8"
+              y1="171.42857142857144"
+              y2="171.42857142857144"
+            />
+            <svg
+              font-size="16"
+              style="overflow: visible;"
+              x="-1.5em"
+              y="0.33em"
+            >
+              <text
+                fill="rgba(111, 94, 92, 1)"
+                font-family="Matter"
+                font-size="16"
+                text-anchor="middle"
+                transform=""
+                x="-8"
+                y="171.42857142857144"
+              >
+                <tspan
+                  dy="0em"
+                  x="-8"
+                >
+                  16
+                </tspan>
+              </text>
+            </svg>
+          </g>
+          <g
+            class="visx-group visx-axis-tick"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="rgba(111, 94, 92, 1)"
+              stroke-linecap="square"
+              stroke-width="1"
+              x1="0"
+              x2="-8"
+              y1="142.85714285714283"
+              y2="142.85714285714283"
+            />
+            <svg
+              font-size="16"
+              style="overflow: visible;"
+              x="-1.5em"
+              y="0.33em"
+            >
+              <text
+                fill="rgba(111, 94, 92, 1)"
+                font-family="Matter"
+                font-size="16"
+                text-anchor="middle"
+                transform=""
+                x="-8"
+                y="142.85714285714283"
+              >
+                <tspan
+                  dy="0em"
+                  x="-8"
+                >
+                  18
+                </tspan>
+              </text>
+            </svg>
+          </g>
+          <g
+            class="visx-group visx-axis-tick"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="rgba(111, 94, 92, 1)"
+              stroke-linecap="square"
+              stroke-width="1"
+              x1="0"
+              x2="-8"
+              y1="114.28571428571428"
+              y2="114.28571428571428"
+            />
+            <svg
+              font-size="16"
+              style="overflow: visible;"
+              x="-1.5em"
+              y="0.33em"
+            >
+              <text
+                fill="rgba(111, 94, 92, 1)"
+                font-family="Matter"
+                font-size="16"
+                text-anchor="middle"
+                transform=""
+                x="-8"
+                y="114.28571428571428"
+              >
+                <tspan
+                  dy="0em"
+                  x="-8"
+                >
+                  20
+                </tspan>
+              </text>
+            </svg>
+          </g>
+          <g
+            class="visx-group visx-axis-tick"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="rgba(111, 94, 92, 1)"
+              stroke-linecap="square"
+              stroke-width="1"
+              x1="0"
+              x2="-8"
+              y1="85.71428571428572"
+              y2="85.71428571428572"
+            />
+            <svg
+              font-size="16"
+              style="overflow: visible;"
+              x="-1.5em"
+              y="0.33em"
+            >
+              <text
+                fill="rgba(111, 94, 92, 1)"
+                font-family="Matter"
+                font-size="16"
+                text-anchor="middle"
+                transform=""
+                x="-8"
+                y="85.71428571428572"
+              >
+                <tspan
+                  dy="0em"
+                  x="-8"
+                >
+                  22
+                </tspan>
+              </text>
+            </svg>
+          </g>
+          <g
+            class="visx-group visx-axis-tick"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="rgba(111, 94, 92, 1)"
+              stroke-linecap="square"
+              stroke-width="1"
+              x1="0"
+              x2="-8"
+              y1="57.14285714285716"
+              y2="57.14285714285716"
+            />
+            <svg
+              font-size="16"
+              style="overflow: visible;"
+              x="-1.5em"
+              y="0.33em"
+            >
+              <text
+                fill="rgba(111, 94, 92, 1)"
+                font-family="Matter"
+                font-size="16"
+                text-anchor="middle"
+                transform=""
+                x="-8"
+                y="57.14285714285716"
+              >
+                <tspan
+                  dy="0em"
+                  x="-8"
+                >
+                  24
+                </tspan>
+              </text>
+            </svg>
+          </g>
+          <g
+            class="visx-group visx-axis-tick"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="rgba(111, 94, 92, 1)"
+              stroke-linecap="square"
+              stroke-width="1"
+              x1="0"
+              x2="-8"
+              y1="28.57142857142856"
+              y2="28.57142857142856"
+            />
+            <svg
+              font-size="16"
+              style="overflow: visible;"
+              x="-1.5em"
+              y="0.33em"
+            >
+              <text
+                fill="rgba(111, 94, 92, 1)"
+                font-family="Matter"
+                font-size="16"
+                text-anchor="middle"
+                transform=""
+                x="-8"
+                y="28.57142857142856"
+              >
+                <tspan
+                  dy="0em"
+                  x="-8"
+                >
+                  26
+                </tspan>
+              </text>
+            </svg>
+          </g>
+          <g
+            class="visx-group visx-axis-tick"
+            transform="translate(0, 0)"
+          >
+            <line
+              class="visx-line"
+              fill="transparent"
+              shape-rendering="crispEdges"
+              stroke="rgba(111, 94, 92, 1)"
+              stroke-linecap="square"
+              stroke-width="1"
+              x1="0"
+              x2="-8"
+              y1="0"
+              y2="0"
+            />
+            <svg
+              font-size="16"
+              style="overflow: visible;"
+              x="-1.5em"
+              y="0.33em"
+            >
+              <text
+                fill="rgba(111, 94, 92, 1)"
+                font-family="Matter"
+                font-size="16"
+                text-anchor="middle"
+                transform=""
+                x="-8"
+                y="0"
+              >
+                <tspan
+                  dy="0em"
+                  x="-8"
+                >
+                  28
+                </tspan>
+              </text>
+            </svg>
+          </g>
+          <line
+            class="visx-line visx-axis-line"
+            fill="transparent"
+            shape-rendering="crispEdges"
+            stroke="rgba(111, 94, 92, 1)"
+            stroke-width="1"
+            x1="0"
+            x2="0"
+            y1="400.5"
+            y2="0.5"
+          />
+          <svg
+            font-size="36"
+            style="overflow: visible;"
+            x="0"
+            y="0"
+          >
+            <text
+              class="visx-axis-label"
+              font-family="Matter"
+              font-size="36"
+              text-anchor="start"
+              transform="rotate(-90)"
+              x="-200"
+              y="-80"
+            >
+              <tspan
+                dy="0em"
+                x="-200"
+              >
+                CO2
+              </tspan>
+            </text>
+          </svg>
+        </g>
+      </g>
+    </svg>
+    <div
+      style="margin-left: 20px; display: flex; flex-direction: column; align-items: center; font-size: 16px; font-family: Matter; transform: translateY(-90%);"
+    >
+      <div
+        class="visx-legend"
+        style="display: flex; flex-direction: column;"
+      >
+        <div
+          class="visx-legend-item"
+          style="display: flex; align-items: center; flex-direction: row; margin: 0px;"
+        >
+          <div
+            class="visx-legend-shape"
+            style="display: flex; margin: 2px 4px 2px 0px;"
+          >
+            <div
+              style="width: 15px; height: 15px; background: rgb(100, 160, 136);"
+            />
+          </div>
+          <div
+            class="visx-legend-label"
+            style="justify-content: left; display: flex; flex: 1; margin: 0px 30px 0px 0px;"
+          >
+            A1-A3
+          </div>
+        </div>
+        <div
+          class="visx-legend-item"
+          style="display: flex; align-items: center; flex-direction: row; margin: 0px;"
+        >
+          <div
+            class="visx-legend-shape"
+            style="display: flex; margin: 2px 4px 2px 0px;"
+          >
+            <div
+              style="width: 15px; height: 15px; background: rgb(74, 82, 64);"
+            />
+          </div>
+          <div
+            class="visx-legend-label"
+            style="justify-content: left; display: flex; flex: 1; margin: 0px 30px 0px 0px;"
+          >
+            A4
+          </div>
+        </div>
+        <div
+          class="visx-legend-item"
+          style="display: flex; align-items: center; flex-direction: row; margin: 0px;"
+        >
+          <div
+            class="visx-legend-shape"
+            style="display: flex; margin: 2px 4px 2px 0px;"
+          >
+            <div
+              style="width: 15px; height: 15px; background: rgb(111, 94, 92);"
+            />
+          </div>
+          <div
+            class="visx-legend-label"
+            style="justify-content: left; display: flex; flex: 1; margin: 0px 30px 0px 0px;"
+          >
+            C1
+          </div>
+        </div>
+        <div
+          class="visx-legend-item"
+          style="display: flex; align-items: center; flex-direction: row; margin: 0px;"
+        >
+          <div
+            class="visx-legend-shape"
+            style="display: flex; margin: 2px 4px 2px 0px;"
+          >
+            <div
+              style="width: 15px; height: 15px; background: rgb(162, 132, 151);"
+            />
+          </div>
+          <div
+            class="visx-legend-label"
+            style="justify-content: left; display: flex; flex: 1; margin: 0px 30px 0px 0px;"
+          >
+            C2
+          </div>
+        </div>
+        <div
+          class="visx-legend-item"
+          style="display: flex; align-items: center; flex-direction: row; margin: 0px;"
+        >
+          <div
+            class="visx-legend-shape"
+            style="display: flex; margin: 2px 4px 2px 0px;"
+          >
+            <div
+              style="width: 15px; height: 15px; background: rgb(198, 202, 237);"
+            />
+          </div>
+          <div
+            class="visx-legend-label"
+            style="justify-content: left; display: flex; flex: 1; margin: 0px 30px 0px 0px;"
+          >
+            D1
+          </div>
+        </div>
+        <div
+          class="visx-legend-item"
+          style="display: flex; align-items: center; flex-direction: row; margin: 0px;"
+        >
+          <div
+            class="visx-legend-shape"
+            style="display: flex; margin: 2px 4px 2px 0px;"
+          >
+            <div
+              style="width: 15px; height: 15px; background: rgb(173, 168, 190);"
+            />
+          </div>
+          <div
+            class="visx-legend-label"
+            style="justify-content: left; display: flex; flex: 1; margin: 0px 30px 0px 0px;"
+          >
+            D2
+          </div>
+        </div>
+        <div
+          class="visx-legend-item"
+          style="display: flex; align-items: center; flex-direction: row; margin: 0px;"
+        >
+          <div
+            class="visx-legend-shape"
+            style="display: flex; margin: 2px 4px 2px 0px;"
+          >
+            <div
+              style="width: 15px; height: 15px; background: rgb(100, 160, 136);"
+            />
+          </div>
+          <div
+            class="visx-legend-label"
+            style="justify-content: left; display: flex; flex: 1; margin: 0px 30px 0px 0px;"
+          >
+            D3
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

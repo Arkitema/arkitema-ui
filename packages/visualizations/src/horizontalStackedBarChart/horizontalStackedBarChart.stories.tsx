@@ -27,7 +27,7 @@ export const Primary: Story = {
     colors: ['#E06763', '#FEA943', '#6C8E85'],
     xLabel: 'Number of Tasks',
     xLabelSize: 18,
-    fontFamily: 'sans-serif',
+    fontFamily: 'Matter',
     backgroundColor: '#FFFFFF',
     barPadding: 0.4,
     borderRadius: 0,
