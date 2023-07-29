@@ -11,14 +11,17 @@
   "scripts": {
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
+    "test:update": "vitest run --update",
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json",
     "build:watch": "tsc --watch",
     "lint": "eslint src --ext ts,tsx ",
+    "lint:fix": "eslint --fix src/**/*.{tsx,ts}",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
     "format:fix": "prettier --write src/",
-    "format": "prettier --check src/"
+    "format": "prettier --check src/",
+    "fix": "npm run lint:fix && npm run format:fix"
   },
   "dependencies": {
     "@arkitema/brand": "^0.2.0",

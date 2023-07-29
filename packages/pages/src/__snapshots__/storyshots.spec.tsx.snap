@@ -18,7 +18,7 @@ exports[`Storybook Snapshots > 'LoginPage' > Primary 1`] = `
           Arkitema UI
         </div>
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1j6c6lb-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-sz93ry-MuiButtonBase-root-MuiButton-root"
           data-testid="arkitema-button"
           tabindex="0"
           type="button"
@@ -93,7 +93,7 @@ exports[`Storybook Snapshots > 'NotFoundPage' > Primary 1`] = `
       class="MuiStack-root css-13rwkht-MuiStack-root"
     >
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-8ujy7p-MuiButtonBase-root-MuiButton-root"
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-117q8sz-MuiButtonBase-root-MuiButton-root"
         data-testid="arkitema-button"
         tabindex="0"
         type="button"
@@ -104,7 +104,7 @@ exports[`Storybook Snapshots > 'NotFoundPage' > Primary 1`] = `
         />
       </button>
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-8ujy7p-MuiButtonBase-root-MuiButton-root"
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-117q8sz-MuiButtonBase-root-MuiButton-root"
         data-testid="arkitema-button"
         tabindex="0"
         type="button"

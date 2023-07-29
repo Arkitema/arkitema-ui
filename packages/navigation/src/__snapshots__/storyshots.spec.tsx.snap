@@ -21,7 +21,7 @@ exports[`Storybook Snapshots > 'ArkitemaAppBar' > Primary 1`] = `
             style="display: flex; flex-direction: row;"
           >
             <img
-              alt="carbon-base-logo"
+              alt="arkitema-logo"
               src="[object Object]"
               style="margin-top: -3.2px; width: 200px;"
             />
