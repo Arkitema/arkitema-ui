@@ -16,9 +16,18 @@ The package is composed of the following components:
 
 ### FileInput
 
-- Loading state: This component supports the optional props 'loading' and 'setLoading'. By utilizing these props, the parent component can manage relevant logic, such as disabling submit buttons until the image has finished uploading. If the loading state props are not passed, the component will create them locally.
-- Allowed extensions: Currently, the component only allows uploading of image-related files and JSON files. However, this restriction may change in the future.
+- Loading state: This component supports the optional props 'loading' and 'setLoading'.
+  By utilizing these props, the parent component can manage relevant logic, such as disabling submit buttons until the
+  image has finished uploading. If the loading state props are not passed, the component will create them locally.
+- Allowed extensions: Currently, the component only allows uploading of image-related files and JSON files. However,
+  this restriction may change in the future.
 
 ### InformationInput
 
 - By default, this component functions as a text input field. To convert it into a dropdown, pass an array of desired options to the 'options' prop.
+
+## Installation
+
+```
+npm install --save @arkitema/datafetching
+```

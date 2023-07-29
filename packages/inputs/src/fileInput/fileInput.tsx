@@ -1,11 +1,15 @@
 import { Typography } from '@mui/material'
-import React, { useState } from 'react'
+import React, { ChangeEvent, useState } from 'react'
 import imageCompression from 'browser-image-compression'
-import { Loading } from '@arkitema/datafetching'
+import { ErrorMessage } from '@arkitema/errorhandling'
+import { ArkitemaButton } from '../arkitemaButton'
+import { UploadFileOutlined } from '@mui/icons-material'
 
 interface FileInputProps {
   data: string
   setData: React.Dispatch<React.SetStateAction<string>>
+  fileName?: string
+  setFileName?: React.Dispatch<React.SetStateAction<string>>
   text: string
   allowedExtensions: string[]
   fileType: 'image' | 'json'
@@ -14,9 +18,8 @@ interface FileInputProps {
 }
 
 export const FileInput = (props: FileInputProps) => {
-  const { data, setData, text, allowedExtensions, fileType } = props
-  const [error, setError] = useState<string | null>(null)
-  const [updateData, setUpdateData] = useState(false)
+  const { data, setData, fileName, setFileName, text, allowedExtensions, fileType } = props
+  const [error, setError] = useState<Error | null>(null)
 
   // If loading is not passed from the parent, a local state is used
   const [localLoading, setLocalLoading] = useState(false)
@@ -30,7 +33,7 @@ export const FileInput = (props: FileInputProps) => {
     }
   }
 
-  const fileToBase64 = (file: File) => {
+  const fileToBase64 = (file: File): Promise<string> => {
     return new Promise((resolve, reject) => {
       const reader = new FileReader()
       reader.onloadend = () => {
@@ -50,45 +53,49 @@ export const FileInput = (props: FileInputProps) => {
     maxWidthOrHeight: 500,
   }
 
-  const handleFileInputChange = async (event: any) => {
+  const handleFileInputChange = async (event: ChangeEvent<HTMLInputElement>) => {
     handleSetLoading(true)
     const fileExist = event.target.files && event.target.files[0]
     if (!fileExist) {
-      setError('No file selected.')
+      setError(new Error('No file selected.'))
       handleSetLoading(false)
       return
     }
-    const file = event.target.files[0]
+    const file = event.target.files ? event.target.files[0] : null
+    if (!file) {
+      handleSetLoading(false)
+      setError(new Error('Invalid file'))
+      return
+    }
     const fileName = file.name.toLowerCase()
     const isValidExtension = allowedExtensions.some((ext) => fileName.endsWith(ext))
 
     if (!isValidExtension) {
       handleSetLoading(false)
       setError(
-        'Invalid file format. Please upload one of these file types: ' +
-          allowedExtensions.map((type: string) => {
-            return type
-          }),
+        new Error(
+          `Invalid file format. Please upload one of these file types: ${allowedExtensions.map(
+            (type: string) => type,
+          )}`,
+        ),
       )
       return
     }
 
     try {
+      let base64 = ''
       if (fileType == 'image') {
         const compressedFile = await imageCompression(file, options)
-        const base64 = await fileToBase64(compressedFile)
-        handleSetLoading(false)
-        setData(base64 as string)
+        base64 = await fileToBase64(compressedFile)
       } else if (fileType == 'json') {
-        const base64 = await fileToBase64(file)
-        handleSetLoading(false)
-        setData(base64 as string)
+        base64 = await fileToBase64(file)
       }
       setError(null)
       handleSetLoading(false)
-      setUpdateData && setUpdateData(true)
+      setData(base64 as string)
+      setFileName ? setFileName(file.name) : null
     } catch (error) {
-      setError('Failed to process the file.')
+      setError(new Error('Failed to process the file.'))
     }
   }
 
@@ -105,37 +112,40 @@ export const FileInput = (props: FileInputProps) => {
       >
         {text}
       </Typography>
-      <input type='file' onChange={handleFileInputChange} />
-      <Typography
-        component='div'
-        sx={{
-          color: 'Red',
-          font: 'Matter',
-          fontSize: '12px',
-          paddingBottom: '20px',
-          paddingTop: '10px',
-        }}
-      >
-        {error}
-      </Typography>
-      {isLoading ? (
-        <Loading />
-      ) : updateData && fileType == 'image' ? (
-        <img src={data} alt='uploaded image' />
-      ) : (
-        <Typography
-          component='div'
-          sx={{
-            color: '#333333',
-            font: 'Matter',
-            fontSize: '12px',
-            paddingBottom: '20px',
-            paddingTop: '10px',
-          }}
-        >
-          {data && 'Added file: ' + data}
-        </Typography>
-      )}
+      <ArkitemaButton text='Upload File' component='label' startIcon={<UploadFileOutlined />} loading={isLoading}>
+        <input onChange={handleFileInputChange} type='file' hidden />
+      </ArkitemaButton>
+      <ErrorMessage error={error} />
+      <ShowUploadedFile fileType={fileType} show={!isLoading && !!data} data={data} fileName={fileName} />
     </div>
+  )
+}
+
+interface ShowUploadedFileProps {
+  show: boolean
+  fileType: 'image' | 'json'
+  data: string
+  fileName?: string
+}
+
+const ShowUploadedFile = ({ show, fileType, data, fileName }: ShowUploadedFileProps) => {
+  if (!show) {
+    return null
+  }
+
+  return (
+    <Typography
+      component='div'
+      sx={{
+        color: '#333333',
+        font: 'Matter',
+        fontSize: '12px',
+        paddingBottom: '20px',
+        paddingTop: '10px',
+      }}
+    >
+      {`Added file: ${fileName}`}
+      {fileType == 'image' ? <img src={`data:image/png;base64,${data}`} alt={fileName} /> : null}
+    </Typography>
   )
 }
