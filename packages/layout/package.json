@@ -1,6 +1,6 @@
 {
   "name": "@arkitema/layout",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "Arkitema Layout Library",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -21,8 +21,8 @@
     "format": "prettier --check src/"
   },
   "dependencies": {
-    "@arkitema/brand": "^0.1.2",
-    "@arkitema/errorhandling": "^0.1.2"
+    "@arkitema/brand": "^0.2.0",
+    "@arkitema/errorhandling": "^0.2.0"
   },
   "devDependencies": {
     "file-loader": "^6.2.0"
