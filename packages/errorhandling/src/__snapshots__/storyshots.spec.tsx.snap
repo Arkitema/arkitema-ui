@@ -64,32 +64,8 @@ exports[`Storybook Snapshots > 'ErrorBoundary' > WithError 1`] = `
         Try going back or refresh the page
       </h3>
       <h3>
-        If the error persists, provide the following details to IT Support:
+        If the error persist, contact IT Support
       </h3>
-      <details
-        style="white-space: pre-wrap;"
-      >
-        <div
-          class="MuiBox-root css-1ns5f5t"
-        >
-          <span
-            class="MuiTypography-root MuiTypography-caption css-1sn4lm3-MuiTypography-root"
-          >
-            Error: 
-    at Child (/home/chrk/git/arkitema/arkitema-ui/packages/errorhandling/src/errorBoundary/errorBoundary.stories.tsx:25:10)
-    at renderWithHooks (/home/chrk/git/arkitema/arkitema-ui/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
-    at mountIndeterminateComponent (/home/chrk/git/arkitema/arkitema-ui/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
-    at beginWork (/home/chrk/git/arkitema/arkitema-ui/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
-    at beginWork$1 (/home/chrk/git/arkitema/arkitema-ui/node_modules/react-dom/cjs/react-dom.development.js:27426:14)
-    at performUnitOfWork (/home/chrk/git/arkitema/arkitema-ui/node_modules/react-dom/cjs/react-dom.development.js:26560:12)
-    at workLoopSync (/home/chrk/git/arkitema/arkitema-ui/node_modules/react-dom/cjs/react-dom.development.js:26466:5)
-    at renderRootSync (/home/chrk/git/arkitema/arkitema-ui/node_modules/react-dom/cjs/react-dom.development.js:26434:7)
-    at recoverFromConcurrentError (/home/chrk/git/arkitema/arkitema-ui/node_modules/react-dom/cjs/react-dom.development.js:25850:20)
-    at performConcurrentWorkOnRoot (/home/chrk/git/arkitema/arkitema-ui/node_modules/react-dom/cjs/react-dom.development.js:25750:22)
-          </span>
-        </div>
-        <hr />
-      </details>
     </div>
   </div>
 </div>

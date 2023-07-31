@@ -41,17 +41,7 @@ export class ErrorBoundary extends React.Component<Props, State> {
           />
           <Box sx={{ padding: 3 }}>
             <h3>Try going back or refresh the page</h3>
-            <h3>If the error persists, provide the following details to IT Support:</h3>
-            {this.state.error ? (
-              <details style={{ whiteSpace: 'pre-wrap' }}>
-                <Box sx={{ paddingLeft: 3 }}>
-                  <Typography variant='caption'>{this.state.error.stack}</Typography>
-                </Box>
-                <hr />
-              </details>
-            ) : (
-              <h3>If the error persist, contact IT Support</h3>
-            )}
+            <h3>If the error persist, contact IT Support</h3>
           </Box>
         </div>
       )
