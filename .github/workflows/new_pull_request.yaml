@@ -104,10 +104,10 @@ jobs:
               --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} \
               --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} \
               --source ${{ vars.BUNDLES_CONTAINER_NAME}} \
-              --pattern "bundles/${{ env.app_name }}/${{ github.ref_name }}/${{ matrix.package }}/*"
+              --pattern "bundles/${{ env.app_name }}/${{ github.head_ref }}/${{ matrix.package }}/*"
             az storage blob upload-batch \
               --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} \
               --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} \
               --auth-mode key -d ${{ vars.BUNDLES_CONTAINER_NAME}} \
-              --destination-path "bundles/${{ env.app_name }}/${{ github.ref_name }}/${{ matrix.package }}" \
+              --destination-path "bundles/${{ env.app_name }}/${{ github.head_ref }}/${{ matrix.package }}" \
               -s ./packages/${{ matrix.package }}/storybook-static
