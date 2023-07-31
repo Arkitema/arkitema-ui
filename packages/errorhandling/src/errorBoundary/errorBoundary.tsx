@@ -1,7 +1,7 @@
 import { ApolloError } from '@apollo/client'
 import * as React from 'react'
 import { ErrorMessage } from '../errorMessage'
-import { Box, Typography } from '@mui/material'
+import { Box } from '@mui/material'
 
 interface Props {
   children?: React.ReactNode
