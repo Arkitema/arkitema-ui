@@ -1,0 +1,497 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Storybook Snapshots > 'AppContainer' > Primary 1`] = `
+<div>
+  <div
+    class="MuiContainer-root MuiContainer-disableGutters css-88wc5-MuiContainer-root"
+    data-testid="app-container"
+  >
+    <div
+      class="MuiTypography-root MuiTypography-body1 css-1uoxje7-MuiTypography-root"
+    >
+      This is an example
+    </div>
+    <div
+      class="MuiTypography-root MuiTypography-body1 css-199oi6q-MuiTypography-root"
+    >
+      If the app loads as expected, this component will simply load its content. If not, it will render an error as displayed in the error story.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook Snapshots > 'ArkitemaCard' > Primary 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-5 MuiGrid-grid-md-auto css-nmdy5z-MuiGrid-root"
+    data-testid="arkitema-card"
+  >
+    <a
+      class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1bhi0za-MuiTypography-root-MuiLink-root"
+      href="//id"
+    >
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 css-osbczb-MuiPaper-root"
+      >
+        <div
+          class="css-1r1qn66"
+        />
+        <div
+          class="MuiTypography-root MuiTypography-h3 css-15h88l5-MuiTypography-root"
+        >
+          <div
+            style="margin-left: auto;"
+          >
+            Kronborg Strandby
+          </div>
+        </div>
+        <div
+          class="MuiTypography-root MuiTypography-h2 css-11kbmis-MuiTypography-root"
+        >
+          <div
+            style="margin-left: auto; margin-right: 30px;"
+          >
+            76
+          </div>
+        </div>
+        <div
+          class="MuiTypography-root MuiTypography-body1 css-139s72-MuiTypography-root"
+        >
+          <div
+            style="margin-left: auto;"
+          >
+            CO2/m2/year
+          </div>
+        </div>
+        <img
+          height="350px"
+          src="/kronborg_strandby.png"
+          style="position: absolute; top: 0px; left: 0px; z-index: 0;"
+        />
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storybook Snapshots > 'ArkitemaTable' > Primary 1`] = `
+<div>
+  <div
+    class="MuiTableContainer-root MuiBox-root css-1ejugte-MuiTableContainer-root"
+  >
+    <table
+      aria-label="a dense table"
+      class="MuiTable-root css-uy3l8x-MuiTable-root"
+    >
+      <tbody
+        class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+      >
+        <tr
+          class="MuiTableRow-root css-34nofg-MuiTableRow-root"
+        >
+          <th
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+            scope="row"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1nwgw9v-MuiTypography-root"
+            >
+              Row 1 
+            </p>
+          </th>
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-dv0mq-MuiTableCell-root"
+          >
+            row 1
+          </td>
+        </tr>
+        <tr
+          class="MuiTableRow-root css-34nofg-MuiTableRow-root"
+        >
+          <th
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-dsuxgy-MuiTableCell-root"
+            scope="row"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1 css-1nwgw9v-MuiTypography-root"
+            >
+              Row 2
+            </p>
+          </th>
+          <td
+            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeSmall css-dv0mq-MuiTableCell-root"
+          >
+            row 2
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Storybook Snapshots > 'CardGrid' > Primary 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container css-1byy5y5-MuiGrid-root"
+    data-testid="card-grid"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-5 MuiGrid-grid-md-auto css-1en3koz-MuiGrid-root"
+      data-testid="arkitema-card"
+    >
+      <a
+        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1bhi0za-MuiTypography-root-MuiLink-root"
+        href="//id"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 css-idttrf-MuiPaper-root"
+        >
+          <div
+            class="css-1r1qn66"
+          />
+          <div
+            class="MuiTypography-root MuiTypography-h4 css-10039id-MuiTypography-root"
+          >
+            <div
+              style="margin-left: auto;"
+            >
+              Kronborg Strandby
+            </div>
+          </div>
+          <div
+            class="MuiTypography-root MuiTypography-h3 css-a301ii-MuiTypography-root"
+          >
+            <div
+              style="margin-left: auto; margin-right: 30px;"
+            >
+              76
+              CO2/m2/year
+            </div>
+          </div>
+          <img
+            height="200px"
+            src="/kronborg_strandby.png"
+            style="position: absolute; top: 0px; left: 0px; z-index: 0;"
+          />
+        </div>
+      </a>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-5 MuiGrid-grid-md-auto css-1en3koz-MuiGrid-root"
+      data-testid="arkitema-card"
+    >
+      <a
+        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1bhi0za-MuiTypography-root-MuiLink-root"
+        href="//id"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 css-idttrf-MuiPaper-root"
+        >
+          <div
+            class="css-1r1qn66"
+          />
+          <div
+            class="MuiTypography-root MuiTypography-h4 css-10039id-MuiTypography-root"
+          >
+            <div
+              style="margin-left: auto;"
+            >
+              Kronborg Strandby
+            </div>
+          </div>
+          <div
+            class="MuiTypography-root MuiTypography-h3 css-a301ii-MuiTypography-root"
+          >
+            <div
+              style="margin-left: auto; margin-right: 30px;"
+            >
+              76
+              CO2/m2/year
+            </div>
+          </div>
+          <img
+            height="200px"
+            src="/kronborg_strandby.png"
+            style="position: absolute; top: 0px; left: 0px; z-index: 0;"
+          />
+        </div>
+      </a>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-5 MuiGrid-grid-md-auto css-1en3koz-MuiGrid-root"
+      data-testid="arkitema-card"
+    >
+      <a
+        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1bhi0za-MuiTypography-root-MuiLink-root"
+        href="//id"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 css-idttrf-MuiPaper-root"
+        >
+          <div
+            class="css-1r1qn66"
+          />
+          <div
+            class="MuiTypography-root MuiTypography-h4 css-10039id-MuiTypography-root"
+          >
+            <div
+              style="margin-left: auto;"
+            >
+              Kronborg Strandby
+            </div>
+          </div>
+          <div
+            class="MuiTypography-root MuiTypography-h3 css-a301ii-MuiTypography-root"
+          >
+            <div
+              style="margin-left: auto; margin-right: 30px;"
+            >
+              76
+              CO2/m2/year
+            </div>
+          </div>
+          <img
+            height="200px"
+            src="/kronborg_strandby.png"
+            style="position: absolute; top: 0px; left: 0px; z-index: 0;"
+          />
+        </div>
+      </a>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-5 MuiGrid-grid-md-auto css-1en3koz-MuiGrid-root"
+      data-testid="arkitema-card"
+    >
+      <a
+        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1bhi0za-MuiTypography-root-MuiLink-root"
+        href="//id"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 css-idttrf-MuiPaper-root"
+        >
+          <div
+            class="css-1r1qn66"
+          />
+          <div
+            class="MuiTypography-root MuiTypography-h4 css-10039id-MuiTypography-root"
+          >
+            <div
+              style="margin-left: auto;"
+            >
+              Kronborg Strandby
+            </div>
+          </div>
+          <div
+            class="MuiTypography-root MuiTypography-h3 css-a301ii-MuiTypography-root"
+          >
+            <div
+              style="margin-left: auto; margin-right: 30px;"
+            >
+              76
+              CO2/m2/year
+            </div>
+          </div>
+          <img
+            height="200px"
+            src="/kronborg_strandby.png"
+            style="position: absolute; top: 0px; left: 0px; z-index: 0;"
+          />
+        </div>
+      </a>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-5 MuiGrid-grid-md-auto css-1en3koz-MuiGrid-root"
+      data-testid="arkitema-card"
+    >
+      <a
+        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1bhi0za-MuiTypography-root-MuiLink-root"
+        href="//id"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 css-idttrf-MuiPaper-root"
+        >
+          <div
+            class="css-1r1qn66"
+          />
+          <div
+            class="MuiTypography-root MuiTypography-h4 css-10039id-MuiTypography-root"
+          >
+            <div
+              style="margin-left: auto;"
+            >
+              Kronborg Strandby
+            </div>
+          </div>
+          <div
+            class="MuiTypography-root MuiTypography-h3 css-a301ii-MuiTypography-root"
+          >
+            <div
+              style="margin-left: auto; margin-right: 30px;"
+            >
+              76
+              CO2/m2/year
+            </div>
+          </div>
+          <img
+            height="200px"
+            src="/kronborg_strandby.png"
+            style="position: absolute; top: 0px; left: 0px; z-index: 0;"
+          />
+        </div>
+      </a>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-5 MuiGrid-grid-md-auto css-1en3koz-MuiGrid-root"
+      data-testid="arkitema-card"
+    >
+      <a
+        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1bhi0za-MuiTypography-root-MuiLink-root"
+        href="//id"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 css-idttrf-MuiPaper-root"
+        >
+          <div
+            class="css-1r1qn66"
+          />
+          <div
+            class="MuiTypography-root MuiTypography-h4 css-10039id-MuiTypography-root"
+          >
+            <div
+              style="margin-left: auto;"
+            >
+              Kronborg Strandby
+            </div>
+          </div>
+          <div
+            class="MuiTypography-root MuiTypography-h3 css-a301ii-MuiTypography-root"
+          >
+            <div
+              style="margin-left: auto; margin-right: 30px;"
+            >
+              76
+              CO2/m2/year
+            </div>
+          </div>
+          <img
+            height="200px"
+            src="/kronborg_strandby.png"
+            style="position: absolute; top: 0px; left: 0px; z-index: 0;"
+          />
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook Snapshots > 'PaperPage' > Primary 1`] = `
+<div>
+  <div
+    class="MuiContainer-root css-9ime96-MuiContainer-root"
+  >
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthMd css-xdmu94-MuiContainer-root"
+      data-testid=""
+    >
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation5 css-juvtnk-MuiPaper-root"
+      >
+        <div
+          class="MuiTypography-root MuiTypography-body1 css-lrpomw-MuiTypography-root"
+        >
+          About
+        </div>
+        <div
+          class="MuiTypography-root MuiTypography-body1 css-1m8u8tr-MuiTypography-root"
+        >
+          We create architecture for the many and for the common good. The result is a continuous balancing act between sustainability, beauty, and economy.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook Snapshots > 'PaperPageStack' > Primary 1`] = `
+<div>
+  <div
+    class="MuiContainer-root css-1mf242o-MuiContainer-root"
+  >
+    <div
+      class="MuiStack-root css-pnq1z9-MuiStack-root"
+    >
+      <div
+        class="MuiContainer-root css-9ime96-MuiContainer-root"
+      >
+        <div
+          class="MuiContainer-root MuiContainer-maxWidthXxl css-oqchhx-MuiContainer-root"
+          data-testid=""
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation5 css-juvtnk-MuiPaper-root"
+          >
+            <div
+              class="MuiTypography-root MuiTypography-body1 css-lrpomw-MuiTypography-root"
+            >
+              About
+            </div>
+            <div
+              class="MuiTypography-root MuiTypography-body1 css-1m8u8tr-MuiTypography-root"
+            >
+              We create architecture for the many and for the common good. The result is a continuous balancing act between sustainability, beauty, and economy.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiContainer-root css-9ime96-MuiContainer-root"
+      >
+        <div
+          class="MuiContainer-root MuiContainer-maxWidthXxl css-oqchhx-MuiContainer-root"
+          data-testid=""
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation5 css-juvtnk-MuiPaper-root"
+          >
+            <div
+              class="MuiTypography-root MuiTypography-body1 css-lrpomw-MuiTypography-root"
+            >
+              About
+            </div>
+            <div
+              class="MuiTypography-root MuiTypography-body1 css-1m8u8tr-MuiTypography-root"
+            >
+              We create architecture for the many and for the common good. The result is a continuous balancing act between sustainability, beauty, and economy.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiContainer-root css-9ime96-MuiContainer-root"
+      >
+        <div
+          class="MuiContainer-root MuiContainer-maxWidthXxl css-oqchhx-MuiContainer-root"
+          data-testid=""
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation5 css-juvtnk-MuiPaper-root"
+          >
+            <div
+              class="MuiTypography-root MuiTypography-body1 css-lrpomw-MuiTypography-root"
+            >
+              About
+            </div>
+            <div
+              class="MuiTypography-root MuiTypography-body1 css-1m8u8tr-MuiTypography-root"
+            >
+              We create architecture for the many and for the common good. The result is a continuous balancing act between sustainability, beauty, and economy.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

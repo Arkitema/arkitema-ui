@@ -14,10 +14,6 @@ export default meta
 
 type Story = StoryObj<typeof AppContainer>
 
-const Child = () => {
-  throw new Error()
-}
-
 export const Primary: Story = {
   args: {
     children: (
@@ -46,23 +42,6 @@ export const Primary: Story = {
             'If the app loads as expected, this component will simply load its content. If not, it will render an error as displayed in the error story.'
           }
         </Typography>
-      </>
-    ),
-  },
-  decorators: [
-    (StoryComponent) => (
-      <Router>
-        <StoryComponent />
-      </Router>
-    ),
-  ],
-}
-
-export const ErrorStory: Story = {
-  args: {
-    children: (
-      <>
-        <Child></Child>
       </>
     ),
   },

@@ -1,6 +1,6 @@
 {
   "name": "@arkitema/visualizations",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Arkitema Visualisations Library",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -11,6 +11,7 @@
   "scripts": {
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
+    "test:update": "vitest run --update",
     "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json",
     "build:watch": "npm run postbuild && tsc --watch",
     "lint": "eslint src/**/*.{tsx,ts}",

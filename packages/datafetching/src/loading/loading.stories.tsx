@@ -1,6 +1,6 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { Loading } from '.'
+import { Loading } from './loading'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 const meta: Meta<typeof Loading> = {

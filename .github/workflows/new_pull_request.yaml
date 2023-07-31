@@ -45,7 +45,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: packages/${{ matrix.package }}/storybook-static
-          key: ${{ matrix.package }}-build-${{ hashFiles('packages/${{ matrix.package }}') }}
+          key: ${{ matrix.package }}-build-${{ hashFiles('packages/${{ matrix.package }}/*') }}
 
       - name: Install
         if: steps.cache-modules.outputs.cache-hit != 'true'
@@ -67,37 +67,9 @@ jobs:
         if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
         run: npm run test:coverage -w packages/${{ matrix.package }}
 
-      - name: 'Report Coverage'
-        if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
-        uses: davelosert/vitest-coverage-report-action@v2
-        with:
-          name: ${{ matrix.package }}
-          json-summary-path: packages/${{ matrix.package }}/coverage/coverage-summary.json
-          json-final-path: packages/${{ matrix.package }}/coverage/coverage-final.json'
-
-#      - name: Storybook Tests
-#        if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
-#        run: npm run storybook:test -w packages/${{ matrix.package }}
-
       - name: Storybook Build
         if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
         run: npm run storybook:build -w packages/${{ matrix.package }}
-
-      - name: Upload Storybook Artifacts
-        if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
-        uses: actions/upload-artifact@v3
-        with:
-          name: storybook-${{ matrix.package }}
-          path: packages/${{ matrix.package }}/storybook-static
-
-      - name: Create Comment on PR
-        if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
-        uses: peter-evans/create-or-update-comment@v3
-        with:
-          issue-number: ${{ github.event.pull_request.number }}
-          body: |
-            Changed Storybook: ${{ matrix.package }} can be found at:
-            https://ui.arkitema.com/${{ github.head_ref }}/${{ matrix.package }}/index.html
 
       - name: Upload to Blob Storage
         if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
@@ -108,10 +80,27 @@ jobs:
               --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} \
               --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} \
               --source ${{ vars.BUNDLES_CONTAINER_NAME}} \
-              --pattern "bundles/${{ env.app_name }}/${{ github.ref_name }}/${{ matrix.package }}/*"
+              --pattern "bundles/${{ env.app_name }}/${{ github.head_ref }}/${{ matrix.package }}/*"
             az storage blob upload-batch \
               --sas-token ${{ secrets.AZURE_STORAGE_CREDENTIALS }} \
               --account-name ${{ vars.AZURE_STORAGE_ACCOUNT }} \
               --auth-mode key -d ${{ vars.BUNDLES_CONTAINER_NAME}} \
-              --destination-path "bundles/${{ env.app_name }}/${{ github.ref_name }}/${{ matrix.package }}" \
+              --destination-path "bundles/${{ env.app_name }}/${{ github.head_ref }}/${{ matrix.package }}" \
               -s ./packages/${{ matrix.package }}/storybook-static
+
+      - name: 'Report Coverage'
+        if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
+        uses: davelosert/vitest-coverage-report-action@v2
+        with:
+          name: ${{ matrix.package }}
+          json-summary-path: packages/${{ matrix.package }}/coverage/coverage-summary.json
+          json-final-path: packages/${{ matrix.package }}/coverage/coverage-final.json'
+
+      - name: Create Comment on PR
+        if: steps.cache-build-artifacts.outputs.cache-hit != 'true'
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            Changed Storybook: ${{ matrix.package }} can be found at:
+            https://ui.arkitema.com/${{ github.head_ref }}/${{ matrix.package }}/index.html

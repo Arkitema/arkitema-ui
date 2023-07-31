@@ -1,6 +1,7 @@
 import { ApolloError } from '@apollo/client'
 import * as React from 'react'
 import { ErrorMessage } from '../errorMessage'
+import { Box } from '@mui/material'
 
 interface Props {
   children?: React.ReactNode
@@ -30,26 +31,18 @@ export class ErrorBoundary extends React.Component<Props, State> {
   override render() {
     if (this.state.hasError) {
       return (
-        <div data-testid='lca-error-boundary-description' style={{ margin: '1em' }}>
+        <div data-testid='error-boundary-description' style={{ margin: '1em' }}>
           <ErrorMessage
             error={
               new ApolloError({
-                errorMessage: 'Sorry.. an error occured',
+                errorMessage: 'Sorry.. an error occurred',
               })
             }
           />
-          <h3>Try going back or refresh the page</h3>
-          {this.state.error ? (
-            <div>
-              <h3>If the error persists, provide the following details to IT Support:</h3>
-              <details style={{ whiteSpace: 'pre-wrap' }}>
-                <code>{this.state.error.stack}</code>
-              </details>
-              <hr />
-            </div>
-          ) : (
-            'If the error persist, contact IT Support'
-          )}
+          <Box sx={{ padding: 3 }}>
+            <h3>Try going back or refresh the page</h3>
+            <h3>If the error persist, contact IT Support</h3>
+          </Box>
         </div>
       )
     }

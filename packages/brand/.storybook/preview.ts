@@ -1,4 +1,7 @@
 import type { Preview } from '@storybook/react'
+import { theme } from '../src'
+import { withThemeFromJSXProvider } from "@storybook/addon-styling";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 
 const preview: Preview = {
   parameters: {
@@ -11,5 +14,16 @@ const preview: Preview = {
     },
   },
 }
+
+export const decorators = [
+  withThemeFromJSXProvider({
+    themes: {
+      default: theme,
+    },
+    defaultTheme: "theme",
+    Provider: ThemeProvider,
+    GlobalStyles: CssBaseline,
+  }),
+];
 
 export default preview

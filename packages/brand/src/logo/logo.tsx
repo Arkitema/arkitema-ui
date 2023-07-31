@@ -32,7 +32,7 @@ export function Logo(props: LogoProps) {
     >
       <div style={{ display: 'flex', flexDirection: 'row' }}>
         <img
-          alt='carbon-base-logo'
+          alt='arkitema-logo'
           style={{
             marginTop: margin + 'px',
             width: width,

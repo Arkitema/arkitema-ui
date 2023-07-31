@@ -1,21 +1,33 @@
-import { Button } from '@mui/material'
-import React from 'react'
+import { Button, CircularProgress, SxProps } from '@mui/material'
+import React, { ReactElement } from 'react'
 import { theme } from '@arkitema/brand'
-
-import { styled } from '@mui/material/styles'
 
 export interface ArkitemaButtonProps {
   text: string
-  onclick: any
+  children?: ReactElement
+  startIcon?: ReactElement
+  onClick?: () => void
   disabled?: boolean
-  sx?: any
+  sx?: SxProps
   dataTestId?: string
+  component?: React.ElementType
+  loading?: boolean | null
 }
 
 export const ArkitemaButton: React.FC<ArkitemaButtonProps> = (props) => {
-  const { text, onclick, disabled, sx, dataTestId = 'arkitema-button' } = props
+  const {
+    children,
+    component = 'button',
+    loading,
+    startIcon,
+    text,
+    onClick,
+    disabled,
+    sx,
+    dataTestId = 'arkitema-button',
+  } = props
 
-  const CustomButton = styled(Button)({
+  const buttonStyle = {
     paddingLeft: '20px',
     marginLeft: '10px',
     marginRight: '10px',
@@ -29,11 +41,26 @@ export const ArkitemaButton: React.FC<ArkitemaButtonProps> = (props) => {
       color: theme.palette.common.white,
     },
     ...sx,
-  })
+  }
 
+  if (loading) {
+    return (
+      <Button sx={buttonStyle} disabled={true} data-testid={dataTestId} startIcon={startIcon} component={component}>
+        <CircularProgress size={24.5} />
+      </Button>
+    )
+  }
   return (
-    <CustomButton onClick={onclick} disabled={disabled} data-testid={dataTestId}>
+    <Button
+      sx={buttonStyle}
+      onClick={onClick}
+      disabled={disabled}
+      data-testid={dataTestId}
+      component={component}
+      startIcon={startIcon}
+    >
       {text}
-    </CustomButton>
+      {children}
+    </Button>
   )
 }

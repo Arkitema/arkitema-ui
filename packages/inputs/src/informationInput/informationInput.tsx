@@ -1,10 +1,11 @@
-import { TextField, InputLabel, MenuItem, FormControl, Select } from '@mui/material'
+import { FormControl, InputLabel, MenuItem, Select, TextField } from '@mui/material'
 
 interface InformationInputProps {
   id: string
   label: string
-  setValue: any
-  value: any
+  // eslint-disable-next-line no-unused-vars
+  setValue: (value: object | string | number) => void
+  value: object | string | number
   options?: string[]
   type?: 'number' | 'string'
   sx?: Record<string, unknown>

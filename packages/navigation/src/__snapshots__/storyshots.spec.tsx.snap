@@ -1,0 +1,122 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Storybook Snapshots > 'ArkitemaAppBar' > Primary 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-i9gxme"
+  >
+    <header
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorDefault MuiAppBar-positionSticky css-uwq5ss-MuiPaper-root-MuiAppBar-root"
+    >
+      <div
+        class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1g467ij-MuiToolbar-root"
+      >
+        <a
+          aria-label="logo"
+          data-testid="logo"
+          href="/"
+          style="text-decoration: none; display: inline-block;"
+        >
+          <div
+            style="display: flex; flex-direction: row;"
+          >
+            <img
+              alt="arkitema-logo"
+              src="[object Object]"
+              style="margin-top: -3.2px; width: 200px;"
+            />
+            <div
+              class="MuiTypography-root MuiTypography-h1 css-1k6hlhp-MuiTypography-root"
+            >
+              Arkitema UI
+            </div>
+          </div>
+        </a>
+        <div
+          class="MuiBox-root css-2yuir"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-ii1q63-MuiButtonBase-root-MuiButton-root"
+            style="text-transform: none; font: Matter,sans-serif; font-size: 19px; margin-left: 23px; margin-top: 33px; margin-bottom: 24px; opacity: 0.5; padding: 0px;"
+            tabindex="0"
+            type="button"
+          >
+            Projects
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-ii1q63-MuiButtonBase-root-MuiButton-root"
+            style="text-transform: none; font: Matter,sans-serif; font-size: 19px; margin-left: 23px; margin-top: 33px; margin-bottom: 24px; opacity: 0.5; padding: 0px;"
+            tabindex="0"
+            type="button"
+          >
+            Constructions
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-ii1q63-MuiButtonBase-root-MuiButton-root"
+            style="text-transform: none; font: Matter,sans-serif; font-size: 19px; margin-left: 23px; margin-top: 33px; margin-bottom: 24px; opacity: 0.5; padding: 0px;"
+            tabindex="0"
+            type="button"
+          >
+            Materials
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </header>
+  </div>
+</div>
+`;
+
+exports[`Storybook Snapshots > 'Breadcrumb' > Primary 1`] = `
+<div>
+  <div
+    role="presentation"
+    style="margin-left: 5%;"
+  >
+    <nav
+      aria-label="breadcrumb"
+      class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root css-63vwl1-MuiTypography-root-MuiBreadcrumbs-root"
+      data-testid="breadcrumb"
+    >
+      <ol
+        class="MuiBreadcrumbs-ol css-4pdmu4-MuiBreadcrumbs-ol"
+      >
+        <li
+          class="MuiBreadcrumbs-li"
+        >
+          <a
+            class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-nrxgm2-MuiTypography-root-MuiLink-root"
+            data-testid="breadcrumb-link"
+            href="/"
+          >
+            Arkitema UI
+          </a>
+        </li>
+        <li
+          aria-hidden="true"
+          class="MuiBreadcrumbs-separator css-1wuw8dw-MuiBreadcrumbs-separator"
+        >
+          /
+        </li>
+        <li
+          class="MuiBreadcrumbs-li"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-1gqyz35-MuiTypography-root"
+          >
+            Settings
+          </p>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</div>
+`;

@@ -4,5 +4,10 @@
     "rootDir": "./src"
   },
   "extends": "../../tsconfig.json",
-  "include": ["./src/**/*"]
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "./.storybook"
+  ]
 }

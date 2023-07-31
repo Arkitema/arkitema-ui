@@ -22,8 +22,8 @@ export const NotFoundPage: React.FC<unknown> = () => {
         Sorry, but the page you were trying to view does not exist.
       </Typography>
       <Stack direction='row' spacing={2} justifyContent='flex-start' sx={{ paddingTop: 5 }}>
-        <ArkitemaButton text='Go to front page' onclick={() => navigate('/projects')}></ArkitemaButton>
-        <ArkitemaButton text='Go back' onclick={() => navigate(-1)}></ArkitemaButton>
+        <ArkitemaButton text='Go to front page' onClick={() => navigate('/projects')}></ArkitemaButton>
+        <ArkitemaButton text='Go back' onClick={() => navigate(-1)}></ArkitemaButton>
       </Stack>
     </Container>
   )
