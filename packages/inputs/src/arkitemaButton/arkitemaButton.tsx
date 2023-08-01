@@ -1,4 +1,4 @@
-import { Button, CircularProgress, SxProps } from '@mui/material'
+import { Box, Button, CircularProgress, SxProps } from '@mui/material'
 import React, { ReactElement } from 'react'
 import { theme } from '@arkitema/brand'
 
@@ -11,7 +11,7 @@ export interface ArkitemaButtonProps {
   sx?: SxProps
   dataTestId?: string
   component?: React.ElementType
-  loading?: boolean | null
+  loading?: boolean
 }
 
 export const ArkitemaButton: React.FC<ArkitemaButtonProps> = (props) => {
@@ -43,24 +43,33 @@ export const ArkitemaButton: React.FC<ArkitemaButtonProps> = (props) => {
     ...sx,
   }
 
-  if (loading) {
-    return (
-      <Button sx={buttonStyle} disabled={true} data-testid={dataTestId} startIcon={startIcon} component={component}>
-        <CircularProgress size={24.5} />
-      </Button>
-    )
-  }
   return (
-    <Button
-      sx={buttonStyle}
-      onClick={onClick}
-      disabled={disabled}
-      data-testid={dataTestId}
-      component={component}
-      startIcon={startIcon}
-    >
-      {text}
-      {children}
-    </Button>
+    <Box sx={{ display: 'flex' }}>
+      <Box sx={{ position: 'relative' }}>
+        <Button
+          sx={buttonStyle}
+          onClick={onClick}
+          disabled={disabled || loading}
+          data-testid={dataTestId}
+          component={component}
+          startIcon={startIcon}
+        >
+          {text}
+          {children}
+        </Button>
+        {loading && (
+          <CircularProgress
+            size={24}
+            sx={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              marginTop: '-12px',
+              marginLeft: '-12px',
+            }}
+          />
+        )}
+      </Box>
+    </Box>
   )
 }

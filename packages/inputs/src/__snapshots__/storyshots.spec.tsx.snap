@@ -2,195 +2,89 @@
 
 exports[`Storybook Snapshots > 'ArkitemaButton' > Disabled 1`] = `
 <div>
-  <button
-    class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1e8xzws-MuiButtonBase-root-MuiButton-root"
-    data-testid="arkitema-button"
-    disabled=""
-    tabindex="-1"
-    type="button"
+  <div
+    class="MuiBox-root css-k008qs"
   >
-    Button text
-  </button>
+    <div
+      class="MuiBox-root css-79elbk"
+    >
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1e8xzws-MuiButtonBase-root-MuiButton-root"
+        data-testid="arkitema-button"
+        disabled=""
+        tabindex="-1"
+        type="button"
+      >
+        Button text
+      </button>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Storybook Snapshots > 'ArkitemaButton' > Enabled 1`] = `
 <div>
-  <button
-    class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-117q8sz-MuiButtonBase-root-MuiButton-root"
-    data-testid="arkitema-button"
-    tabindex="0"
-    type="button"
-  >
-    Button text
-    <span
-      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-    />
-  </button>
-</div>
-`;
-
-exports[`Storybook Snapshots > 'ArkitemaButton' > StartIcon 1`] = `
-<div>
-  <button
-    class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-117q8sz-MuiButtonBase-root-MuiButton-root"
-    data-testid="arkitema-button"
-    tabindex="0"
-    type="button"
-  >
-    <span
-      class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
-    >
-      <svg
-        aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-        data-testid="AccountCircleOutlinedIcon"
-        focusable="false"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.35 18.5C8.66 17.56 10.26 17 12 17s3.34.56 4.65 1.5c-1.31.94-2.91 1.5-4.65 1.5s-3.34-.56-4.65-1.5zm10.79-1.38C16.45 15.8 14.32 15 12 15s-4.45.8-6.14 2.12C4.7 15.73 4 13.95 4 12c0-4.42 3.58-8 8-8s8 3.58 8 8c0 1.95-.7 3.73-1.86 5.12z"
-        />
-        <path
-          d="M12 6c-1.93 0-3.5 1.57-3.5 3.5S10.07 13 12 13s3.5-1.57 3.5-3.5S13.93 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"
-        />
-      </svg>
-    </span>
-    Button text
-    <span
-      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-    />
-  </button>
-</div>
-`;
-
-exports[`Storybook Snapshots > 'FileInput' > Clear 1`] = `
-<div>
   <div
-    aria-label="file-input"
-    style="width: 250px; margin-top: 30px;"
+    class="MuiBox-root css-k008qs"
   >
     <div
-      class="MuiTypography-root MuiTypography-body1 css-irmczp-MuiTypography-root"
+      class="MuiBox-root css-79elbk"
     >
-      Select Image
-    </div>
-    <label
-      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-117q8sz-MuiButtonBase-root-MuiButton-root"
-      data-testid="arkitema-button"
-      role="button"
-      tabindex="0"
-    >
-      <span
-        class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-117q8sz-MuiButtonBase-root-MuiButton-root"
+        data-testid="arkitema-button"
+        tabindex="0"
+        type="button"
       >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-          data-testid="UploadFileOutlinedIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15.01l1.41 1.41L11 14.84V19h2v-4.16l1.59 1.59L16 15.01 12.01 11 8 15.01z"
-          />
-        </svg>
-      </span>
-      Upload File
-      <input
-        hidden=""
-        type="file"
-      />
-      <span
-        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-      />
-    </label>
+        Button text
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+    </div>
   </div>
 </div>
 `;
 
-exports[`Storybook Snapshots > 'FileInput' > Error 1`] = `
+exports[`Storybook Snapshots > 'ArkitemaButton' > Loading 1`] = `
 <div>
   <div
-    aria-label="file-input"
-    style="width: 250px; margin-top: 30px;"
+    class="MuiBox-root css-k008qs"
   >
     <div
-      class="MuiTypography-root MuiTypography-body1 css-irmczp-MuiTypography-root"
+      class="MuiBox-root css-79elbk"
     >
-      Upload Image
-    </div>
-    <label
-      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-117q8sz-MuiButtonBase-root-MuiButton-root"
-      data-testid="arkitema-button"
-      role="button"
-      tabindex="0"
-    >
-      <span
-        class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-117q8sz-MuiButtonBase-root-MuiButton-root"
+        data-testid="arkitema-button"
+        disabled=""
+        tabindex="-1"
+        type="button"
       >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-          data-testid="UploadFileOutlinedIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
+        <span
+          class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
         >
-          <path
-            d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15.01l1.41 1.41L11 14.84V19h2v-4.16l1.59 1.59L16 15.01 12.01 11 8 15.01z"
-          />
-        </svg>
-      </span>
-      Upload File
-      <input
-        hidden=""
-        type="file"
-      />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="AccountCircleOutlinedIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.35 18.5C8.66 17.56 10.26 17 12 17s3.34.56 4.65 1.5c-1.31.94-2.91 1.5-4.65 1.5s-3.34-.56-4.65-1.5zm10.79-1.38C16.45 15.8 14.32 15 12 15s-4.45.8-6.14 2.12C4.7 15.73 4 13.95 4 12c0-4.42 3.58-8 8-8s8 3.58 8 8c0 1.95-.7 3.73-1.86 5.12z"
+            />
+            <path
+              d="M12 6c-1.93 0-3.5 1.57-3.5 3.5S10.07 13 12 13s3.5-1.57 3.5-3.5S13.93 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"
+            />
+          </svg>
+        </span>
+        Button text
+      </button>
       <span
-        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-      />
-    </label>
-  </div>
-</div>
-`;
-
-exports[`Storybook Snapshots > 'FileInput' > Loading 1`] = `
-<div>
-  <div
-    aria-label="file-input"
-    style="width: 250px; margin-top: 30px;"
-  >
-    <div
-      class="MuiTypography-root MuiTypography-body1 css-irmczp-MuiTypography-root"
-    >
-      Upload Image
-    </div>
-    <label
-      aria-disabled="true"
-      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-117q8sz-MuiButtonBase-root-MuiButton-root"
-      data-testid="arkitema-button"
-      role="button"
-      tabindex="-1"
-    >
-      <span
-        class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
-      >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-          data-testid="UploadFileOutlinedIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15.01l1.41 1.41L11 14.84V19h2v-4.16l1.59 1.59L16 15.01 12.01 11 8 15.01z"
-          />
-        </svg>
-      </span>
-      <span
-        class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-18lrjg1-MuiCircularProgress-root"
+        class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1g9nplg-MuiCircularProgress-root"
         role="progressbar"
-        style="width: 24.5px; height: 24.5px;"
+        style="width: 24px; height: 24px;"
       >
         <svg
           class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
@@ -206,7 +100,225 @@ exports[`Storybook Snapshots > 'FileInput' > Loading 1`] = `
           />
         </svg>
       </span>
-    </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook Snapshots > 'ArkitemaButton' > StartIcon 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-k008qs"
+  >
+    <div
+      class="MuiBox-root css-79elbk"
+    >
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-117q8sz-MuiButtonBase-root-MuiButton-root"
+        data-testid="arkitema-button"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="AccountCircleOutlinedIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.35 18.5C8.66 17.56 10.26 17 12 17s3.34.56 4.65 1.5c-1.31.94-2.91 1.5-4.65 1.5s-3.34-.56-4.65-1.5zm10.79-1.38C16.45 15.8 14.32 15 12 15s-4.45.8-6.14 2.12C4.7 15.73 4 13.95 4 12c0-4.42 3.58-8 8-8s8 3.58 8 8c0 1.95-.7 3.73-1.86 5.12z"
+            />
+            <path
+              d="M12 6c-1.93 0-3.5 1.57-3.5 3.5S10.07 13 12 13s3.5-1.57 3.5-3.5S13.93 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"
+            />
+          </svg>
+        </span>
+        Button text
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook Snapshots > 'FileInput' > Clear 1`] = `
+<div>
+  <div
+    aria-label="file-input"
+    style="width: 250px; margin-top: 30px;"
+  >
+    <div
+      class="MuiTypography-root MuiTypography-body1 css-irmczp-MuiTypography-root"
+    >
+      Select Image
+    </div>
+    <div
+      class="MuiBox-root css-k008qs"
+    >
+      <div
+        class="MuiBox-root css-79elbk"
+      >
+        <label
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-117q8sz-MuiButtonBase-root-MuiButton-root"
+          data-testid="arkitema-button"
+          role="button"
+          tabindex="0"
+        >
+          <span
+            class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="UploadFileOutlinedIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15.01l1.41 1.41L11 14.84V19h2v-4.16l1.59 1.59L16 15.01 12.01 11 8 15.01z"
+              />
+            </svg>
+          </span>
+          Upload File
+          <input
+            hidden=""
+            type="file"
+          />
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook Snapshots > 'FileInput' > Error 1`] = `
+<div>
+  <div
+    aria-label="file-input"
+    style="width: 250px; margin-top: 30px;"
+  >
+    <div
+      class="MuiTypography-root MuiTypography-body1 css-irmczp-MuiTypography-root"
+    >
+      Upload Image
+    </div>
+    <div
+      class="MuiBox-root css-k008qs"
+    >
+      <div
+        class="MuiBox-root css-79elbk"
+      >
+        <label
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-117q8sz-MuiButtonBase-root-MuiButton-root"
+          data-testid="arkitema-button"
+          role="button"
+          tabindex="0"
+        >
+          <span
+            class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="UploadFileOutlinedIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15.01l1.41 1.41L11 14.84V19h2v-4.16l1.59 1.59L16 15.01 12.01 11 8 15.01z"
+              />
+            </svg>
+          </span>
+          Upload File
+          <input
+            hidden=""
+            type="file"
+          />
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook Snapshots > 'FileInput' > Loading 1`] = `
+<div>
+  <div
+    aria-label="file-input"
+    style="width: 250px; margin-top: 30px;"
+  >
+    <div
+      class="MuiTypography-root MuiTypography-body1 css-irmczp-MuiTypography-root"
+    >
+      Upload Image
+    </div>
+    <div
+      class="MuiBox-root css-k008qs"
+    >
+      <div
+        class="MuiBox-root css-79elbk"
+      >
+        <label
+          aria-disabled="true"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-117q8sz-MuiButtonBase-root-MuiButton-root"
+          data-testid="arkitema-button"
+          role="button"
+          tabindex="-1"
+        >
+          <span
+            class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="UploadFileOutlinedIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15.01l1.41 1.41L11 14.84V19h2v-4.16l1.59 1.59L16 15.01 12.01 11 8 15.01z"
+              />
+            </svg>
+          </span>
+          Upload File
+          <input
+            hidden=""
+            type="file"
+          />
+        </label>
+        <span
+          class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1g9nplg-MuiCircularProgress-root"
+          role="progressbar"
+          style="width: 24px; height: 24px;"
+        >
+          <svg
+            class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+            viewBox="22 22 44 44"
+          >
+            <circle
+              class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+              cx="44"
+              cy="44"
+              fill="none"
+              r="20.2"
+              stroke-width="3.6"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -222,36 +334,44 @@ exports[`Storybook Snapshots > 'FileInput' > UploadedImage 1`] = `
     >
       Upload Image
     </div>
-    <label
-      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-117q8sz-MuiButtonBase-root-MuiButton-root"
-      data-testid="arkitema-button"
-      role="button"
-      tabindex="0"
+    <div
+      class="MuiBox-root css-k008qs"
     >
-      <span
-        class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+      <div
+        class="MuiBox-root css-79elbk"
       >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-          data-testid="UploadFileOutlinedIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
+        <label
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-117q8sz-MuiButtonBase-root-MuiButton-root"
+          data-testid="arkitema-button"
+          role="button"
+          tabindex="0"
         >
-          <path
-            d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15.01l1.41 1.41L11 14.84V19h2v-4.16l1.59 1.59L16 15.01 12.01 11 8 15.01z"
+          <span
+            class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="UploadFileOutlinedIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15.01l1.41 1.41L11 14.84V19h2v-4.16l1.59 1.59L16 15.01 12.01 11 8 15.01z"
+              />
+            </svg>
+          </span>
+          Upload File
+          <input
+            hidden=""
+            type="file"
           />
-        </svg>
-      </span>
-      Upload File
-      <input
-        hidden=""
-        type="file"
-      />
-      <span
-        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-      />
-    </label>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </label>
+      </div>
+    </div>
     <div
       class="MuiTypography-root MuiTypography-body1 css-14889gr-MuiTypography-root"
     >
@@ -276,36 +396,44 @@ exports[`Storybook Snapshots > 'FileInput' > UploadedJSON 1`] = `
     >
       Upload JSON
     </div>
-    <label
-      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-117q8sz-MuiButtonBase-root-MuiButton-root"
-      data-testid="arkitema-button"
-      role="button"
-      tabindex="0"
+    <div
+      class="MuiBox-root css-k008qs"
     >
-      <span
-        class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+      <div
+        class="MuiBox-root css-79elbk"
       >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-          data-testid="UploadFileOutlinedIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
+        <label
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-117q8sz-MuiButtonBase-root-MuiButton-root"
+          data-testid="arkitema-button"
+          role="button"
+          tabindex="0"
         >
-          <path
-            d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15.01l1.41 1.41L11 14.84V19h2v-4.16l1.59 1.59L16 15.01 12.01 11 8 15.01z"
+          <span
+            class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="UploadFileOutlinedIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15.01l1.41 1.41L11 14.84V19h2v-4.16l1.59 1.59L16 15.01 12.01 11 8 15.01z"
+              />
+            </svg>
+          </span>
+          Upload File
+          <input
+            hidden=""
+            type="file"
           />
-        </svg>
-      </span>
-      Upload File
-      <input
-        hidden=""
-        type="file"
-      />
-      <span
-        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-      />
-    </label>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </label>
+      </div>
+    </div>
     <div
       class="MuiTypography-root MuiTypography-body1 css-14889gr-MuiTypography-root"
     >

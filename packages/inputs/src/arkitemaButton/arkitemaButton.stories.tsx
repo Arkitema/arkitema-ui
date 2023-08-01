@@ -33,3 +33,12 @@ export const StartIcon: Story = {
     startIcon: <AccountCircleOutlined />,
   },
 }
+
+export const Loading: Story = {
+  args: {
+    disabled: false,
+    loading: true,
+    text: 'Button text',
+    startIcon: <AccountCircleOutlined />,
+  },
+}
