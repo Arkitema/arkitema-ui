@@ -1,3 +1,10 @@
+## [0.4.0](https://github.com/Arkitema/arkitema-ui/compare/v0.3.0...v0.4.0) (2023-08-01)
+
+
+### Features
+
+* **inputs:** improved loading state for button ([68d3793](https://github.com/Arkitema/arkitema-ui/commit/68d379324111157bb41261742b339ab8d8cfdbfc))
+
 ## [0.3.0](https://github.com/Arkitema/arkitema-ui/compare/v0.2.0...v0.3.0) (2023-07-31)
 
 
