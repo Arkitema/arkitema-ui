@@ -1,3 +1,10 @@
+## [0.5.0](https://github.com/Arkitema/arkitema-ui/compare/v0.4.0...v0.5.0) (2023-08-02)
+
+
+### Features
+
+* **inputs:** added custom data-testid to FileInput ([0a8eba6](https://github.com/Arkitema/arkitema-ui/commit/0a8eba6791b2510548ff00acf0c55e0244bfcb17))
+
 ## [0.4.0](https://github.com/Arkitema/arkitema-ui/compare/v0.3.0...v0.4.0) (2023-08-01)
 
 
