@@ -24,23 +24,28 @@ describe('FileInput', () => {
     })
     const file = new File(['(⌐□_□)'], 'image.jpg', { type: 'image/jpeg' })
 
-    const { getByLabelText } = render(
+    const { getByTestId } = render(
       <FileInput
         text='Upload Project Image'
-        data=''
+        data='(⌐□_□)'
         setData={setImageDataMock}
         fileType={'image'}
         allowedExtensions={['.jpg', '.jpeg', '.png']}
+        setLoading={() => ({})}
+        fileName={'image.jpg'}
       />,
     )
 
-    const fileInput = getByLabelText('file-input') as HTMLInputElement
-    expect(fileInput.files).toBeUndefined()
+    const fileInput = getByTestId('file-upload-input') as HTMLInputElement
+    expect(fileInput.files).to.have.length(0)
 
     await act(async () => {
       fireEvent.change(fileInput, { target: { files: [file] } })
       await new Promise((r) => setTimeout(r, 2000))
     })
+
     expect(fileInput?.files[0]).toBeInstanceOf(File)
+    expect(await screen.findByText('Added file: image.jpg')).toBeTruthy()
+    expect(await screen.findByText('Change File')).toBeTruthy()
   })
 })

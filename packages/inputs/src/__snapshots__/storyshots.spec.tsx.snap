@@ -151,6 +151,7 @@ exports[`Storybook Snapshots > 'FileInput' > Clear 1`] = `
 <div>
   <div
     aria-label="file-input"
+    data-testid="file-upload"
     style="width: 250px; margin-top: 30px;"
   >
     <div
@@ -187,6 +188,7 @@ exports[`Storybook Snapshots > 'FileInput' > Clear 1`] = `
           </span>
           Upload File
           <input
+            data-testid="file-upload-input"
             hidden=""
             type="file"
           />
@@ -204,6 +206,7 @@ exports[`Storybook Snapshots > 'FileInput' > Error 1`] = `
 <div>
   <div
     aria-label="file-input"
+    data-testid="file-upload"
     style="width: 250px; margin-top: 30px;"
   >
     <div
@@ -240,6 +243,7 @@ exports[`Storybook Snapshots > 'FileInput' > Error 1`] = `
           </span>
           Upload File
           <input
+            data-testid="file-upload-input"
             hidden=""
             type="file"
           />
@@ -257,6 +261,7 @@ exports[`Storybook Snapshots > 'FileInput' > Loading 1`] = `
 <div>
   <div
     aria-label="file-input"
+    data-testid="file-upload"
     style="width: 250px; margin-top: 30px;"
   >
     <div
@@ -294,6 +299,7 @@ exports[`Storybook Snapshots > 'FileInput' > Loading 1`] = `
           </span>
           Upload File
           <input
+            data-testid="file-upload-input"
             hidden=""
             type="file"
           />
@@ -327,6 +333,7 @@ exports[`Storybook Snapshots > 'FileInput' > UploadedImage 1`] = `
 <div>
   <div
     aria-label="file-input"
+    data-testid="file-upload"
     style="width: 250px; margin-top: 30px;"
   >
     <div
@@ -361,8 +368,9 @@ exports[`Storybook Snapshots > 'FileInput' > UploadedImage 1`] = `
               />
             </svg>
           </span>
-          Upload File
+          Change File
           <input
+            data-testid="file-upload-input"
             hidden=""
             type="file"
           />
@@ -389,6 +397,7 @@ exports[`Storybook Snapshots > 'FileInput' > UploadedJSON 1`] = `
 <div>
   <div
     aria-label="file-input"
+    data-testid="file-upload"
     style="width: 250px; margin-top: 30px;"
   >
     <div
@@ -423,8 +432,9 @@ exports[`Storybook Snapshots > 'FileInput' > UploadedJSON 1`] = `
               />
             </svg>
           </span>
-          Upload File
+          Change File
           <input
+            data-testid="file-upload-input"
             hidden=""
             type="file"
           />
