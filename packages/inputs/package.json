@@ -26,6 +26,7 @@
   "dependencies": {
     "@arkitema/brand": "^0.2.0",
     "@arkitema/errorhandling": "^0.2.0",
+    "@storybook/react": "^7.2.0",
     "browser-image-compression": "^2.0.2"
   }
 }
