@@ -15,6 +15,7 @@ interface FileInputProps {
   fileType: 'image' | 'json'
   loading?: boolean
   setLoading?: React.Dispatch<React.SetStateAction<boolean>>
+  'data-testid'?: string
 }
 
 export const FileInput = (props: FileInputProps) => {
@@ -99,8 +100,10 @@ export const FileInput = (props: FileInputProps) => {
     }
   }
 
+  const dataTestId = props['data-testid'] ? props['data-testid'] : 'file-upload'
+
   return (
-    <div style={{ width: '250px', marginTop: '30px' }} aria-label='file-input'>
+    <div style={{ width: '250px', marginTop: '30px' }} aria-label='file-input' data-testid={dataTestId}>
       <Typography
         component='div'
         sx={{
@@ -112,8 +115,13 @@ export const FileInput = (props: FileInputProps) => {
       >
         {text}
       </Typography>
-      <ArkitemaButton text='Upload File' component='label' startIcon={<UploadFileOutlined />} loading={isLoading}>
-        <input onChange={handleFileInputChange} type='file' hidden />
+      <ArkitemaButton
+        text={data ? 'Change File' : 'Upload File'}
+        component='label'
+        startIcon={<UploadFileOutlined />}
+        loading={isLoading}
+      >
+        <input onChange={handleFileInputChange} type='file' hidden data-testid={`${dataTestId}-input`} />
       </ArkitemaButton>
       <ErrorMessage error={error} />
       <ShowUploadedFile fileType={fileType} show={!isLoading && !!data} data={data} fileName={fileName} />

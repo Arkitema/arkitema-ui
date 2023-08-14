@@ -1,6 +1,5 @@
 /// <reference types="vite/client"/>
-import { Meta, StoryFn } from '@storybook/react'
-import { composeStories } from '@storybook/testing-react'
+import { Meta, StoryFn, composeStories } from '@storybook/react'
 import { render } from '@testing-library/react'
 import { describe, expect, test } from 'vitest'
 
