@@ -6,7 +6,7 @@ export interface ArkitemaButtonProps {
   text: string
   children?: ReactElement
   startIcon?: ReactElement
-  onClick?: () => void
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
   disabled?: boolean
   sx?: SxProps
   dataTestId?: string
