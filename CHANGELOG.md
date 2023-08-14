@@ -1,3 +1,10 @@
+## [0.5.1](https://github.com/Arkitema/arkitema-ui/compare/v0.5.0...v0.5.1) (2023-08-14)
+
+
+### Bug Fixes
+
+* **inputs:** updated onClick type argument ([7403d1e](https://github.com/Arkitema/arkitema-ui/commit/7403d1e313267b718c2ee86dd8ee2ed762403e77))
+
 ## [0.5.0](https://github.com/Arkitema/arkitema-ui/compare/v0.4.0...v0.5.0) (2023-08-02)
 
 
