@@ -1,3 +1,15 @@
+## [0.6.0](https://github.com/Arkitema/arkitema-ui/compare/v0.5.1...v0.6.0) (2023-08-15)
+
+
+### Features
+
+* **errorhandling:** added NotificationContext ([21efafc](https://github.com/Arkitema/arkitema-ui/commit/21efafc1abcdc12a9c28619f69dd4d97fe11268b))
+
+
+### Bug Fixes
+
+* **inputs:** removed unused eslint comment ([1f82ce4](https://github.com/Arkitema/arkitema-ui/commit/1f82ce447fbd41b341612318c891fa02d568146a))
+
 ## [0.5.1](https://github.com/Arkitema/arkitema-ui/compare/v0.5.0...v0.5.1) (2023-08-14)
 
 
