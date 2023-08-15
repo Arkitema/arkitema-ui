@@ -3,7 +3,6 @@ import { FormControl, InputLabel, MenuItem, Select, TextField } from '@mui/mater
 interface InformationInputProps {
   id: string
   label: string
-  // eslint-disable-next-line no-unused-vars
   setValue: (value: object | string | number) => void
   value: object | string | number
   options?: string[]
